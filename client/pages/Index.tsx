@@ -505,15 +505,15 @@ export default function Home() {
 
       {/* Whitepaper Download Section */}
       <section className="container mx-auto px-2 py-0 pb-0">
-        <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
+        <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)", height: "314px" }}>
           <div className="flex items-center justify-center">
             <div>
-              <p className="text-center lg:text-left text-[32px] font-bold leading-tight text-black dark:text-white">
+              <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
                 Download the whitepaper to understand what makes us different
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-center lg:justify-end gap-4">
+          <div className="flex items-center justify-center gap-4">
             <a
               href="#"
               className="flex items-center justify-center w-16 h-16 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
