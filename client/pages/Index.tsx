@@ -18,96 +18,161 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="relative min-h-[calc(100vh-3.5rem)] flex flex-col">
-      <div className="container mx-auto px-2 py-8 flex-1">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Hero Section */}
-          <div className="text-center space-y-6 py-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-black dark:text-white">
-              Welcome to the Platform
-            </h1>
-            <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-              Explore, collect, and trade relics on our community-driven marketplace.
-            </p>
+    <section className="relative min-h-screen flex flex-col">
+      {/* Pre-login homepage sections */}
+      <>
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  Explore
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Buy cards on the market
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
+                <img
+                  src="/images/relicGif.gif"
+                  alt="Relic Card"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  Rewards
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Build your collection for weekly rewards
+                </p>
+              </div>
+            </div>
           </div>
+        </section>
 
-          {/* Explore Section */}
-          <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-black dark:text-white">
-              Explore
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
-              <div className="flex items-center justify-center">
-                <div>
-                  <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
-                    Explore
-                  </p>
-                  <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                    Buy cards on the market
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
-                  <img
-                    src="/images/relicGif.gif"
-                    alt="Relic Card"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <div>
-                  <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
-                    Rewards
-                  </p>
-                  <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                    Build your collection for weekly rewards
-                  </p>
-                </div>
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  DEMAND
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  You decide the supply
+                </p>
               </div>
             </div>
-          </section>
-
-          {/* Features Section */}
-          <section className="space-y-4">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
-              <div className="flex items-center justify-center">
-                <div>
-                  <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
-                    Demand
-                  </p>
-                  <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                    Cards people want, trades people value
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
-                  <img
-                    src="/images/relicGif.gif"
-                    alt="Relic Card"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <div>
-                  <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
-                    Rarity
-                  </p>
-                  <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                    Rare cards, common cards. Your favorites.
-                  </p>
-                </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900">
+                <img
+                  src="/images/voteGif.gif"
+                  alt="Vote Card"
+                  className="w-full object-cover"
+                  loading="lazy"
+                  style={{ marginLeft: "auto", marginRight: "auto", height: "250px" }}
+                />
               </div>
             </div>
-          </section>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  CONTROL
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Vote for what releases next
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        </div>
-      </div>
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-4 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  REDEEM
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Turn in old cards to earn a team's new one
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex flex-col justify-center items-center flex-shrink-0" style={{ height: "250px" }}>
+                <img
+                  src="/images/teamGrid.webp"
+                  alt="Team Grid"
+                  className="object-scale-down"
+                  loading="lazy"
+                  style={{ marginLeft: "auto", marginRight: "auto", height: "300px" }}
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  Value
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Hold to see more scarcity over time
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center" style={{ height: "250px" }}>
+                <img
+                  src="/images/collectionValue.webp"
+                  alt="Collection Value"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  Showcase
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Customize your collection page
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center" style={{ height: "250px" }}>
+                <img
+                  src="/images/trophyCaseSplash.webp"
+                  alt="Trophy Case"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  Community
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Show off, connect, and chat with fellow fans
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
 
       {/* Scroll Indicator */}
       {showScrollIndicator && (
