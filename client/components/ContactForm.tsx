@@ -28,35 +28,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus("idle");
 
     try {
-      const resendApiKey = import.meta.env.VITE_RESEND_KEY;
-
-      if (!resendApiKey) {
-        console.error("VITE_RESEND_KEY not configured");
-        setSubmitStatus("error");
-        setIsSubmitting(false);
-        return;
-      }
-
-      const response = await fetch("https://api.resend.com/emails", {
+      const response = await fetch("/api/send-contact-email", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${resendApiKey}`,
-        },
-        body: JSON.stringify({
-          from: "contact@cornerstonedigitalsports.com",
-          to: "contact@cornerstonedigitalsports.com",
-          reply_to: formData.email,
-          subject: `New Contact Form Submission: ${formData.subject}`,
-          html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${formData.name}</p>
-            <p><strong>Email:</strong> ${formData.email}</p>
-            <p><strong>Subject:</strong> ${formData.subject}</p>
-            <h3>Message:</h3>
-            <p>${formData.message.replace(/\n/g, "<br>")}</p>
-          `,
-        }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -68,7 +43,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         }, 2000);
       } else {
         const error = await response.json();
-        console.error("Resend API error:", error);
+        console.error("API error:", error);
         setSubmitStatus("error");
       }
     } catch (error) {
