@@ -7,7 +7,7 @@ export default function AppHeader() {
           alt="Cornerstone Digital Sports"
           className="h-20 w-20 object-contain flex-shrink-0"
         />
-        <h1 style={{ fontFamily: "Roboto", fontSize: "40px", lineHeight: "40px", fontWeight: 600 }}>
+        <h1 className="mx-auto lg:text-[60px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontSize: "40px", lineHeight: "40px", fontWeight: 600 }}>
           Cornerstone Digital Sports
         </h1>
       </div>
