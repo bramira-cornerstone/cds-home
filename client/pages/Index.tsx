@@ -171,7 +171,7 @@ export default function Home() {
                   Explore
                 </p>
                 <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                  Buy cards on the market
+                  A new kind of sports collectible
                 </p>
               </div>
             </div>
