@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "apps/renderer/Dockerfile",
+    "rootDirectory": "apps/renderer"
+  },
+  "deploy": {
+    "startCommand": "node index.js"
+  }
+}

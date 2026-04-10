@@ -1,0 +1,620 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+  }
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@layer components {
+  /**
+   * Performance optimizations for homepage sections
+   * These classes improve scrolling performance on mobile by limiting paint and layout recalculations
+   */
+  .homepage-section {
+    contain: layout style paint;
+  }
+
+  /* Optimize Spline canvas rendering */
+  [data-spline-fitted] {
+    contain: layout style;
+  }
+
+  /**
+   * UNIVERSAL BOX SHADOW
+   *
+   * All box shadows across the site use this single universal value.
+   * This applies consistently to all card containers and elements across all responsive widths.
+   *
+   * Shadow value: x=1px, y=1px, blur=3px, spread=1px, color=#989B9B (rgba(152, 155, 155, 1))
+   */
+
+  /* Universal card shadow - applies to all cards and white containers */
+  .card-shadow {
+    box-shadow: 1px 1px 3px 1px rgba(152, 155, 155, 1);
+  }
+
+  /* Alias for Tailwind shadow-sm usage */
+  .shadow-sm {
+    box-shadow: 1px 1px 3px 1px rgba(152, 155, 155, 1) !important;
+  }
+
+  /* Legacy slab-depth effect - decorative deep shadow */
+  .slab-depth {
+    position: relative;
+    /* simulate a 10px raised slab with visible bottom edge */
+    box-shadow:
+      0 10px 0 rgba(0, 0, 0, 0.15),
+      0 15px 20px rgba(0, 0, 0, 0.1);
+  }
+  .slab-depth::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    pointer-events: none;
+  }
+
+  /* Unified card shadow classes - all use the same universal shadow */
+  .listing-card-mobile-shadow {
+    box-shadow: 1px 1px 3px 1px rgba(152, 155, 155, 1);
+  }
+
+  .card-shadow-responsive {
+    box-shadow: 1px 1px 3px 1px rgba(152, 155, 155, 1) !important;
+  }
+
+  .prior-drop-card-mobile-shadow {
+    box-shadow: 1px 1px 3px 1px rgba(152, 155, 155, 1);
+  }
+
+  .badge-mobile-shadow {
+    box-shadow: 1px 1px 3px 1px rgba(152, 155, 155, 1);
+  }
+
+  .my-recent-relics-container {
+    @media (max-width: 991px) {
+      justify-content: flex-start !important;
+      align-items: flex-start !important;
+    }
+  }
+}
+
+@keyframes holo-sweep {
+  0% {
+    transform: translate(70%, 70%) rotate(-20deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-70%, -70%) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@layer components {
+  .holo-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .holo-card::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 15%,
+      rgba(255, 255, 255, 0.2) 25%,
+      rgba(255, 0, 0, 0.75) 35%,
+      rgba(255, 165, 0, 0.75) 42%,
+      rgba(255, 255, 0, 0.75) 50%,
+      rgba(0, 128, 0, 0.75) 58%,
+      rgba(0, 0, 255, 0.75) 66%,
+      rgba(75, 0, 130, 0.75) 74%,
+      rgba(238, 130, 238, 0.75) 82%,
+      rgba(255, 255, 255, 0.2) 88%,
+      rgba(255, 255, 255, 0) 95%
+    );
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    transform: translate(70%, 70%) rotate(-20deg);
+    will-change: transform, opacity;
+    opacity: 0.75;
+    z-index: 10;
+  }
+  .holo-card::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 45%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0) 55%
+    );
+    pointer-events: none;
+    transform: translate(70%, 70%) rotate(-20deg);
+    opacity: 0;
+    z-index: 11;
+  }
+  .holo-card:hover::before,
+  .holo-card:active::before,
+  .holo-card:focus-visible::before,
+  .holo-card.holo-run::before {
+    animation: holo-sweep 1000ms ease-out forwards;
+  }
+  .holo-card:hover::after,
+  .holo-card:active::after,
+  .holo-card:focus-visible::after,
+  .holo-card.holo-run::after {
+    animation: holo-sweep 1000ms ease-out forwards;
+  }
+
+  /* Reusable night mode wrappers */
+  .dark .nightmode_cards {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  /* Force page titles/subtitles to white in night mode */
+  .dark .nightmode_cards h1,
+  .dark .nightmode_cards h2,
+  .dark .nightmode_cards h3,
+  .dark .nightmode_cards .page-title,
+  .dark .nightmode_cards .subtitle,
+  .dark .nightmode_cards .text-slate-800,
+  .dark .nightmode_cards .text-slate-700,
+  .dark .nightmode_cards .text-slate-600 {
+    color: #ffffff !important;
+  }
+  .dark .nightmode_cards .holo-card,
+  .dark .nightmode_cards article,
+  .dark .nightmode_cards .card {
+    background-color: rgb(51 65 85);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark .nightmode_cards article table,
+  .dark .nightmode_cards article tbody,
+  .dark .nightmode_cards article tr {
+    background-color: #000000;
+  }
+  .dark .nightmode_cards article th,
+  .dark .nightmode_cards article td {
+    color: #ffffff;
+  }
+  /* Homepage placeholders: force slate backgrounds to black in night mode */
+  .dark .nightmode_cards .bg-slate-50,
+  .dark .nightmode_cards .bg-slate-100,
+  .dark .nightmode_cards .bg-slate-200 {
+    background-color: #000000 !important;
+  }
+  .dark .nightmode_cards .border-slate-200 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  /* Exempt regions (like EditionCardMini) from nightmode text overrides */
+  .dark .nightmode_cards .nightmode-exempt h1,
+  .dark .nightmode_cards .nightmode-exempt h2,
+  .dark .nightmode_cards .nightmode-exempt h3,
+  .dark .nightmode_cards .nightmode-exempt .text-slate-800,
+  .dark .nightmode_cards .nightmode-exempt .text-slate-700,
+  .dark .nightmode_cards .nightmode-exempt .text-slate-600 {
+    color: #000000 !important;
+  }
+
+  .dark .nightmode_nocards {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  /* Force page titles/subtitles to white in night mode */
+  .dark .nightmode_nocards h1,
+  .dark .nightmode_nocards h2,
+  .dark .nightmode_nocards h3,
+  .dark .nightmode_nocards .page-title,
+  .dark .nightmode_nocards .subtitle,
+  .dark .nightmode_nocards .text-slate-800,
+  .dark .nightmode_nocards .text-slate-700,
+  .dark .nightmode_nocards .text-slate-600 {
+    color: #ffffff !important;
+  }
+  /* Exempt regions (like EditionCardMini) from nightmode text overrides */
+  .dark .nightmode_nocards .nightmode-exempt h1,
+  .dark .nightmode_nocards .nightmode-exempt h2,
+  .dark .nightmode_nocards .nightmode-exempt h3,
+  .dark .nightmode_nocards .nightmode-exempt .text-slate-800,
+  .dark .nightmode_nocards .nightmode-exempt .text-slate-700,
+  .dark .nightmode_nocards .nightmode-exempt .text-slate-600 {
+    color: #000000 !important;
+  }
+  .dark .nightmode_nocards table,
+  .dark .nightmode_nocards .table,
+  .dark .nightmode_nocards .rounded-md,
+  .dark .nightmode_nocards .rounded-lg,
+  .dark .nightmode_nocards .rounded-xl,
+  .dark .nightmode_nocards button,
+  .dark .nightmode_nocards .btn {
+    background-color: rgb(51 65 85);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark .nightmode_nocards tbody tr,
+  .dark .nightmode_nocards thead tr {
+    background-color: rgb(51 65 85);
+  }
+
+  .collection-trophy-wrapper {
+    margin-top: 2px !important;
+    gap: 0px !important;
+  }
+
+  .collection-header-section {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .collection-header-title-row {
+    gap: 8px !important;
+  }
+
+  @media (max-width: 640px) {
+    .collection-header-title-row {
+      gap: 1px !important;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .collection-header-title-row {
+      gap: 4px !important;
+    }
+  }
+
+  /* Box shadows - applies uniformly across all responsive widths */
+  .badge-mobile-shadow {
+    box-shadow: 1px 1px 3px 0 rgba(155, 155, 155, 1);
+  }
+
+  /* Box shadows - applies uniformly across all responsive widths */
+  .prior-drop-card-mobile-shadow {
+    box-shadow: 1px 1px 3px 1px rgba(155, 155, 155, 1);
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOutToRight {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(8px);
+    }
+  }
+
+  .badge-stats-panel {
+    animation: slideInFromRight 0.2s ease-out;
+  }
+
+  @media (max-width: 640px) {
+    .badge-stats-panel {
+      height: 100%;
+    }
+  }
+
+  .collection-events-wrapper {
+    margin-top: 2px !important;
+    gap: 0px !important;
+  }
+
+  .recent-events-card {
+    margin-top: 8px !important;
+  }
+
+  @media (max-width: 640px) {
+    .recent-events-card {
+      margin-top: 12px !important;
+      padding-bottom: 4px !important;
+    }
+  }
+
+  .marketplace-stats-grid {
+    margin-top: 24px !important;
+  }
+
+  @media (max-width: 640px) {
+    .marketplace-stats-grid {
+      margin-top: 12px !important;
+    }
+  }
+
+  .marketplace-stats-card {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  @media (max-width: 640px) {
+    .marketplace-stats-card {
+      margin-left: 6px !important;
+      margin-right: 6px !important;
+    }
+  }
+
+  .collection-cards-header {
+  }
+
+  @media (max-width: 640px) {
+    .collection-cards-header {
+      margin-top: 20px !important;
+    }
+  }
+
+  .user-following-stats-wrapper {
+    margin-top: 24px !important;
+  }
+
+  @media (max-width: 640px) {
+    .user-following-stats-wrapper {
+      margin-top: 12px !important;
+    }
+  }
+
+  .collection-cards-wrapper {
+    margin-top: 24px !important;
+  }
+
+  @media (max-width: 640px) {
+    .collection-cards-wrapper {
+      margin-top: 12px !important;
+    }
+  }
+
+  .set-favorite-team-button {
+    height: 50px !important;
+    width: 50px !important;
+    font-weight: 300 !important;
+    box-shadow: 1px 1px 2px 0 rgba(155, 155, 155, 1) !important;
+    font-size: 9px !important;
+    line-height: 10px !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+  }
+
+  .collection-cards-section {
+    margin-top: 24px !important;
+  }
+
+  @media (max-width: 640px) {
+    .collection-cards-section {
+      margin-top: 12px !important;
+    }
+  }
+
+  .recent-events-pills-container {
+    gap: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .recent-events-pills-container {
+      gap: 1px !important;
+    }
+  }
+
+  .followees-list-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 640px) {
+    .followees-list-container > div {
+      gap: 1px !important;
+    }
+  }
+
+  .section-header {
+    line-height: inherit;
+  }
+
+  .section-title {
+    margin-right: auto !important;
+  }
+
+  /* Tablet-specific sizing for SerialCardMiniWrapper */
+  @media (max-width: 991px) {
+    [data-manage-listing-container] {
+      padding-top: 24px !important;
+    }
+
+    [data-tablet-flex-col] {
+      display: flex !important;
+      flex-direction: column !important;
+      margin: 0 auto !important;
+    }
+
+    [data-tablet-container] {
+      width: 175px !important;
+      height: 200px !important;
+      margin: 0 auto !important;
+    }
+
+    [data-tablet-card] {
+      width: 100% !important;
+      height: 100% !important;
+      margin: 0 auto !important;
+    }
+  }
+
+  /* Mobile-specific sizing for SerialCardMiniWrapper */
+  @media (max-width: 640px) {
+    [data-tablet-container] {
+      width: 200px !important;
+      height: 240px !important;
+    }
+  }
+
+  /* Desktop-specific styling for PriorDropCard on account page (992px+) */
+  @media (min-width: 992px) {
+    article.account-prior-drop-card {
+      gap: 8px !important;
+      padding: 24px !important;
+    }
+
+    article.account-prior-drop-card h2 {
+      font-size: 20px !important;
+      font-weight: 600 !important;
+      line-height: 28px !important;
+      text-align: center !important;
+    }
+
+    .account-prior-drop-card .space-y-2 p {
+      font-size: 14px !important;
+      line-height: 23px !important;
+      margin-top: 8px !important;
+      text-align: center !important;
+    }
+  }
+
+  /* Mobile styling for RedemptionsCard */
+  @media (max-width: 640px) {
+    .redemptions-card-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

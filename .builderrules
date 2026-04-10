@@ -1,0 +1,7 @@
+"blue" = #004FFF
+"orange" = #FF6300
+"Null placeholder" = Roboto font, font size 12px. line height 20px, weight 300 on all responsive screen widths
+Use Tailwind classes for new styling (consistent, maintainable, responsive), prefer inline styles only when necessary for dynamic values or custom styling explicitly set or asked for, Never use both conflicting approaches on the same property.
+When adding box shadows and text shadows to elements, only add it to the element- never hardcode it into the CSS class.
+Do not attenpt to take screenshots to validate code, I will paste screenshots if needed.
+Do not EVER make ANY changes related to config file / EPIPE / elifecycle / esbuild / lockfile without expressly asking me to approve it first.
