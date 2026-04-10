@@ -21,6 +21,77 @@ export default function Home() {
     <section className="relative min-h-screen flex flex-col">
       {/* Pre-login homepage sections */}
       <>
+        {/* Get Started & Sell Section */}
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-4 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  Get Started
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Open a box of digital sports cards
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg flex flex-col justify-center items-start" style={{ height: "200px" }}>
+                <img
+                  src="/images/basicBox.webp"
+                  alt="Basic Box"
+                  className="object-cover"
+                  style={{ width: "300px", height: "220px", marginLeft: "auto", marginRight: "auto", objectPosition: "center" }}
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  SELL
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Sell on the market for cash
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div
+                className="flex h-full w-full min-h-0 min-w-0 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700"
+                style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.08) 0%, rgba(0, 79, 255, 0.08) 100%)", paddingLeft: "16px", paddingRight: "16px", height: "280px" }}
+              >
+                <div
+                  className="flex h-full w-full flex-col items-start justify-center p-3 pointer-events-none"
+                  style={{ flex: 1 }}
+                >
+                  <div
+                    className="font-normal text-slate-700 dark:text-slate-200 text-center"
+                    style={{
+                      fontSize: "20px",
+                      lineHeight: "20px",
+                      margin: "0 auto 8px",
+                    }}
+                  >
+                    Recent Sales
+                  </div>
+                  <p
+                    className="break-words text-center"
+                    style={{
+                      color: "#FF6300",
+                      fontSize: "12px",
+                      fontWeight: "400",
+                      lineHeight: "14.4px",
+                      overflowWrap: "break-word",
+                      wordWrap: "break-word",
+                    }}
+                  >
+                    Sign in to see marketplace activity
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="container mx-auto px-2 py-0 pb-0">
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
