@@ -28,22 +28,22 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus("idle");
 
     try {
-      // Send email via mailto link
-      const mailtoLink = `mailto:contact@cornerstonedigitalsports.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-        `From: ${formData.name} (${formData.email})\n\n${formData.message}`
-      )}`;
-      
-      // Open mailto link
-      window.location.href = mailtoLink;
-      
-      // Show success message
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      
-      setTimeout(() => {
-        onClose();
-        setSubmitStatus("idle");
-      }, 2000);
+      const response = await fetch("/functions/v1/send-contact-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => {
+          onClose();
+          setSubmitStatus("idle");
+        }, 2000);
+      } else {
+        setSubmitStatus("error");
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus("error");
@@ -67,7 +67,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
         {submitStatus === "success" && (
           <div className="mb-4 p-3 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">
-            Thank you! Your email client will open with your message.
+            Message sent successfully! Thank you for contacting us.
           </div>
         )}
 
