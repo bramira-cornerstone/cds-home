@@ -162,6 +162,42 @@ export default function Home() {
     <section className="relative min-h-screen flex flex-col">
       {/* Pre-login homepage sections */}
       <>
+        {/* Explore & Rewards Section */}
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  Explore
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Buy cards on the market
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
+                <img
+                  src="/images/relicGif.gif"
+                  alt="Relic Card"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  Rewards
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Build your collection for weekly rewards
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Get Started & Sell Section */}
         <section className="container mx-auto px-2 py-0 pb-0">
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-4 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
@@ -345,41 +381,6 @@ export default function Home() {
                 </div>
               </div>
             )}
-          </div>
-        </section>
-
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
-                  Explore
-                </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                  Buy cards on the market
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
-                <img
-                  src="/images/relicGif.gif"
-                  alt="Relic Card"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
-                  Rewards
-                </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                  Build your collection for weekly rewards
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
