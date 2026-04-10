@@ -198,6 +198,43 @@ export default function Home() {
           </div>
         </section>
 
+        {/* DEMAND & CONTROL Section */}
+        <section className="container mx-auto px-2 py-0 pb-0">
+          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                  DEMAND
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  You decide the supply
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900">
+                <img
+                  src="/images/voteGif.gif"
+                  alt="Vote Card"
+                  className="w-full object-cover"
+                  loading="lazy"
+                  style={{ marginLeft: "auto", marginRight: "auto", height: "250px" }}
+                />
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div>
+                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                  CONTROL
+                </p>
+                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                  Vote for what releases next
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Get Started & Sell Section */}
         <section className="container mx-auto px-2 py-0 pb-0">
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-4 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
@@ -381,42 +418,6 @@ export default function Home() {
                 </div>
               </div>
             )}
-          </div>
-        </section>
-
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
-                  DEMAND
-                </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                  You decide the supply
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900">
-                <img
-                  src="/images/voteGif.gif"
-                  alt="Vote Card"
-                  className="w-full object-cover"
-                  loading="lazy"
-                  style={{ marginLeft: "auto", marginRight: "auto", height: "250px" }}
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
-                  CONTROL
-                </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
-                  Vote for what releases next
-                </p>
-              </div>
-            </div>
           </div>
         </section>
 
