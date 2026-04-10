@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { fetchHomepageMarketplaceCards } from "@/lib/homepageMarketplaceCards";
+import SerialCardMini from "@/components/SerialCardMini";
 
 export default function Home() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
@@ -14,11 +15,20 @@ export default function Home() {
     id: number;
     serial: number | null;
     name: string | null;
+    thumb?: string | null;
     price: string | null;
     username?: string | null;
     auctionCreatorUsername?: string | null;
     increaseFromAsking?: string | null;
     auctionEndTs?: number;
+    minted?: number | null;
+    gameDate?: string | null;
+    createDate?: string | null;
+    setName?: string | null;
+    badge?: string | null;
+    badge2?: string | null;
+    badge3?: string | null;
+    team?: string | null;
   };
 
   // Combine marketplace items
@@ -38,8 +48,17 @@ export default function Home() {
           id: relic.editionId || relic.id,
           serial: relic.serial,
           name: relic.name,
+          thumb: relic.thumb,
           price: relic.price,
           username: relic.listing_creator_username,
+          minted: relic.minted,
+          gameDate: relic.gameDate,
+          createDate: relic.createDate,
+          setName: relic.setName,
+          badge: relic.badge,
+          badge2: relic.badge2,
+          badge3: relic.badge3,
+          team: relic.team,
         });
       }
       if (i < recentSales.length) {
@@ -49,8 +68,17 @@ export default function Home() {
           id: sale.editionId || sale.id,
           serial: sale.serial,
           name: sale.name,
+          thumb: sale.thumb,
           price: sale.price,
           username: sale.saleUsername,
+          minted: sale.minted,
+          gameDate: sale.gameDate,
+          createDate: sale.createDate,
+          setName: sale.setName,
+          badge: sale.badge,
+          badge2: sale.badge2,
+          badge3: sale.badge3,
+          team: sale.team,
         });
       }
       if (i < activeAuctionCards.length) {
@@ -60,10 +88,19 @@ export default function Home() {
           id: auction.editionId,
           serial: auction.serial,
           name: auction.name,
+          thumb: auction.thumb,
           price: auction.bidPrice,
           increaseFromAsking: auction.increaseFromAsking,
           auctionEndTs: auction.auctionEndTs,
           auctionCreatorUsername: auction.auctionCreatorUsername,
+          minted: auction.minted,
+          gameDate: auction.gameDate,
+          createDate: auction.createDate,
+          setName: auction.setName,
+          badge: auction.badge,
+          badge2: auction.badge2,
+          badge3: auction.badge3,
+          team: auction.team,
         });
       }
     }
@@ -277,6 +314,33 @@ export default function Home() {
                         {marketplaceItems[marketplaceIndex].auctionCreatorUsername}
                       </p>
                     )}
+                  </div>
+                  <div
+                    className="flex items-center justify-center p-0 pointer-events-none"
+                    style={{ flex: 1 }}
+                  >
+                    <div
+                      className="aspect-[3/4] relative"
+                      style={{ marginRight: "auto", width: "150px", height: "180px" }}
+                    >
+                      <div className="block h-full w-full">
+                        <SerialCardMini
+                          id={marketplaceItems[marketplaceIndex].id}
+                          name={marketplaceItems[marketplaceIndex].name}
+                          thumb={marketplaceItems[marketplaceIndex].thumb}
+                          serial={marketplaceItems[marketplaceIndex].serial ?? 0}
+                          minted={marketplaceItems[marketplaceIndex].minted}
+                          gameDate={marketplaceItems[marketplaceIndex].gameDate}
+                          createDate={marketplaceItems[marketplaceIndex].createDate}
+                          setName={marketplaceItems[marketplaceIndex].setName}
+                          badge={marketplaceItems[marketplaceIndex].badge}
+                          badge2={marketplaceItems[marketplaceIndex].badge2}
+                          badge3={marketplaceItems[marketplaceIndex].badge3}
+                          team={marketplaceItems[marketplaceIndex].team}
+                          disableBadgeTooltips={true}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
