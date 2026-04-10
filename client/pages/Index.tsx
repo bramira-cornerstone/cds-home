@@ -503,6 +503,40 @@ export default function Home() {
         </section>
       </>
 
+      {/* Whitepaper Download Section */}
+      <section className="container mx-auto px-2 py-0 pb-0">
+        <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
+          <div className="flex items-center justify-center">
+            <div>
+              <p className="text-center lg:text-left text-[32px] font-bold leading-tight text-black dark:text-white">
+                Download the whitepaper to understand what makes us different
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center lg:justify-end gap-4">
+            <a
+              href="#"
+              className="flex items-center justify-center w-16 h-16 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
+              title="Download from Google Drive"
+            >
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" style={{ color: "#1F8FD4" }}>
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4c-1.48 0-2.85.43-4.01 1.17l1.46 1.46C10.21 5.23 11.08 5 12 5c3.04 0 5.5 2.46 5.5 5.5v.5H19c2.05 0 3.71 1.66 3.71 3.71 0 1.71-1.04 2.95-2.05 3.12.02-.23.02-.47.02-.71.5-.5.99-1.01 1.41-1.61.05-.09.1-.18.14-.27.05-.1.09-.21.13-.31.04-.1.08-.2.11-.31.07-.22.12-.45.16-.68.04-.23.06-.46.06-.7z"/>
+                <path d="M12 4C6.48 4 2 8.48 2 14s4.48 10 10 10 10-4.48 10-10S17.52 4 12 4m-1.5 15l-3-3h2V10h3v6h2l-3 3z"/>
+              </svg>
+            </a>
+            <a
+              href="#"
+              className="flex items-center justify-center w-16 h-16 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
+              title="Download from Microsoft Word"
+            >
+              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" style={{ color: "#0078D4" }}>
+                <path d="M3 3h9v9H3V3m0 11h9v9H3v-9m11-11h9v9h-9V3m0 11h9v9h-9v-9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Scroll Indicator */}
       {showScrollIndicator && (
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
