@@ -5,3 +5,7 @@ export async function canClaim(): Promise<boolean> {
 export async function claimDrops(): Promise<void> {
   return;
 }
+
+export async function addToQueue(): Promise<void> {
+  return;
+}
