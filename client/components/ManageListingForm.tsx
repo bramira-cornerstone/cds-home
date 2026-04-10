@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { useActiveListings } from "@/hooks/useActiveListings";
 import { useActiveAuctions } from "@/hooks/useActiveAuctions";
 import { useMarketplace, ALLOWED_CONTRACT_ADDRESSES } from "@/hooks/useMarketplace";
-import { getContract, prepareContractCall, sendAndConfirmTransaction } from "thirdweb";
-import { setApprovalForAll } from "thirdweb/extensions/erc721";
 import { fetchMintedByEditionId, type MintedRow } from "@/lib/supabaseMinted";
 import { fetchRelicSerialByEditionAndSerial } from "@/lib/supabaseRelicSerialsJoined";
 import { ListingCard } from "@/components/market/ListingCard";

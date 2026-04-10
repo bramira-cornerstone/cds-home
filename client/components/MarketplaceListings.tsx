@@ -1,4 +1,4 @@
-import { useActiveAccount } from "thirdweb/react";
+
 import { useMarketplaceListings } from "@/hooks/useMarketplaceListings";
 
 export default function MarketplaceListings() {

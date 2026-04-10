@@ -1,6 +1,6 @@
 import { PropsWithChildren, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import SiteNav from "@/components/SiteNav";

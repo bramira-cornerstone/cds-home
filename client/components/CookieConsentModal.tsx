@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { PrivacyModal } from "@/components/COPPAGDPRModal";
 import { useToast } from "@/components/ui/use-toast";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";

@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { useNavigate } from "react-router-dom";
 import {
   fetchMarketplaceEvents,

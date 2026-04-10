@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import {
   fetchWalletDailyValue,
   getWalletValueHistory,

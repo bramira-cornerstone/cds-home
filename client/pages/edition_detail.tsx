@@ -1,8 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useActiveAccount, useSendTransaction } from "thirdweb/react";
-import { getContract, readContract, prepareContractCall } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { getAlchemyThirdwebClient } from "@/lib/alchemyThirdwebClient";
 import {
   FontLoader,

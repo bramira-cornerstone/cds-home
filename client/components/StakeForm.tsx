@@ -1,9 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { useActiveAccount } from "thirdweb/react";
-import { useSendTransaction } from "thirdweb/react";
-import { prepareContractCall } from "thirdweb";
-import { getContract } from "thirdweb";
-import { polygon } from "thirdweb/chains";
+
+
 import { getAlchemyThirdwebClient } from "@/lib/alchemyThirdwebClient";
 import {
   fetchRelicSerialByEditionAndSerial,

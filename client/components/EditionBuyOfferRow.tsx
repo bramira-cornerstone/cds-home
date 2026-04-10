@@ -4,7 +4,7 @@ import { FilterStyleButton } from "@/components/ui/filter-style-button";
 import { useWalletProfile } from "@/hooks/useWalletProfile";
 import { useActiveListings } from "@/hooks/useActiveListings";
 import { useActiveAuctions } from "@/hooks/useActiveAuctions";
-import { useActiveAccount } from "thirdweb/react";
+
 
 export default function EditionBuyOfferRow({
   className = "",

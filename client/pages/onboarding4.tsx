@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { toast } from "@/hooks/use-toast";
 import { useCookieConsent } from "@/contexts/CookieConsentContext";
 import { getTeamCrest, getAllTeams } from "@/lib/teams";

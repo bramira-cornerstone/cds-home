@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { useSendTransaction } from "@/hooks/useThirdwebStubs";
 import {
   getTokenIdString,
   resolveMediaUrl,
@@ -9,13 +10,8 @@ import {
   type PriorDropNFT,
   type PriorDropAttributeMap,
 } from "@/lib/priorDrops";
-import { useSendTransaction } from "thirdweb/react";
+
 import { useSharedCountdownBreakdown } from "@/hooks/useSharedCountdown";
-import {
-  canClaim,
-  claimTo,
-  type BaseContract,
-} from "thirdweb/extensions/erc1155";
 
 type AttributeValue = string | number | bigint | boolean | null | undefined;
 

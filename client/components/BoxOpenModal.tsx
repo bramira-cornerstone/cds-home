@@ -8,9 +8,7 @@ import {
   parseEventLogs,
   prepareContractCall,
 } from "thirdweb";
-import { setApprovalForAll, isApprovedForAll } from "thirdweb/extensions/erc1155";
-import { useActiveAccount } from "thirdweb/react";
-import { polygon } from "thirdweb/chains";
+
 import { encodeAbiParameters, keccak256, toHex } from "viem";
 import { fetchRelicSerialByTokenId } from "@/lib/supabaseRelicSerialsJoined";
 

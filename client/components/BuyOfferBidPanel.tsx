@@ -1,7 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { TbEyeSearch } from "react-icons/tb";
-import { useActiveAccount, useSendTransaction } from "thirdweb/react";
 import { useMarketplace } from "@/hooks/useMarketplace";
 import { useActiveListings } from "@/hooks/useActiveListings";
 import { useActiveAuctions } from "@/hooks/useActiveAuctions";
@@ -14,7 +13,6 @@ import {
   getContract,
   readContract,
 } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { useToast } from "@/hooks/use-toast";
 import { FilterStyleButton } from "@/components/ui/filter-style-button";
 import {

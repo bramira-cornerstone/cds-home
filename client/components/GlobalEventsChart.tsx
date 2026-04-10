@@ -38,7 +38,7 @@ import {
   type RMVPerOwnerRecord,
 } from "@/lib/rmvPerOwner";
 import { getRankLevelBadgeImage } from "@/lib/teamRmvChartData";
-import { useActiveAccount } from "thirdweb/react";
+
 
 interface EventInitiator {
   username: string;

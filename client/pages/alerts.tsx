@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { toast } from "sonner";
 import { TbX } from "react-icons/tb";
 import {

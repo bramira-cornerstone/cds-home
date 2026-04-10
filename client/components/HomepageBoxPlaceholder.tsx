@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { useActiveAccount } from "thirdweb/react";
+import { useActiveAccount } from "@/hooks/useThirdwebStubs";
+
 import {
   fetchPriorDropNFTs,
   PRIOR_DROPS_QUERY_PARAMS,

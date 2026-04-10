@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PrivacyModal } from "@/components/COPPAGDPRModal";
 import { useToast } from "@/components/ui/use-toast";
-import { useActiveAccount } from "thirdweb/react";
+
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();

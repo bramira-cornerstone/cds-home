@@ -1,9 +1,8 @@
 import { useState, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { useMarketplace } from "@/hooks/useMarketplace";
 import { useActiveListings } from "@/hooks/useActiveListings";
-import { prepareContractCall, sendAndConfirmTransaction } from "thirdweb";
 import { useToast } from "@/hooks/use-toast";
 
 const NATIVE_TOKEN_ADDRESS = "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE";

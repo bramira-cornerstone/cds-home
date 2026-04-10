@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { toast } from "sonner";
 import { ThumbsUp, ThumbsDown } from "lucide-react";
 import {

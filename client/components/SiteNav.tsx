@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { hasOpenAlerts, markAllAlertsAsSeen } from "@/lib/alerts";
 import SiteSearch from "@/components/SiteSearch";
 import RankBar from "@/components/RankBar";

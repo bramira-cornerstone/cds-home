@@ -6,7 +6,7 @@ import React, {
   useCallback,
 } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { fetchMintedByEditionId, MintedRow } from "@/lib/supabaseMinted";
 import {
   fetchRelicSerialsJoinedByEditionId,

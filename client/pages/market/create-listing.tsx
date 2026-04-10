@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import {
   useMarketplace,
   ALLOWED_CONTRACT_ADDRESSES,
@@ -10,7 +10,6 @@ import {
   prepareContractCall,
   sendAndConfirmTransaction,
 } from "thirdweb";
-import { setApprovalForAll } from "thirdweb/extensions/erc721";
 import { fetchRelicSerialByEditionAndSerial } from "@/lib/supabaseRelicSerialsJoined";
 import { fetchMintedByEditionId, type MintedRow } from "@/lib/supabaseMinted";
 import { useActiveListings } from "@/hooks/useActiveListings";

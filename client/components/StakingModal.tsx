@@ -1,6 +1,3 @@
-import { useActiveAccount, useSendTransaction } from "thirdweb/react";
-import { prepareContractCall, getContract } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { getAlchemyThirdwebClient } from "@/lib/alchemyThirdwebClient";
 import CollectionCards from "@/components/CollectionCards";
 import SerialCardMini from "@/components/SerialCardMini";

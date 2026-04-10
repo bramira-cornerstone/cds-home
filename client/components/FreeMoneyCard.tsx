@@ -1,6 +1,4 @@
 import { useCallback, useEffect, useState } from "react";
-import { useActiveAccount, useReadContract, useSendTransaction } from "thirdweb/react";
-import { prepareContractCall } from "thirdweb";
 import { useToast } from "@/components/ui/use-toast";
 import { corContract } from "@/lib/priorDrops";
 

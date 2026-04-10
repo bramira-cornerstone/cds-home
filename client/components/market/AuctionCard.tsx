@@ -1,14 +1,13 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
-import { useSendTransaction } from "thirdweb/react";
+
+
 import {
   getContract,
   prepareContractCall,
   sendAndConfirmTransaction,
   readContract,
 } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { useEditionMetadata } from "@/hooks/useEditionMetadata";
 import { useSharedCountdownBreakdown } from "@/hooks/useSharedCountdown";
 import { fetchMintedByEditionId, type MintedRow } from "@/lib/supabaseMinted";

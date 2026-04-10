@@ -5,7 +5,7 @@ import TeamRMVCarousel from "@/components/TeamRMVCarousel";
 import DropWeekCalendar from "@/components/DropWeekCalendar";
 import ClubhouseChat from "@/components/ClubhouseChat";
 import { getTeamCrest, getAllTeams } from "@/lib/teams";
-import { useActiveAccount } from "thirdweb/react";
+
 import { toast } from "sonner";
 import { getFavoriteTeam, updateFavoriteTeam } from "@/lib/favoriteTeamService";
 

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState, useMemo } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { useBetaAllowlist } from "@/hooks/useWalletProfile";
 import { useSharedCountdownBreakdown } from "@/hooks/useSharedCountdown";
 import { getAllTeams } from "@/lib/teams";

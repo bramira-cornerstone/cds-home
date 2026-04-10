@@ -26,8 +26,6 @@ import { isAuctionExpired } from "@/lib/activeAuctionsFromEvents";
 import { checkAuctionClosed } from "@/lib/marketplaceEvents";
 import { fetchAllRMVData, type RMVData } from "@/lib/walletProfitLoss";
 import CountdownDisplay from "@/components/CountdownDisplay";
-import { getContract, readContract } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { getAlchemyThirdwebClient } from "@/lib/alchemyThirdwebClient";
 
 import type { TrophySlot } from "@/hooks/useTrophyCase";

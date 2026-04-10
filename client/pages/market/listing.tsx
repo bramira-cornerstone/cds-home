@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { useMarketplace } from "@/hooks/useMarketplace";
 import {
   getListing,
   getAuction,
   type Listing,
 } from "@/hooks/useMarketplaceListings";
-import { prepareContractCall, sendAndConfirmTransaction } from "thirdweb";
 
 const CUSTOM_ERC20_ADDRESS = "0x1505F1122C8D08008DBac7B9D9dadDE4a1c64e71";
 

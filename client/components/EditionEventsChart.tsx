@@ -37,7 +37,7 @@ import {
   fetchUserReactionForEvent,
   fetchEmojiReactionsForEvent,
 } from "@/lib/emojiReactions";
-import { useActiveAccount } from "thirdweb/react";
+
 
 interface EditionEventsChartProps {
   editionId: number | null;

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { INVITE_CODE_VALIDATION_ENABLED } from "@/lib/config";
 import { updateAnalyticsStatus } from "@/utils/analytics";
 

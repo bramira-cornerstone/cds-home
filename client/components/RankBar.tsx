@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { toast } from "sonner";
 import {
   fetchRMVPerOwner,

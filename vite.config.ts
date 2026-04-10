@@ -28,7 +28,6 @@ const envVars = loadEnv();
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   optimizeDeps: {
-    exclude: ["@thirdweb-dev/wallets"],
     include: ["react/jsx-runtime"],
     esbuildOptions: {
       target: "esnext",
@@ -62,12 +61,6 @@ export default defineConfig(({ mode }) => ({
     ),
     "import.meta.env.SUPABASE_ANON_KEY": JSON.stringify(
       envVars.SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || "",
-    ),
-    "import.meta.env.THIRDWEB_CLIENT_ID": JSON.stringify(
-      envVars.THIRDWEB_CLIENT_ID || process.env.THIRDWEB_CLIENT_ID || "",
-    ),
-    "import.meta.env.RPC_KEY": JSON.stringify(
-      envVars.RPC_KEY || process.env.RPC_KEY || "",
     ),
     "import.meta.env.VITE_MARKETPLACE_ADDRESS": JSON.stringify(
       envVars.VITE_MARKETPLACE_ADDRESS || process.env.VITE_MARKETPLACE_ADDRESS || "",

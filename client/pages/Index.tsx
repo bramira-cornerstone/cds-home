@@ -1,6 +1,6 @@
 import MiniCarousel from "@/components/MiniCarousel";
 import { Link, useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import { getPlaceholder } from "@/lib/placeholders";
 import EditionCardMini from "@/components/EditionCardMini";
 import SerialCardMini from "@/components/SerialCardMini";

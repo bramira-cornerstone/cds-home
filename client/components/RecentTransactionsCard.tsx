@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { getFavoriteTeam } from "@/lib/favoriteTeamService";
 import {
   fetchMarketplaceEvents,

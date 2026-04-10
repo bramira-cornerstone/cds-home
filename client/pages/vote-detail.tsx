@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { FilterStyleButton } from "@/components/ui/filter-style-button";
-import { useActiveAccount } from "thirdweb/react";
+
 import {
   AlertDialog,
   AlertDialogContent,

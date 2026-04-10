@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import { useActiveOffers } from "@/hooks/useActiveOffers";
 import { useMarketplace } from "@/hooks/useMarketplace";
-import { prepareContractCall, sendAndConfirmTransaction } from "thirdweb";
 import { formatOfferPrice } from "@/lib/activeOffers";
 import type { ActiveOffer } from "@/lib/activeOffers";
 

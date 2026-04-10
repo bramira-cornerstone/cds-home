@@ -1,5 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
-import { useActiveAccount } from "thirdweb/react";
+
 import MiniCarousel from "@/components/MiniCarousel";
 import { CardWithOffersSummarySerial } from "@/components/CardWithOffersSummarySerial";
 import { CardWithListingDetailsSerial } from "@/components/CardWithListingDetailsSerial";

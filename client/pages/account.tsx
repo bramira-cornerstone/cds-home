@@ -1,6 +1,5 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { useActiveAccount, useReadContract } from "thirdweb/react";
 import { Copy, Check, Square } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { INVITE_CODE_VALIDATION_ENABLED } from "@/lib/config";

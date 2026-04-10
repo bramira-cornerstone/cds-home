@@ -1,13 +1,12 @@
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import {
   prepareContractCall,
   sendAndConfirmTransaction,
   getContract,
   readContract,
 } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { useEditionMetadata } from "@/hooks/useEditionMetadata";
 import { fetchMintedByEditionId, type MintedRow } from "@/lib/supabaseMinted";
 import SerialCardMiniWrapper from "@/components/SerialCardMiniWrapper";

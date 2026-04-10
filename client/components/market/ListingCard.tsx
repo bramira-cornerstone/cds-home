@@ -1,12 +1,11 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import {
   getContract,
   prepareContractCall,
   sendAndConfirmTransaction,
 } from "thirdweb";
-import { polygon } from "thirdweb/chains";
 import { useTokenMetadata } from "@/hooks/useTokenMetadata";
 import CountdownDisplay from "@/components/CountdownDisplay";
 import type { Listing } from "@/hooks/useMarketplaceListings";

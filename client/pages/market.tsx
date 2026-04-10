@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { Link, useSearchParams, useNavigate } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
+
 import EditionHoverPreview from "@/components/EditionHoverPreview";
 import { FitText } from "@/components/ui/fit-text";
 import { useBetaAllowlist } from "@/hooks/useWalletProfile";

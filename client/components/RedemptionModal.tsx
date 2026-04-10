@@ -1,6 +1,4 @@
-import { useActiveAccount } from "thirdweb/react";
-import { getContract, prepareContractCall, sendTransaction } from "thirdweb";
-import { polygon } from "thirdweb/chains";
+
 import CollectionCards from "@/components/CollectionCards";
 import SerialCardMini from "@/components/SerialCardMini";
 import { X, ArrowLeft } from "lucide-react";

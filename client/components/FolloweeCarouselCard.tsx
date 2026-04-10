@@ -11,7 +11,7 @@ import {
   fetchTeamRMVChartData,
   type TeamRMVChartRecord,
 } from "@/lib/teamRmvChartData";
-import { useActiveAccount } from "thirdweb/react";
+
 
 interface FolloweeCarouselCardProps {
   followerAddress?: string;
