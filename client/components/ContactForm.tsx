@@ -28,22 +28,22 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch("/api/send-contact-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        setTimeout(() => {
-          onClose();
-          setSubmitStatus("idle");
-        }, 2000);
-      } else {
-        setSubmitStatus("error");
-      }
+      // Send email via mailto link
+      const mailtoLink = `mailto:contact@cornerstonedigitalsports.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+        `From: ${formData.name} (${formData.email})\n\n${formData.message}`
+      )}`;
+      
+      // Open mailto link
+      window.location.href = mailtoLink;
+      
+      // Show success message
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      
+      setTimeout(() => {
+        onClose();
+        setSubmitStatus("idle");
+      }, 2000);
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus("error");
@@ -67,13 +67,13 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
         {submitStatus === "success" && (
           <div className="mb-4 p-3 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded">
-            Message sent successfully!
+            Thank you! Your email client will open with your message.
           </div>
         )}
 
         {submitStatus === "error" && (
           <div className="mb-4 p-3 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded">
-            Error sending message. Please try again.
+            Error submitting form. Please try again.
           </div>
         )}
 
@@ -134,6 +134,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             type="submit"
             disabled={isSubmitting}
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium py-2 px-4 rounded-md transition"
+            style={{ backgroundColor: "#004FFF" }}
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>
