@@ -530,9 +530,11 @@ export default function Home() {
               className="flex items-center justify-center w-16 h-16 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
               title="Download from Microsoft Word"
             >
-              <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" style={{ color: "#0078D4" }}>
-                <path d="M3 3h9v9H3V3m0 11h9v9H3v-9m11-11h9v9h-9V3m0 11h9v9h-9v-9z"/>
-              </svg>
+              <img
+                src="/images/word-icon.webp"
+                alt="Microsoft Word"
+                className="w-8 h-8 object-contain"
+              />
             </a>
           </div>
         </div>
