@@ -1,7 +1,111 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+import { fetchHomepageMarketplaceCards } from "@/lib/homepageMarketplaceCards";
 
 export default function Home() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const [newRelics, setNewRelics] = useState<any[]>([]);
+  const [recentSales, setRecentSales] = useState<any[]>([]);
+  const [activeAuctionCards, setActiveAuctionCards] = useState<any[]>([]);
+  const [marketplaceIndex, setMarketplaceIndex] = useState(0);
+
+  // Marketplace item type
+  type MarketplaceItem = {
+    type: "listing" | "sale" | "auction";
+    id: number;
+    serial: number | null;
+    name: string | null;
+    price: string | null;
+    username?: string | null;
+    auctionCreatorUsername?: string | null;
+    increaseFromAsking?: string | null;
+    auctionEndTs?: number;
+  };
+
+  // Combine marketplace items
+  const marketplaceItems = useMemo(() => {
+    const items: MarketplaceItem[] = [];
+    const maxLength = Math.max(
+      newRelics.length,
+      recentSales.length,
+      activeAuctionCards.length,
+    );
+
+    for (let i = 0; i < maxLength; i++) {
+      if (i < newRelics.length) {
+        const relic = newRelics[i];
+        items.push({
+          type: "listing",
+          id: relic.editionId || relic.id,
+          serial: relic.serial,
+          name: relic.name,
+          price: relic.price,
+          username: relic.listing_creator_username,
+        });
+      }
+      if (i < recentSales.length) {
+        const sale = recentSales[i];
+        items.push({
+          type: "sale",
+          id: sale.editionId || sale.id,
+          serial: sale.serial,
+          name: sale.name,
+          price: sale.price,
+          username: sale.saleUsername,
+        });
+      }
+      if (i < activeAuctionCards.length) {
+        const auction = activeAuctionCards[i];
+        items.push({
+          type: "auction",
+          id: auction.editionId,
+          serial: auction.serial,
+          name: auction.name,
+          price: auction.bidPrice,
+          increaseFromAsking: auction.increaseFromAsking,
+          auctionEndTs: auction.auctionEndTs,
+          auctionCreatorUsername: auction.auctionCreatorUsername,
+        });
+      }
+    }
+    return items;
+  }, [newRelics, recentSales, activeAuctionCards]);
+
+  // Fetch marketplace data
+  useEffect(() => {
+    let mounted = true;
+    const ctrl = new AbortController();
+
+    const fetchData = async () => {
+      try {
+        const data = await fetchHomepageMarketplaceCards(ctrl.signal);
+        if (!mounted) return;
+
+        setNewRelics(data?.newRelics || []);
+        setRecentSales(data?.recentSales || []);
+        setActiveAuctionCards(data?.previousAuctions || []);
+      } catch (err: any) {
+        if (err?.name === "AbortError") return;
+        console.debug("[Homepage] Error fetching marketplace cards:", err);
+      }
+    };
+
+    fetchData();
+    return () => {
+      mounted = false;
+      ctrl.abort();
+    };
+  }, []);
+
+  // Rotate carousel every 5 seconds
+  useEffect(() => {
+    if (marketplaceItems.length === 0) return;
+
+    const interval = setInterval(() => {
+      setMarketplaceIndex((prev) => (prev + 1) % marketplaceItems.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [marketplaceItems.length]);
 
   // Detect scroll position to hide scroll indicator when at bottom
   useEffect(() => {
@@ -54,41 +158,129 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center">
-              <div
-                className="flex h-full w-full min-h-0 min-w-0 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700"
-                style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.08) 0%, rgba(0, 79, 255, 0.08) 100%)", paddingLeft: "16px", paddingRight: "16px", height: "280px" }}
-              >
+            {marketplaceItems.length > 0 && (
+              <div className="flex items-center justify-center">
                 <div
-                  className="flex h-full w-full flex-col items-start justify-center p-3 pointer-events-none"
-                  style={{ flex: 1 }}
+                  className="flex h-full w-full min-h-0 min-w-0 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700"
+                  style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.08) 0%, rgba(0, 79, 255, 0.08) 100%)", paddingLeft: "16px", paddingRight: "16px", height: "280px" }}
                 >
                   <div
-                    className="font-normal text-slate-700 dark:text-slate-200 text-center"
-                    style={{
-                      fontSize: "20px",
-                      lineHeight: "20px",
-                      margin: "0 auto 8px",
-                    }}
+                    className="flex h-full w-full flex-col items-start justify-center p-3 pointer-events-none"
+                    style={{ flex: 1 }}
                   >
-                    Recent Sales
+                    <div
+                      className="font-normal text-slate-700 dark:text-slate-200 text-center"
+                      style={{
+                        fontSize: "20px",
+                        lineHeight: "20px",
+                        margin: "0 auto 8px",
+                      }}
+                    >
+                      {marketplaceItems[marketplaceIndex].type === "listing"
+                        ? "New Listing"
+                        : marketplaceItems[marketplaceIndex].type === "sale"
+                          ? "Recent Sale"
+                          : "Auction"}
+                    </div>
+                    {marketplaceItems[marketplaceIndex].type === "auction" ? (
+                      <>
+                        <p
+                          className="font-bold break-words text-center"
+                          style={{
+                            color: "#FF6300",
+                            fontSize: "18px",
+                            lineHeight: "24px",
+                            margin: "0 auto 4px",
+                            overflowWrap: "break-word",
+                            wordWrap: "break-word",
+                          }}
+                        >
+                          {(() => {
+                            const currentItem = marketplaceItems[marketplaceIndex];
+                            const auctionEndTs = currentItem.auctionEndTs || 0;
+                            const now = Math.floor(Date.now() / 1000);
+                            const isActive = auctionEndTs > 0 && auctionEndTs > now;
+                            if (isActive) {
+                              return "Bidding";
+                            } else {
+                              return currentItem.increaseFromAsking || "Closed";
+                            }
+                          })()}
+                        </p>
+                        {(() => {
+                          const currentItem = marketplaceItems[marketplaceIndex];
+                          const auctionEndTs = currentItem.auctionEndTs || 0;
+                          const now = Math.floor(Date.now() / 1000);
+                          const isActive = auctionEndTs > 0 && auctionEndTs > now;
+                          if (!isActive) {
+                            return (
+                              <p
+                                className="break-words text-center"
+                                style={{
+                                  color: "#FF6300",
+                                  fontSize: "12px",
+                                  fontWeight: "400",
+                                  lineHeight: "14.4px",
+                                  overflowWrap: "break-word",
+                                  margin: "0 auto",
+                                }}
+                              >
+                                from asking
+                              </p>
+                            );
+                          }
+                        })()}
+                      </>
+                    ) : (
+                      <p
+                        className="font-bold break-words text-center"
+                        style={{
+                          color: "#FF6300",
+                          fontSize: "40px",
+                          fontWeight: "700",
+                          lineHeight: "40px",
+                          margin: "0 auto 4px",
+                          overflowWrap: "break-word",
+                          wordWrap: "break-word",
+                        }}
+                      >
+                        {marketplaceItems[marketplaceIndex].price || ""}
+                      </p>
+                    )}
+                    {marketplaceItems[marketplaceIndex].username && (
+                      <p
+                        className="break-words text-center"
+                        style={{
+                          color: "#000000",
+                          fontSize: "20px",
+                          fontWeight: "300",
+                          lineHeight: "20px",
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      >
+                        {marketplaceItems[marketplaceIndex].username}
+                      </p>
+                    )}
+                    {marketplaceItems[marketplaceIndex].auctionCreatorUsername && (
+                      <p
+                        className="break-words text-center"
+                        style={{
+                          color: "#000000",
+                          fontSize: "20px",
+                          fontWeight: "300",
+                          lineHeight: "20px",
+                          marginLeft: "auto",
+                          marginRight: "auto",
+                        }}
+                      >
+                        {marketplaceItems[marketplaceIndex].auctionCreatorUsername}
+                      </p>
+                    )}
                   </div>
-                  <p
-                    className="break-words text-center"
-                    style={{
-                      color: "#FF6300",
-                      fontSize: "12px",
-                      fontWeight: "400",
-                      lineHeight: "14.4px",
-                      overflowWrap: "break-word",
-                      wordWrap: "break-word",
-                    }}
-                  >
-                    Sign in to see marketplace activity
-                  </p>
                 </div>
               </div>
-            </div>
+            )}
           </div>
         </section>
 
