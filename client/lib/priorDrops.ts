@@ -7,6 +7,7 @@ export type PriorDropAttributeMap = Record<string, unknown>;
 
 export const PRIOR_DROPS_QUERY_PARAMS = {};
 export const priorDropsContract = null;
+export const priorDropsClient = null;
 
 export async function fetchPriorDropNFTs(): Promise<PriorDropNFT[]> {
   return [];
