@@ -1,15 +1,12 @@
 import "./global.css";
 
-import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { ThirdwebProvider, useActiveAccount } from "thirdweb/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ChatPollingProvider } from "@/contexts/ChatPollingContext";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
-import { initializeAnalytics } from "@/utils/analytics";
 import Home from "./pages/Index";
 import PriorDropsPage, {
   BoxOwnedDetailPage,
@@ -85,24 +82,6 @@ if (typeof window !== "undefined") {
   });
 }
 
-function AnalyticsInitializer() {
-  const account = useActiveAccount();
-
-  useEffect(() => {
-    const gaId = (import.meta as any).env.GOOGLE_ANALYTICS_TOKEN as string;
-    const mixpanelToken = (import.meta as any).env
-      .MIXPANEL_TOKEN as string;
-
-    // Pass wallet address to analytics initialization
-    // Only collects if wallet exists and user has explicitly opted in
-    initializeAnalytics(account?.address, {
-      gaId,
-      mixpanelToken,
-    });
-  }, [account?.address]);
-
-  return null;
-}
 
 function AppContent() {
   return (
@@ -112,8 +91,6 @@ function AppContent() {
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            <ThirdwebProvider>
-            <AnalyticsInitializer />
             <Routes>
               <Route
                 path="/snapshot/relic/:token_id"
@@ -247,7 +224,6 @@ function AppContent() {
                 }
               />
             </Routes>
-            </ThirdwebProvider>
           </BrowserRouter>
         </TooltipProvider>
       </ChatPollingProvider>

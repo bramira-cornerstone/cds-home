@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useActiveAccount } from "thirdweb/react";
-import ThirdwebWallet from "@/components/ThirdwebWallet";
 import { ComingSoonModal } from "@/components/ComingSoonModal";
 import { useBetaAllowlist } from "@/hooks/useWalletProfile";
 import {
@@ -75,8 +73,6 @@ export default function SiteHeader() {
   const btnRef = useRef<HTMLButtonElement | null>(null);
   const navigate = useNavigate();
   const betaAllowlist = useBetaAllowlist();
-  const account = useActiveAccount();
-  const isSignedIn = !!account;
 
   useEffect(() => {
     const saved = localStorage.getItem("nightMode");
@@ -85,12 +81,12 @@ export default function SiteHeader() {
     if (enabled) document.documentElement.classList.add("dark");
   }, []);
 
-  // Close menu if user disconnects wallet or beta allowlist access is revoked
+  // Close menu if beta allowlist access is revoked
   useEffect(() => {
-    if (!isSignedIn || betaAllowlist !== true) {
+    if (betaAllowlist !== true) {
       setMenuOpen(false);
     }
-  }, [isSignedIn, betaAllowlist]);
+  }, [betaAllowlist]);
 
   useEffect(() => {
     const onDocPointer = (e: Event) => {
@@ -132,9 +128,6 @@ export default function SiteHeader() {
         style={{ zIndex: 60 }}
       >
         <div className="container mx-auto h-full px-4 flex items-center justify-between relative">
-          <div className="flex items-center gap-3">
-            <ThirdwebWallet />
-          </div>
 
           <div className="ml-auto flex items-center gap-3">
             <Link
@@ -152,13 +145,8 @@ export default function SiteHeader() {
               type="button"
               aria-label="Open menu"
               aria-expanded={menuOpen}
-              disabled={!isSignedIn}
-              onClick={() => isSignedIn && setMenuOpen((v) => !v)}
-              className={`inline-flex h-9 w-9 items-center justify-center rounded-md lg:mr-2 md:mr-1.5 mr-1 transition-all ${
-                isSignedIn
-                  ? "bg-white/60 text-slate-700 hover:bg-white dark:bg-black/60 dark:text-white dark:hover:bg-black cursor-pointer"
-                  : "bg-slate-200 text-slate-400 dark:bg-slate-700 dark:text-slate-500 cursor-not-allowed opacity-50"
-              }`}
+              onClick={() => setMenuOpen((v) => !v)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md lg:mr-2 md:mr-1.5 mr-1 transition-all bg-white/60 text-slate-700 hover:bg-white dark:bg-black/60 dark:text-white dark:hover:bg-black cursor-pointer"
             >
               <svg
                 width="18"
