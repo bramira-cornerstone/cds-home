@@ -6,7 +6,7 @@ export default function FixedContactBar() {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 w-full border-t border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10 backdrop-blur-sm z-40">
+      <div className="fixed bottom-0 left-0 right-0 w-full border-t border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10 backdrop-blur-sm z-40 md:hidden">
         <div className="container mx-auto px-4 py-3 flex items-center justify-center">
           <button
             onClick={() => setIsContactFormOpen(true)}
