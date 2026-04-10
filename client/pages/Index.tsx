@@ -508,7 +508,7 @@ export default function Home() {
         <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)", height: "314px" }}>
           <div className="flex items-center justify-center">
             <div>
-              <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+              <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white px-6">
                 Download the whitepaper to understand what makes us different
               </p>
             </div>
