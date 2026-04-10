@@ -5,7 +5,7 @@ export default function AppHeader() {
         <img
           src="/images/cds-logo-color-text.webp"
           alt="Cornerstone Digital Sports"
-          className="h-10 w-10 object-contain"
+          className="h-20 w-20 object-contain"
         />
       </div>
     </header>
