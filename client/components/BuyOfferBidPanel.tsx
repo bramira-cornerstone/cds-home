@@ -7,12 +7,6 @@ import { useActiveAuctions } from "@/hooks/useActiveAuctions";
 import { useActiveOffers } from "@/hooks/useActiveOffers";
 import { useAuctionBids } from "@/hooks/useAuctionBids";
 import { useSharedCountdownBreakdown } from "@/hooks/useSharedCountdown";
-import {
-  prepareContractCall,
-  sendAndConfirmTransaction,
-  getContract,
-  readContract,
-} from "thirdweb";
 import { useToast } from "@/hooks/use-toast";
 import { FilterStyleButton } from "@/components/ui/filter-style-button";
 import {

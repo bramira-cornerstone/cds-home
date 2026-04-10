@@ -3,6 +3,8 @@ export type ActiveOffer = {
   tokenId: string;
   offeror: string;
   expiresAt: string;
+  totalPrice?: string | number;
+  currency?: string;
 };
 
 export async function fetchAllActiveOffers(): Promise<ActiveOffer[]> {
@@ -13,6 +15,6 @@ export function getHighestOfferForToken(offers: ActiveOffer[], tokenId: string):
   return null;
 }
 
-export function formatOfferPrice(offer: ActiveOffer): string {
+export function formatOfferPrice(totalPrice?: string | number, currency?: string): string {
   return "$0";
 }

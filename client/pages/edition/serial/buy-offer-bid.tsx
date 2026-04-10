@@ -1,16 +1,11 @@
 import { useState, useMemo, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
+import { useActiveAccount } from "@/hooks/useThirdwebStubs";
 import { useMarketplace } from "@/hooks/useMarketplace";
 import { useActiveListings } from "@/hooks/useActiveListings";
 import { useActiveOffers } from "@/hooks/useActiveOffers";
 import { useActiveAuctions } from "@/hooks/useActiveAuctions";
-import {
-  prepareContractCall,
-  sendAndConfirmTransaction,
-  getContract,
-  readContract,
-} from "thirdweb";
 import type { ActiveAuction } from "@/lib/activeAuctionsFromEvents";
 import { useToast } from "@/hooks/use-toast";
 import { FilterStyleButton } from "@/components/ui/filter-style-button";
