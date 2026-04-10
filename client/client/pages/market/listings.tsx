@@ -1,11 +1,9 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { useMarketplaceListings } from "@/hooks/useMarketplaceListings";
-import { useBetaAllowlist } from "@/hooks/useWalletProfile";
 import { ListingCard } from "@/components/market/ListingCard";
 
 export default function ListingsPage() {
-  const betaAllowlist = useBetaAllowlist();
   const { listings, loading } = useMarketplaceListings();
   const [sortBy, setSortBy] = useState<"price-low" | "price-high" | "token-id">(
     "price-low",
@@ -40,17 +38,6 @@ export default function ListingsPage() {
 
     return sorted;
   }, [listings, sortBy, filterListingType]);
-
-  if (betaAllowlist !== true) {
-    return (
-      <section className="container mx-auto px-4 py-16">
-        <div className="w-full rounded-none bg-white text-black p-6 text-center text-base dark:bg-slate-800 dark:text-white">
-          Platform is invitation only. Log In, sign up, and await your
-          confirmation.
-        </div>
-      </section>
-    );
-  }
 
   if (loading) {
     return (

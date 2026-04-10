@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ComingSoonModal } from "@/components/ComingSoonModal";
-import { useBetaAllowlist } from "@/hooks/useWalletProfile";
 import {
   ThumbsUp,
   Gift,
@@ -72,7 +71,6 @@ export default function SiteHeader() {
   const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
   const btnRef = useRef<HTMLButtonElement | null>(null);
   const navigate = useNavigate();
-  const betaAllowlist = useBetaAllowlist();
 
   useEffect(() => {
     const saved = localStorage.getItem("nightMode");
@@ -80,13 +78,6 @@ export default function SiteHeader() {
     setNightMode(enabled);
     if (enabled) document.documentElement.classList.add("dark");
   }, []);
-
-  // Close menu if beta allowlist access is revoked
-  useEffect(() => {
-    if (betaAllowlist !== true) {
-      setMenuOpen(false);
-    }
-  }, [betaAllowlist]);
 
   useEffect(() => {
     const onDocPointer = (e: Event) => {

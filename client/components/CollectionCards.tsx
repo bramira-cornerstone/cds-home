@@ -4,7 +4,6 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import EditionHoverPreview from "@/components/EditionHoverPreview";
 import { FitText } from "@/components/ui/fit-text";
 import CollectionSerialCard from "@/components/CollectionSerialCard";
-import { useBetaAllowlist } from "@/hooks/useWalletProfile";
 import {
   fetchRelicsFromAlchemy,
   fetchRelicSerialsByTokenIds,
@@ -102,7 +101,6 @@ export default function CollectionCards({
   hideHeader?: boolean;
   showTrophyBadges?: boolean;
 }) {
-  const betaAllowlist = useBetaAllowlist();
   const navigate = useNavigate();
   const location = useLocation();
   const { listings, loading: listingsLoading } = useMarketplaceListings();
@@ -1164,8 +1162,6 @@ export default function CollectionCards({
     setSelectedSet(null);
     setSelectedSort(null);
   };
-
-  if (betaAllowlist !== true) return null;
 
   return (
     <div
