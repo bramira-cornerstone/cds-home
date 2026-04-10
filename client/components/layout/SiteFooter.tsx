@@ -1,38 +1,21 @@
-import { useState } from "react";
-import ContactForm from "@/components/ContactForm";
-
-export default function SiteFooter() {
+export default function PageFooter() {
   const year = new Date().getFullYear();
-  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   return (
-    <>
-      <footer className="fixed bottom-0 left-0 right-0 w-full border-t border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-4 flex flex-col items-center justify-center gap-4">
-          <button
-            onClick={() => setIsContactFormOpen(true)}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition"
-            style={{ backgroundColor: "#004FFF" }}
-          >
-            Contact Us
-          </button>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-xs sm:text-sm text-slate-600 dark:text-slate-400 w-full">
-            <div className="flex items-center gap-2">
-              <img
-                src="/images/cornerstone-logo.webp"
-                alt="Cornerstone Digital Sports logo"
-                className="h-5 w-5 rounded-md object-cover shadow-md"
-              />
-              <p>© {year} Cornerstone Digital Sports</p>
-            </div>
-            <div>
-              <p>Where fandom has value</p>
-            </div>
-          </div>
+    <footer className="w-full border-t border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10">
+      <div className="container mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400">
+        <div className="flex items-center gap-2">
+          <img
+            src="/images/cornerstone-logo.webp"
+            alt="Cornerstone Digital Sports logo"
+            className="h-6 w-6 rounded-md object-cover shadow-md"
+          />
+          <p>© {year} Cornerstone Digital Sports</p>
         </div>
-      </footer>
-      <ContactForm isOpen={isContactFormOpen} onClose={() => setIsContactFormOpen(false)} />
-    </>
+        <div>
+          <p>Where fandom has value</p>
+        </div>
+      </div>
+    </footer>
   );
 }
