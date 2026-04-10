@@ -1,8 +1,6 @@
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const navigate = useNavigate();
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   // Detect scroll position to hide scroll indicator when at bottom
@@ -31,12 +29,6 @@ export default function Home() {
             <p className="text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
               Explore, collect, and trade relics on our community-driven marketplace.
             </p>
-            <button
-              onClick={() => navigate("/info")}
-              className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Learn More
-            </button>
           </div>
 
           {/* Explore Section */}
@@ -114,38 +106,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Getting Started Section */}
-          <section className="space-y-4">
-            <h2 className="text-3xl font-bold text-black dark:text-white">
-              Getting Started
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md border border-slate-200 dark:border-slate-700">
-                <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">Learn About the Platform</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  Discover how to navigate the marketplace and build your collection.
-                </p>
-                <button
-                  onClick={() => navigate("/info")}
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-                >
-                  Go to Info
-                </button>
-              </div>
-              <div className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md border border-slate-200 dark:border-slate-700">
-                <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">Browse the Marketplace</h3>
-                <p className="text-slate-600 dark:text-slate-300 mb-4">
-                  Check out available cards and current market activity.
-                </p>
-                <button
-                  onClick={() => navigate("/market")}
-                  className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
-                >
-                  View Marketplace
-                </button>
-              </div>
-            </div>
-          </section>
         </div>
       </div>
 
