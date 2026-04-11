@@ -439,7 +439,7 @@ export default function Home() {
                   CONFIDENCE
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Expected utility, no randomness.Favorite team matters.
+                  Redeem team relics for new.&nbsp;Utility you can expect with no rug pulls or game randomness.
                 </p>
               </div>
             </div>
@@ -460,7 +460,7 @@ export default function Home() {
                   Value
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Hold to see more scarcity over time
+                  Hold to see more scarcity over time. No more need to fear new supply released.
                 </p>
               </div>
             </div>
@@ -505,7 +505,7 @@ export default function Home() {
                   Community
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Show off, connect, and chat with fellow fans
+                  Favorite team finally matters - in-app favorite team specific chat.
                 </p>
               </div>
             </div>
