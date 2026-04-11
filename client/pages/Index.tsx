@@ -187,10 +187,10 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px" }}>
                   Rewards
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Build your collection for weekly rewards
                 </p>
               </div>
@@ -203,10 +203,10 @@ export default function Home() {
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
                   DEMAND
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   You decide the supply
                 </p>
               </div>
@@ -224,10 +224,10 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px" }}>
                   CONTROL
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Vote for what releases next
                 </p>
               </div>
@@ -240,10 +240,10 @@ export default function Home() {
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-4 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
                   Get Started
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Open a box of digital sports cards
                 </p>
               </div>
@@ -260,10 +260,10 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px" }}>
                   SELL
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Sell on the market for cash
                 </p>
               </div>
@@ -425,10 +425,10 @@ export default function Home() {
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-4 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px" }}>
                   REDEEM
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Turn in old cards to earn a team's new one
                 </p>
               </div>
@@ -446,10 +446,10 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
                   Value
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Hold to see more scarcity over time
                 </p>
               </div>
@@ -471,10 +471,10 @@ export default function Home() {
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#FF6300" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
                   Showcase
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Customize your collection page
                 </p>
               </div>
@@ -491,10 +491,10 @@ export default function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[14px] font-semibold uppercase tracking-wider mb-2" style={{ color: "#004FFF" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px" }}>
                   Community
                 </p>
-                <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white">
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Show off, connect, and chat with fellow fans
                 </p>
               </div>
