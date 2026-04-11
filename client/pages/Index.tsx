@@ -526,7 +526,8 @@ export default function Home() {
           <div className="flex items-center justify-center gap-2 w-full">
             <a
               href="#"
-              className="flex-1 flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
+              className="flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
+              style={{ maxWidth: "165px" }}
               title="Download from Google Drive"
             >
               <img
@@ -537,7 +538,8 @@ export default function Home() {
             </a>
             <a
               href="#"
-              className="flex-1 flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
+              className="flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
+              style={{ maxWidth: "165px" }}
               title="Download from Microsoft Word"
             >
               <img
