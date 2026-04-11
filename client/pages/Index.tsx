@@ -211,7 +211,9 @@ export default function Home() {
                   POWER
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  The first collectible that listens to its fans.We don't "curate" what collectors should want, they tell us and we deliver.
+                  The first collectible that listens to its fans.
+                  <br />
+                  We don't "curate" what collectors should want, they tell us and we deliver.
                 </p>
               </div>
             </div>
