@@ -10,7 +10,7 @@ export default function FixedContactBar() {
         <div className="container mx-auto px-4 py-3 flex items-center justify-center">
           <button
             onClick={() => setIsContactFormOpen(true)}
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition"
+            className="px-8 py-3 text-lg bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition"
             style={{ backgroundColor: "#004FFF" }}
           >
             Contact Us
