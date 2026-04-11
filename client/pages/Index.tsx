@@ -191,7 +191,7 @@ export default function Home() {
                   RELICS
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Video clips don't feel ownable, and a recreated physical card doesn't capture the event. Ours bridges this gap.
+                  Video clips don't feel ownable.Physical card don't capture the event. Ours bridge this gap.
                 </p>
               </div>
             </div>
