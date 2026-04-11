@@ -232,7 +232,11 @@ export default function Home() {
                   VOTE TO MINT
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Users vote on supply released.Most popular made the highest tier.The least popular not released at all.
+                  Users vote on supply released.
+                  <br />
+                  Most popular made the highest tier.
+                  <br />
+                  The least popular not released at all.
                 </p>
               </div>
             </div>
