@@ -251,10 +251,10 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div>
                 <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
-                  DEMAND
+                  SATISFACTION
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  All boxes have demand.No loot packs, no gambling.
+                  No loot boxes, no gambling.Guaranteed pulls, no losers.Higher tier access for supporting collectors.
                 </p>
               </div>
             </div>
