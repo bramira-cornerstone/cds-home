@@ -538,19 +538,6 @@ export default function Home() {
                 className="w-full h-full object-contain"
               />
             </a>
-            <a
-              href="/Sports_Collectibles_v2.docx"
-              download="Sports_Collectibles_v2.docx"
-              className="flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
-              style={{ maxWidth: "165px" }}
-              title="Download from Microsoft Word"
-            >
-              <img
-                src="/images/word-icon.webp"
-                alt="Microsoft Word"
-                className="w-full h-full object-contain"
-              />
-            </a>
           </div>
         </div>
       </section>
