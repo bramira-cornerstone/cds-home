@@ -171,7 +171,7 @@ export default function Home() {
                   OWN THE PLAYS
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Limited edition digital cards capturing sports history
+                  Limited edition, interactive, 3d digital cards capturing sports history with owner name and market data on-card
                 </p>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function Home() {
                   RELICS
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Fully interactive 3d collectibles with the owner name and market data on-card
+                  Video clips don't feel ownable, and a recreated physical card doesn't capture the event. Ours bridges this gap.
                 </p>
               </div>
             </div>
