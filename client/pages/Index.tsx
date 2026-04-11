@@ -525,7 +525,9 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center gap-2 w-full">
             <a
-              href="#"
+              href="https://docs.google.com/document/d/1VjdfbtKhVM5a2KiqTC0ZiXX5o9X3lsBD/edit?usp=sharing&ouid=103100335654011855903&rtpof=true&sd=true"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
               style={{ maxWidth: "165px" }}
               title="Download from Google Drive"
