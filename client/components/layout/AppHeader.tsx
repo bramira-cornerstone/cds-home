@@ -18,7 +18,7 @@ export default function AppHeader() {
           </h1>
           <button
             onClick={() => setIsContactFormOpen(true)}
-            className="hidden md:block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition flex-shrink-0 text-[24px] ml-auto"
+            className="hidden md:block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex-shrink-0 text-[28px] ml-auto overflow-hidden"
             style={{ backgroundColor: "#004FFF", boxShadow: "3px 3px 6px 0 rgba(155, 155, 155, 1)" }}
           >
             Contact Us
