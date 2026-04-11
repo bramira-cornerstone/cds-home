@@ -193,7 +193,9 @@ export default function Home() {
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Physical card don't capture the event.
                   <br />
-                  Video clips don't feel ownable.Ours bridge this gap.
+                  Video clips don't feel ownable.
+                  <br />
+                  Ours bridge this gap.
                 </p>
               </div>
             </div>
