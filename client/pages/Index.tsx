@@ -208,10 +208,10 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div>
                 <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "rgba(0, 79, 255, 1)", fontWeight: 700, lineHeight: "50px" }}>
-                  CONTROL
+                  VOTE
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  A collectible that listens to its users
+                  Weekly user votes for new supply.Collectors decide what gets minted and how scarce.
                 </p>
               </div>
             </div>
