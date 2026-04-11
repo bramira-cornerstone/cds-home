@@ -167,10 +167,10 @@ export default function Home() {
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[40px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "40px" }}>
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
                   OWN THE PLAYS
                 </p>
-                <p className="text-center text-[24px] text-black dark:text-white" style={{ fontWeight: 100, lineHeight: "30px" }}>
+                <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Limited edition digital cards capturing sports history
                 </p>
               </div>
