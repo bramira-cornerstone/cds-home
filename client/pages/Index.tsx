@@ -518,8 +518,8 @@ export default function Home() {
         <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
           <div className="flex items-center justify-center">
             <div>
-              <p className="text-center text-[32px] font-bold leading-tight text-black dark:text-white px-6">
-                Download the whitepaper to understand what makes us different
+              <p className="text-center text-[32px] font-semibold leading-tight text-black dark:text-white px-6" style={{ marginTop: "36px", marginBottom: "36px" }}>
+                Download the whitepaper to understand how we will succeed to hold users, value, and demand where others have failed:
               </p>
             </div>
           </div>
