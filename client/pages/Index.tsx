@@ -251,7 +251,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div>
                 <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  SATISFACTION
+                  CONFIDENCE
                 </p>
                 <p className="text-center text-[22px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
                   No loot boxes, no gambling.Guaranteed pulls, no losers.Higher tier access for supporting collectors.
@@ -436,7 +436,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div>
                 <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  CONFIDENCE
+                  UTILITY
                 </p>
                 <p className="text-center text-[22px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
                   Redeem team relics for new.&nbsp;Utility you can expect with no rug pulls or game randomness.
