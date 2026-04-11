@@ -532,7 +532,7 @@ export default function Home() {
               <img
                 src="/images/drive-icon.webp"
                 alt="Google Drive"
-                className="w-full h-full object-contain"
+                className="w-1/2 h-1/2 object-contain"
               />
             </a>
             <a
@@ -543,7 +543,7 @@ export default function Home() {
               <img
                 src="/images/word-icon.webp"
                 alt="Microsoft Word"
-                className="w-full h-full object-contain"
+                className="w-1/2 h-1/2 object-contain"
               />
             </a>
           </div>
