@@ -208,10 +208,10 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div>
                 <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "rgba(0, 79, 255, 1)", fontWeight: 700, lineHeight: "50px" }}>
-                  VOTE
+                  VOTE TO MINT
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  Weekly user votes for new supply.Collectors decide what gets minted and how scarce.
+                  Weekly user votes on new supply.Most popular made the highest tier.Least popular not minted at all.
                 </p>
               </div>
             </div>
