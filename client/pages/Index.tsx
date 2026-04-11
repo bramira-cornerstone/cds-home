@@ -203,11 +203,11 @@ export default function Home() {
           <div className="homepage-section grid grid-cols-1 lg:grid-cols-3 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
             <div className="flex items-center justify-center">
               <div>
-                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px" }}>
-                  DEMAND
+                <p className="text-center text-[44px] uppercase tracking-wider mb-2" style={{ color: "rgba(0, 79, 255, 1)", fontWeight: 700, lineHeight: "50px" }}>
+                  CONTROL
                 </p>
                 <p className="text-center text-[24px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif" }}>
-                  You decide the supply
+                  A collectible that listens to its users
                 </p>
               </div>
             </div>
