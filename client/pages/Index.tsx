@@ -442,7 +442,11 @@ export default function Home() {
                   UTILITY
                 </p>
                 <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Redeem team relics for new.&nbsp;Utility you can trust - no rug pulls or randomness.
+                  Redeem team relics for new.
+                  <br />
+                  Utility you can trust - no rug pulls
+                  <br />
+                  or randomness.
                 </p>
               </div>
             </div>
