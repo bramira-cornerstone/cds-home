@@ -178,7 +178,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
                 <img
-                  src="https://cdn.builder.io/api/v1/file/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fee7ba164f8dc441aae97e94ae9b3a04d"
+                  src="/images/relicGif2.gif"
                   alt="Relic Card"
                   className="w-full h-full object-cover"
                   loading="lazy"
