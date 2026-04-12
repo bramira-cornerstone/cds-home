@@ -222,9 +222,8 @@ export default function Home() {
                 <img
                   src="/images/voteGif.gif"
                   alt="Vote Card"
-                  className="w-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
-                  style={{ marginLeft: "auto", marginRight: "auto", height: "250px" }}
                 />
               </div>
             </div>
