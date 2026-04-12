@@ -7,7 +7,6 @@ interface ContactFormProps {
 
 export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     subject: "",
     message: "",
@@ -36,7 +35,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
       if (response.ok) {
         setSubmitStatus("success");
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ email: "", subject: "", message: "" });
         setTimeout(() => {
           onClose();
           setSubmitStatus("idle");
@@ -80,19 +79,6 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         )}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium mb-1">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md dark:bg-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="Your name"
-            />
-          </div>
-
           <div>
             <label className="block text-sm font-medium mb-1">Email</label>
             <input
