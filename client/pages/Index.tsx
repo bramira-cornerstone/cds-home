@@ -195,7 +195,7 @@ export default function Home() {
                   <br />
                   Video clips don't feel ownable.
                   <br />
-                  Ours bridge this gap.
+                  Ours bridge the gap.
                 </p>
               </div>
             </div>
