@@ -273,7 +273,7 @@ export default function Home() {
                   DEMAND
                 </p>
                 <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  All supply has market demand and we don't undercut its value to hold.
+                  All supply has market demand and we never undermine user value to hold.
                 </p>
               </div>
             </div>
