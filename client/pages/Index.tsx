@@ -180,7 +180,7 @@ export default function Home() {
                 <img
                   src="/images/relicGif2.gif"
                   alt="Relic Card"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
