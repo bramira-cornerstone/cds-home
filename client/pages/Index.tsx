@@ -253,7 +253,11 @@ export default function Home() {
                   CONFIDENCE
                 </p>
                 <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  No loot boxes, no gambling.Guaranteed pulls, no losers.Higher tier access for supporting collectors.
+                  No loot boxes, no gambling.
+                  <br />
+                  Guaranteed pulls, no losers.
+                  <br />
+                  Higher tier access for supporting collectors.
                 </p>
               </div>
             </div>
