@@ -512,7 +512,9 @@ export default function Home() {
                   Community
                 </p>
                 <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Favorite team finally matters - in-app favorite team specific chat.
+                  Favorite team finally matters
+                  <br />
+                  In-app favorite team chat
                 </p>
               </div>
             </div>
