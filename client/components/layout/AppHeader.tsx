@@ -11,7 +11,7 @@ export default function AppHeader() {
           <img
             src="/images/cds-logo-color-text.webp"
             alt="Cornerstone Digital Sports"
-            className="h-20 w-20 object-contain flex-shrink-0"
+            className="h-[70px] w-[70px] object-contain flex-shrink-0"
           />
           <h1 className="text-[36px] md:text-[50px] lg:text-[60px] leading-[36px] md:leading-[50px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
             Cornerstone Digital Sports
