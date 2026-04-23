@@ -497,7 +497,9 @@ export default function Home() {
                   SOCIAL
                 </p>
                 <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  No more lonely marketplace.Friends can follow your trophy case, collecting events, badges, and ranks
+                  No more lonely marketplace.
+                  <br />
+                  Friends can follow your trophy case, collecting events, badges, and ranks
                 </p>
               </div>
             </div>
