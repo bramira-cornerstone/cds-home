@@ -7,6 +7,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import Home from "./pages/Index";
+import PostReveal from "./pages/post-reveal";
 import NotFound from "./pages/NotFound";
 import AppLayout from "@/components/layout/AppLayout";
 
@@ -52,6 +53,7 @@ function AppContent() {
           <AppLayout>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/post-reveal" element={<PostReveal />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AppLayout>
