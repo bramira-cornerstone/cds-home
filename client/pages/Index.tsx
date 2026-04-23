@@ -176,13 +176,18 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center justify-center">
-              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
-                <img
-                  src="/images/relicGif2.gif"
-                  alt="Relic Card"
-                  className="w-full h-full object-contain"
-                  loading="lazy"
-                />
+              <div>
+                <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
+                  <img
+                    src="/images/relicGif2.gif"
+                    alt="Relic Card"
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
+                  *Sample product with sample league
+                </p>
               </div>
             </div>
             <div className="flex items-center justify-center">
