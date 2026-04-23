@@ -196,7 +196,7 @@ export default function Home() {
                   RELICS
                 </p>
                 <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "22px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Physical card don't capture the event.
+                  Sports cards don't capture the event.
                   <br />
                   Video clips don't feel ownable.
                   <br />
