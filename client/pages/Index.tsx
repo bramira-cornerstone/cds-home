@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section className="relative flex flex-col items-center justify-between py-32" style={{ minHeight: "100vh" }}>
+    <section className="relative flex flex-col items-center justify-between flex-1 py-6 md:py-32">
       <div className="flex items-center justify-center">
         <p style={{ fontSize: "18px", fontStyle: "italic", color: "rgba(74, 74, 74, 1)", textAlign: "center" }}>
           Where fandom has value
