@@ -237,10 +237,10 @@ export default function Home() {
                 <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
                   VOTING
                 </p>
-                <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
+                <p className="text-center text-[19px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
                   Users vote on supply released.
                   <br />
-                  Most popular made the highest tier.
+                  Most popular becomes the most scarce.
                   <br />
                   The least popular not released at all.
                 </p>
