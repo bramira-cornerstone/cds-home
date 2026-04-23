@@ -131,7 +131,6 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist/spa",
-    minify: "terser",
     sourcemap: mode === "production" ? false : "inline",
     rollupOptions: {
       output: {
