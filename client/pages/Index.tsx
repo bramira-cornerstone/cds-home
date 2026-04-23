@@ -551,6 +551,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Footer Content Section */}
+      <section className="container mx-auto px-2 py-0 pb-0">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400 py-12 px-4">
+          <div className="flex items-center gap-2">
+            <img
+              src="/images/cornerstone-logo.webp"
+              alt="Cornerstone Digital Sports logo"
+              className="h-6 w-6 rounded-md object-cover shadow-md"
+            />
+            <p>© {new Date().getFullYear()} Cornerstone Digital Sports</p>
+          </div>
+          <div>
+            <p>Where fandom has value</p>
+          </div>
+        </div>
+      </section>
+
     </section>
   );
 }
