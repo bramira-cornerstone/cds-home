@@ -195,8 +195,8 @@ export default function Home() {
                 <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
                   RELICS
                 </p>
-                <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "22px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Sports cards don't capture the event.
+                <p className="text-center text-[19px] dark:text-white" style={{ fontWeight: 100, lineHeight: "22px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
+                  Physical cards don't capture the event.
                   <br />
                   Video clips don't feel ownable.
                   <br />
