@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section className="relative flex flex-col items-center justify-between flex-1 py-6 md:py-32 w-full h-full">
+    <section className="relative flex flex-col items-center justify-start md:justify-start flex-1 py-6 md:py-32 w-full h-full">
       <video
         autoPlay
         muted
