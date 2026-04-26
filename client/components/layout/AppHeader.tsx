@@ -13,7 +13,7 @@ export default function AppHeader() {
             alt="Cornerstone Digital Sports"
             className="h-[80px] w-[80px] object-contain flex-shrink-0"
           />
-          <h1 className="text-[40px] md:text-[50px] lg:text-[60px] leading-[40px] md:leading-[50px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
+          <h1 className="text-[36px] md:text-[50px] lg:text-[60px] leading-[36px] md:leading-[50px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
             Cornerstone Digital Sports
           </h1>
           <button
