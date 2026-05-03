@@ -4,15 +4,9 @@ import { useLocation } from "react-router-dom";
 import AppHeader from "./AppHeader";
 import FixedContactBar from "./FixedContactBar";
 import { CookieConsentModal } from "@/components/CookieConsentModal";
-import { loadFont, EDITION_FONT_URL } from "@/components/EditionSplineScene";
 
 export default function AppLayout({ children }: PropsWithChildren) {
   const location = useLocation();
-
-  // Preload font for EditionSplineScene at app bootstrap
-  useEffect(() => {
-    loadFont(EDITION_FONT_URL).catch(() => {});
-  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
