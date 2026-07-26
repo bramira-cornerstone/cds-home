@@ -7,7 +7,7 @@ export default function Home() {
         loop
         className="w-full h-full object-cover"
         style={{ maxWidth: "500px" }}
-        src="/images/preview.mp4"
+        src="https://cdn.builder.io/o/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F6d31e1af898f41f5a762dea2b00cab1a?alt=media&token=46a3638a-ef8f-4760-91b1-185cd2a8e7c7&apiKey=1fc926a98c3145c69dfab54fa66e93f8"
       />
     </section>
   );
