@@ -71,15 +71,6 @@ export default defineConfig(({ mode }) => ({
     "import.meta.env.VITE_ERC1155_ADDRESS": JSON.stringify(
       envVars.VITE_ERC1155_ADDRESS || process.env.VITE_ERC1155_ADDRESS || "",
     ),
-    "import.meta.env.BANNED_USERNAMES": JSON.stringify(
-      envVars.BANNED_USERNAMES || process.env.BANNED_USERNAMES || "",
-    ),
-    "import.meta.env.GOOGLE_ANALYTICS_TOKEN": JSON.stringify(
-      process.env.GOOGLE_ANALYTICS_TOKEN || "",
-    ),
-    "import.meta.env.MIXPANEL_TOKEN": JSON.stringify(
-      process.env.MIXPANEL_TOKEN || "",
-    ),
   },
   plugins: [react()],
   resolve: {
