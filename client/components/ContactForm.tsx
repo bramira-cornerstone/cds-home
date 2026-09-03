@@ -21,7 +21,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
         <div className="space-y-8">
           <section>
             <h2 className="font-semibold text-xl mb-2">Investors</h2>
-            <p className="text-slate-600 dark:text-slate-400">
+            <p className="text-sm text-slate-600 dark:text-slate-400">
               Equity offering announcing soon. Join the waitlist to be notified:{" "}
               <a
                 href="https://stack.angellist.com/s/3cmz2r3k37"
@@ -39,8 +39,8 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
               Interested in discussing how we could bring this to your league?
             </p>
-            <p>
-              Email{" "}
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              Email:{" "}
               <a
                 href="mailto:contact@cornerstonedigitalsports.com"
                 className="text-blue-600 underline hover:text-blue-700"
@@ -53,10 +53,10 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
           <section>
             <h2 className="font-semibold text-xl mb-2">Collectors</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
-              Working demo released to closed beta. Email for demo
+              Working demo released to closed beta.
             </p>
-            <p>
-              Email for invite code to try it:{" "}
+            <p className="text-sm text-slate-500 dark:text-slate-400">
+              Email for invite code to try:{" "}
               <a
                 href="mailto:contact@cornerstonedigitalsports.com"
                 className="text-blue-600 underline hover:text-blue-700"
