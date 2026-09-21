@@ -1,163 +1,251 @@
+import { useEffect, useState, type CSSProperties } from "react";
+
+type FeatureCard = {
+  title: string;
+  titleColor: string;
+  description: string[];
+  descriptionClassName: string;
+  image: string;
+  imageAlt: string;
+  background: string;
+  imageContainerClassName: string;
+  imageContainerStyle?: CSSProperties;
+  imageClassName: string;
+  imageStyle?: CSSProperties;
+  caption?: string;
+};
+
+const featureCards: FeatureCard[] = [
+  {
+    title: "OWN THE PLAYS",
+    titleColor: "#FF6300",
+    description: [
+      "Limited edition, interactive, 3d digital cards capturing sports history with owner name and market data on-card",
+    ],
+    descriptionClassName: "text-[22px]",
+    image: "/images/relicGif2.gif",
+    imageAlt: "Relic Card",
+    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)",
+    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900",
+    imageContainerStyle: { height: "280px" },
+    imageClassName: "w-full h-full object-contain",
+    caption: "*Sample product with sample league",
+  },
+  {
+    title: "VOTING",
+    titleColor: "#FF6300",
+    description: [
+      "Users vote on supply released.",
+      "Most popular becomes the most scarce.",
+      "The least popular not released at all.",
+    ],
+    descriptionClassName: "text-[19px]",
+    image: "/images/voteGif.gif",
+    imageAlt: "Vote Card",
+    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)",
+    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900",
+    imageContainerStyle: { height: "280px" },
+    imageClassName: "w-full h-full object-contain",
+  },
+  {
+    title: "CONFIDENCE",
+    titleColor: "#FF6300",
+    description: [
+      "No loot boxes, no gambling.",
+      "Guaranteed pulls, no losers.",
+      "Higher tier access for supporting collectors.",
+    ],
+    descriptionClassName: "text-[20px]",
+    image: "/images/basicBox.webp",
+    imageAlt: "Basic Box",
+    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)",
+    imageContainerClassName: "rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg flex flex-col justify-center items-start",
+    imageContainerStyle: { height: "200px" },
+    imageClassName: "object-cover",
+    imageStyle: {
+      width: "300px",
+      height: "220px",
+      marginLeft: "auto",
+      marginRight: "auto",
+      objectPosition: "center",
+    },
+  },
+  {
+    title: "UTILITY",
+    titleColor: "#004FFF",
+    description: [
+      "Redeem team relics for new.",
+      "Utility you can trust - no rug pulls",
+      "or randomness.",
+    ],
+    descriptionClassName: "text-[20px]",
+    image: "/images/teamGrid.webp",
+    imageAlt: "Team Grid",
+    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)",
+    imageContainerClassName: "rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex flex-col justify-center items-center flex-shrink-0",
+    imageContainerStyle: { height: "250px" },
+    imageClassName: "object-scale-down",
+    imageStyle: { marginLeft: "auto", marginRight: "auto", height: "300px" },
+  },
+  {
+    title: "SOCIAL",
+    titleColor: "#FF6300",
+    description: [
+      "No more lonely marketplace.",
+      "Friends can follow your trophy case, collecting events, badges, and ranks",
+    ],
+    descriptionClassName: "text-[20px]",
+    image: "/images/trophyCaseSplash.webp",
+    imageAlt: "Trophy Case",
+    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)",
+    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center",
+    imageContainerStyle: { height: "250px" },
+    imageClassName: "w-full h-auto object-cover",
+  },
+];
+
+function FeatureCarousel() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeCard = featureCards[activeIndex];
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveIndex((currentIndex) => (currentIndex + 1) % featureCards.length);
+    }, 5000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const showPrevious = () => {
+    setActiveIndex((currentIndex) =>
+      currentIndex === 0 ? featureCards.length - 1 : currentIndex - 1,
+    );
+  };
+
+  const showNext = () => {
+    setActiveIndex((currentIndex) => (currentIndex + 1) % featureCards.length);
+  };
+
+  return (
+    <section className="container mx-auto px-2 py-0 pb-0">
+      <div
+        className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
+        style={{ background: activeCard.background }}
+      >
+        <div className="flex items-center justify-center">
+          <div>
+            <p
+              className="text-center text-[42px] uppercase tracking-wider mb-2"
+              style={{
+                color: activeCard.titleColor,
+                fontWeight: 700,
+                lineHeight: "50px",
+                marginTop: "24px",
+              }}
+            >
+              {activeCard.title}
+            </p>
+            <p
+              className={`text-center ${activeCard.descriptionClassName} dark:text-white`}
+              style={{
+                fontWeight: 100,
+                lineHeight: "26px",
+                color: "rgba(74, 74, 74, 1)",
+                fontStyle: "italic",
+                fontFamily: "Roboto Condensed, sans-serif",
+                marginTop: "36px",
+                marginBottom: "36px",
+              }}
+            >
+              {activeCard.description.map((line, index) => (
+                <span key={line}>
+                  {line}
+                  {index < activeCard.description.length - 1 ? <br /> : null}
+                </span>
+              ))}
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center">
+          <div>
+            <div
+              className={activeCard.imageContainerClassName}
+              style={activeCard.imageContainerStyle}
+            >
+              <img
+                src={activeCard.image}
+                alt={activeCard.imageAlt}
+                className={activeCard.imageClassName}
+                loading="lazy"
+                style={activeCard.imageStyle}
+              />
+            </div>
+            {activeCard.caption ? (
+              <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
+                {activeCard.caption}
+              </p>
+            ) : null}
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onClick={showPrevious}
+          aria-label="Previous feature"
+          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-2xl leading-none text-slate-700 shadow-sm transition hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-900"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          onClick={showNext}
+          aria-label="Next feature"
+          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-2xl leading-none text-slate-700 shadow-sm transition hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-900"
+        >
+          ›
+        </button>
+
+        <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+          {featureCards.map((card, index) => (
+            <button
+              key={card.title}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              aria-label={`Show ${card.title.toLowerCase()} feature`}
+              className={`h-2.5 w-2.5 rounded-full border transition ${
+                index === activeIndex
+                  ? "border-slate-700 bg-slate-700 dark:border-slate-200 dark:bg-slate-200"
+                  : "border-slate-400 bg-transparent dark:border-slate-500"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   return (
     <section className="relative min-h-screen flex flex-col">
-      {/* Pre-login homepage sections */}
-      <>
-        {/* Explore & Rewards Section */}
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  OWN THE PLAYS
-                </p>
-                <p className="text-center text-[22px] dark:text-white" style={{ fontWeight: 100, lineHeight: "22px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Limited edition, interactive, 3d digital cards capturing sports history with owner name and market data on-card
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div>
-                <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900" style={{ height: "280px" }}>
-                  <img
-                    src="/images/relicGif2.gif"
-                    alt="Relic Card"
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-                <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
-                  *Sample product with sample league
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Voting Section */}
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900">
-                <img
-                  src="/images/voteGif.gif"
-                  alt="Vote Card"
-                  className="w-full h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  VOTING
-                </p>
-                <p className="text-center text-[19px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Users vote on supply released.
-                  <br />
-                  Most popular becomes the most scarce.
-                  <br />
-                  The least popular not released at all.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Get Started & Sell Section */}
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  CONFIDENCE
-                </p>
-                <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  No loot boxes, no gambling.
-                  <br />
-                  Guaranteed pulls, no losers.
-                  <br />
-                  Higher tier access for supporting collectors.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg flex flex-col justify-center items-start" style={{ height: "200px" }}>
-                <img
-                  src="/images/basicBox.webp"
-                  alt="Basic Box"
-                  className="object-cover"
-                  style={{ width: "300px", height: "220px", marginLeft: "auto", marginRight: "auto", objectPosition: "center" }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#004FFF", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  UTILITY
-                </p>
-                <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  Redeem team relics for new.
-                  <br />
-                  Utility you can trust - no rug pulls
-                  <br />
-                  or randomness.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex flex-col justify-center items-center flex-shrink-0" style={{ height: "250px" }}>
-                <img
-                  src="/images/teamGrid.webp"
-                  alt="Team Grid"
-                  className="object-scale-down"
-                  loading="lazy"
-                  style={{ marginLeft: "auto", marginRight: "auto", height: "300px" }}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="container mx-auto px-2 py-0 pb-0">
-          <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)" }}>
-            <div className="flex items-center justify-center">
-              <div>
-                <p className="text-center text-[42px] uppercase tracking-wider mb-2" style={{ color: "#FF6300", fontWeight: 700, lineHeight: "50px", marginTop: "24px" }}>
-                  SOCIAL
-                </p>
-                <p className="text-center text-[20px] dark:text-white" style={{ fontWeight: 100, lineHeight: "26px", color: "rgba(74, 74, 74, 1)", fontStyle: "italic", fontFamily: "Roboto Condensed, sans-serif", marginTop: "36px", marginBottom: "36px" }}>
-                  No more lonely marketplace.
-                  <br />
-                  Friends can follow your trophy case, collecting events, badges, and ranks
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div className="w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center" style={{ height: "250px" }}>
-                <img
-                  src="/images/trophyCaseSplash.webp"
-                  alt="Trophy Case"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </>
+      <FeatureCarousel />
 
       {/* Whitepaper Download Section */}
       <section className="container mx-auto px-2 py-0 pb-0">
-        <div className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg" style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)" }}>
+        <div
+          className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
+          style={{
+            background:
+              "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)",
+          }}
+        >
           <div className="flex items-center justify-center">
             <div>
-              <p className="text-center text-[28px] leading-tight text-black dark:text-white px-6" style={{ marginTop: "36px", marginBottom: "36px" }}>
+              <p
+                className="text-center text-[28px] leading-tight text-black dark:text-white px-6"
+                style={{ marginTop: "36px", marginBottom: "36px" }}
+              >
                 Read the whitepaper to understand how we will succeed to hold users, value, and demand where others have failed:
               </p>
             </div>
@@ -197,7 +285,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </section>
   );
 }
