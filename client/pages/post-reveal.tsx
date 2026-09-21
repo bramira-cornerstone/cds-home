@@ -1,19 +1,4 @@
-import SerialCardMini from "@/components/SerialCardMini";
-
 export default function Home() {
-  const marketplaceItem = {
-    id: 1,
-    serial: 42,
-    name: "Santiago Rojas",
-    thumb: "https://image.mux.com/oTsgg00J7l9SCEQtYLz02RzTtZvEprkaHHj00TxfIvU7iI/thumbnail.png?time=5",
-    price: "$38",
-    username: "Caterina",
-    minted: 50,
-    gameDate: "2025-09-27",
-    setName: "Cornerstone Premiere",
-    team: "Lagos",
-  };
-
   return (
     <section className="relative min-h-screen flex flex-col">
       {/* Pre-login homepage sections */}
@@ -104,53 +89,6 @@ export default function Home() {
                   className="object-cover"
                   style={{ width: "300px", height: "220px", marginLeft: "auto", marginRight: "auto", objectPosition: "center" }}
                 />
-              </div>
-            </div>
-            <div className="flex items-center justify-center">
-              <div
-                className="flex h-full w-full min-h-0 min-w-0 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700"
-                style={{ background: "linear-gradient(135deg, rgba(255, 99, 0, 0.08) 0%, rgba(0, 79, 255, 0.08) 100%)", paddingLeft: "16px", paddingRight: "16px", height: "280px" }}
-              >
-                <div
-                  className="flex h-full w-full flex-col items-start justify-center p-3 pointer-events-none"
-                  style={{ flex: 1 }}
-                >
-                  <div
-                    className="font-normal text-slate-700 dark:text-slate-200 text-center"
-                    style={{ fontSize: "20px", lineHeight: "20px", margin: "0 auto 8px" }}
-                  >
-                    New Listing
-                  </div>
-                  <p
-                    className="font-bold break-words text-center"
-                    style={{ color: "#FF6300", fontSize: "40px", fontWeight: "700", lineHeight: "40px", margin: "0 auto 4px", overflowWrap: "break-word", wordWrap: "break-word" }}
-                  >
-                    $38
-                  </p>
-                  <p
-                    className="break-words text-center"
-                    style={{ color: "#000000", fontSize: "20px", fontWeight: "300", lineHeight: "20px", marginLeft: "auto", marginRight: "auto" }}
-                  >
-                    Caterina
-                  </p>
-                </div>
-                <div className="flex items-center justify-center p-0 pointer-events-none" style={{ flex: 1 }}>
-                  <div className="aspect-[3/4] relative" style={{ marginRight: "auto", width: "150px", height: "180px" }}>
-                    <div className="block h-full w-full">
-                      <SerialCardMini
-                        id={marketplaceItem.id}
-                        name={marketplaceItem.name}
-                        thumb={marketplaceItem.thumb}
-                        serial={marketplaceItem.serial}
-                        minted={marketplaceItem.minted}
-                        gameDate={marketplaceItem.gameDate}
-                        setName={marketplaceItem.setName}
-                        team={marketplaceItem.team}
-                        disableBadgeTooltips={true}
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
