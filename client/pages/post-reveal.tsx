@@ -106,15 +106,18 @@ const featureCards: FeatureCard[] = [
 
 function FeatureCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const activeCard = featureCards[activeIndex];
 
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = window.setInterval(() => {
       setActiveIndex((currentIndex) => (currentIndex + 1) % featureCards.length);
     }, 5000);
 
     return () => window.clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   const showPrevious = () => {
     setActiveIndex((currentIndex) =>
@@ -220,6 +223,14 @@ function FeatureCarousel() {
               }`}
             />
           ))}
+          <button
+            type="button"
+            onClick={() => setIsPaused((currentPaused) => !currentPaused)}
+            aria-label={isPaused ? "Resume carousel" : "Pause carousel"}
+            className="ml-1 rounded border border-slate-400 px-1.5 text-[10px] leading-[10px] text-slate-600 transition hover:bg-white dark:border-slate-500 dark:text-slate-300 dark:hover:bg-slate-900"
+          >
+            {isPaused ? "▶" : "Ⅱ"}
+          </button>
         </div>
       </div>
     </section>
