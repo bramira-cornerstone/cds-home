@@ -131,6 +131,17 @@ function FeatureCarousel() {
 
   return (
     <section className="container mx-auto px-2 py-0 pb-0">
+      <div className="relative left-1/2 h-screen w-screen -translate-x-1/2 overflow-hidden">
+        <video
+          className="h-full w-full object-cover"
+          src="https://cdn.builder.io/api/v1/file/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F6ac440c0a1e74533a516b028b8e2ec60"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+      </div>
       <div
         className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
         style={{ background: activeCard.background }}
