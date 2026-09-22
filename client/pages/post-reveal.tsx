@@ -142,10 +142,10 @@ function FeatureCarousel() {
           aria-hidden="true"
         />
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/20 px-6 text-center text-white">
-          <h2 className="text-[60px] font-bold leading-tight md:text-[96px]">
+          <h2 className="text-[50px] font-bold leading-tight md:text-[96px]">
             Media Fragmentation
           </h2>
-          <p className="mt-4 max-w-3xl text-[32px] leading-relaxed md:text-[40px]">
+          <p className="mt-4 max-w-3xl text-[28px] leading-relaxed md:text-[40px]">
             Live sports are among the most valuable IP in the world. But after the match, other platforms attract more of the attention and extract more of the value.
             <br />
             <br />
