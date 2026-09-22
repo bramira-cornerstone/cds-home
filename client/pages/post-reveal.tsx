@@ -141,6 +141,14 @@ function FeatureCarousel() {
           playsInline
           aria-hidden="true"
         />
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/20 px-6 text-center text-white">
+          <h2 className="text-3xl font-bold leading-tight md:text-5xl">
+            Media Fragmentation
+          </h2>
+          <p className="mt-4 max-w-3xl text-base leading-relaxed md:text-xl">
+            Live sports are among the most valuable IP in the world. But after the match, other platforms attract more of the attention and extract more of the value. We help you bring it back.
+          </p>
+        </div>
       </div>
       <div
         className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
