@@ -3,17 +3,21 @@ import "./global.css";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
-const rootElement = document.getElementById("root");
+type RootElement = HTMLElement & {
+  __reactRoot?: ReturnType<typeof createRoot>;
+};
+
+const rootElement = document.getElementById("root") as RootElement | null;
 
 if (!rootElement) {
   throw new Error("Root element not found");
 }
 
-let root = rootElement.__reactRoot as ReturnType<typeof createRoot> | undefined;
+let root = rootElement.__reactRoot;
 
 if (!root) {
   root = createRoot(rootElement);
-  (rootElement as any).__reactRoot = root;
+  rootElement.__reactRoot = root;
 }
 
 root.render(<App />);
