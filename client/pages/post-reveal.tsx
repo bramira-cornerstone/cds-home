@@ -134,7 +134,7 @@ function FeatureCarousel() {
       <div className="relative left-1/2 h-screen w-screen -translate-x-1/2 overflow-hidden">
         <video
           className="h-full w-full object-cover"
-          src="https://cdn.builder.io/api/v1/file/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F6ac440c0a1e74533a516b028b8e2ec60"
+          src="https://cdn.builder.io/o/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Ff6b90d1c15664e18a581212a6c0bc81c?alt=media&token=1733fb19-c8ea-4041-b07e-7b69144a1bc2&apiKey=1fc926a98c3145c69dfab54fa66e93f8"
           autoPlay
           muted
           loop
