@@ -117,7 +117,7 @@ function FeatureCarousel() {
   const [activeIndex, setActiveIndex] = useState(2);
   const [isPaused, setIsPaused] = useState(false);
   const activeCard = featureCards[activeIndex];
-  const { copy } = useLanguage();
+  const { copy, language } = useLanguage();
   const activeCopy = copy.features[activeCard.key];
 
   useEffect(() => {
@@ -152,7 +152,10 @@ function FeatureCarousel() {
           aria-hidden="true"
         />
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/20 px-6 text-center text-white">
-          <h2 className="text-[50px] font-bold leading-tight md:text-[96px]">
+          <h2
+            lang={language}
+            className="text-[40px] font-bold leading-tight hyphens-auto sm:text-[50px] md:text-[96px] [overflow-wrap:anywhere]"
+          >
             {copy.hero.title}
           </h2>
           <p className="mt-4 max-w-3xl text-[24px] leading-relaxed md:text-[40px]">
