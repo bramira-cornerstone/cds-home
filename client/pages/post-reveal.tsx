@@ -114,7 +114,7 @@ const featureCards: FeatureCard[] = [
 ];
 
 function FeatureCarousel() {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const activeCard = featureCards[activeIndex];
   const { copy, language } = useLanguage();
@@ -141,7 +141,7 @@ function FeatureCarousel() {
   };
 
   return (
-    <section className="container mx-auto px-2 py-0 pb-0">
+    <section className="container mx-auto px-1.5 py-0 pb-0">
       <div className="relative left-1/2 h-[calc(100dvh-216px)] w-screen -translate-x-1/2 overflow-hidden bg-black/30 md:h-screen">
         <video
           className="h-full w-full object-cover"
@@ -166,7 +166,7 @@ function FeatureCarousel() {
           </p>
         </div>
       </div>
-      <section className="container mx-auto px-2 py-0 pb-0">
+      <section className="container mx-auto px-0 py-0 pb-0">
         <div
           className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
@@ -175,7 +175,7 @@ function FeatureCarousel() {
             <h2
               className="text-center text-[42px] uppercase tracking-wider mb-2"
               style={{
-                color: "#FF6300",
+                color: "#000000",
                 fontWeight: 700,
                 lineHeight: "50px",
               }}
