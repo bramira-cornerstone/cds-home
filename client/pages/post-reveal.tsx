@@ -183,11 +183,29 @@ function FeatureCarousel() {
               {copy.needs.title}
             </h2>
           </div>
-          <div className="flex items-center justify-center lg:col-span-2">
+          <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
               alt={copy.needs.title}
-              className="mt-4 max-h-[360px] w-full max-w-2xl object-contain"
+              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
+              loading="lazy"
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
+              alt={copy.needs.title}
+              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
+              loading="lazy"
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F4f234cc2be154ce1befa99fd986f3f59"
+              alt={copy.needs.title}
+              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
+              loading="lazy"
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F7ec4639454334c3fbc05c890a0bc0ea7"
+              alt={copy.needs.title}
+              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
               loading="lazy"
             />
           </div>
