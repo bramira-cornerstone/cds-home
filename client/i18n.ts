@@ -26,6 +26,13 @@ type FeatureCopy = {
   caption?: string;
 };
 
+type NeedsCardCopy = {
+  title: string;
+  description: string;
+};
+
+type NeedsCardKey = "aggregates" | "converts" | "sustainable" | "valuable";
+
 export type TranslationSet = {
   language: {
     select: string;
@@ -41,8 +48,7 @@ export type TranslationSet = {
   needs: {
     title: string;
     subtitle: string;
-    aggregatesTitle: string;
-    aggregatesDescription: string;
+    cards: Record<NeedsCardKey, NeedsCardCopy>;
   };
   features: Record<FeatureKey, FeatureCopy>;
   carousel: {
@@ -91,9 +97,27 @@ const english: TranslationSet = {
   needs: {
     title: "Needs",
     subtitle: "What must the solution have that prior attempts have missed?",
-    aggregatesTitle: "Aggregates",
-    aggregatesDescription:
-      "Brings fans off fragmented streaming and social media platforms and onto one you control",
+    cards: {
+      aggregates: {
+        title: "Aggregates",
+        description:
+          "Brings fans off fragmented streaming and social media platforms and onto one you control",
+      },
+      converts: {
+        title: "Converts",
+        description: "Turns attention and reach into paying customers",
+      },
+      sustainable: {
+        title: "Sustainable",
+        description:
+          "Conitnues working without constant effort, investment, or incentivizing from rights-holder",
+      },
+      valuable: {
+        title: "Valuable",
+        description:
+          "Both the ran and rights-holder can reasonably expect a clear return on what they put in",
+      },
+    },
   },
   features: {
     ownThePlays: {
@@ -195,9 +219,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Necesidades",
       subtitle: "¿Qué debe tener la solución que los intentos anteriores no tuvieron?",
-      aggregatesTitle: "Agregados",
-      aggregatesDescription:
-        "Devuelve a los fans desde plataformas fragmentadas de streaming y redes sociales a una sola plataforma que controlas",
+      cards: {
+        aggregates: {
+          title: "Agregados",
+          description:
+            "Devuelve a los fans desde plataformas fragmentadas de streaming y redes sociales a una sola plataforma que controlas",
+        },
+        converts: {
+          title: "Convierte",
+          description: "Convierte la atención y el alcance en clientes de pago",
+        },
+        sustainable: {
+          title: "Sostenible",
+          description:
+            "Sigue funcionando sin esfuerzo, inversión ni incentivos constantes por parte del titular de los derechos",
+        },
+        valuable: {
+          title: "Valioso",
+          description:
+            "Tanto el fan como el titular de los derechos pueden esperar razonablemente un retorno claro de lo que aportan",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -293,9 +335,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Necessidades",
       subtitle: "O que a solução precisa ter que as tentativas anteriores não tiveram?",
-      aggregatesTitle: "Agregados",
-      aggregatesDescription:
-        "Traz os fãs de plataformas fragmentadas de streaming e redes sociais para uma única plataforma que você controla",
+      cards: {
+        aggregates: {
+          title: "Agregados",
+          description:
+            "Traz os fãs de plataformas fragmentadas de streaming e redes sociais para uma única plataforma que você controla",
+        },
+        converts: {
+          title: "Converte",
+          description: "Transforma atenção e alcance em clientes pagantes",
+        },
+        sustainable: {
+          title: "Sustentável",
+          description:
+            "Continua funcionando sem esforço, investimento ou incentivos constantes do detentor dos direitos",
+        },
+        valuable: {
+          title: "Valioso",
+          description:
+            "Tanto o fã quanto o detentor dos direitos podem esperar razoavelmente um retorno claro sobre o que investem",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -391,9 +451,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "الاحتياجات",
       subtitle: "ما الذي يجب أن يتوفر في الحل وغاب عن المحاولات السابقة؟",
-      aggregatesTitle: "التجميع",
-      aggregatesDescription:
-        "ينقل المشجعين من منصات البث ووسائل التواصل الاجتماعي المتفرقة إلى منصة واحدة تسيطر عليها",
+      cards: {
+        aggregates: {
+          title: "التجميع",
+          description:
+            "ينقل المشجعين من منصات البث ووسائل التواصل الاجتماعي المتفرقة إلى منصة واحدة تسيطر عليها",
+        },
+        converts: {
+          title: "التحويل",
+          description: "يحوّل الاهتمام والوصول إلى عملاء يدفعون",
+        },
+        sustainable: {
+          title: "مستدام",
+          description:
+            "يستمر في العمل دون جهد أو استثمار أو تحفيز مستمر من مالك الحقوق",
+        },
+        valuable: {
+          title: "قيّم",
+          description:
+            "يمكن للمشجع ومالك الحقوق توقع عائد واضح بشكل معقول مقابل ما يقدمانه",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -489,9 +567,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Bedürfnisse",
       subtitle: "Was muss die Lösung haben, das frühere Versuche übersehen haben?",
-      aggregatesTitle: "Aggregationen",
-      aggregatesDescription:
-        "Bringt Fans von fragmentierten Streaming- und Social-Media-Plattformen auf eine Plattform, die du kontrollierst",
+      cards: {
+        aggregates: {
+          title: "Aggregationen",
+          description:
+            "Bringt Fans von fragmentierten Streaming- und Social-Media-Plattformen auf eine Plattform, die du kontrollierst",
+        },
+        converts: {
+          title: "Konvertiert",
+          description: "Verwandelt Aufmerksamkeit und Reichweite in zahlende Kunden",
+        },
+        sustainable: {
+          title: "Nachhaltig",
+          description:
+            "Funktioniert ohne ständigen Aufwand, Investitionen oder Anreize durch den Rechteinhaber",
+        },
+        valuable: {
+          title: "Wertvoll",
+          description:
+            "Sowohl Fans als auch Rechteinhaber können vernünftigerweise eine klare Rendite für ihren Einsatz erwarten",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -587,9 +683,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Besoins",
       subtitle: "Que doit avoir la solution que les tentatives précédentes n'avaient pas ?",
-      aggregatesTitle: "Agrégats",
-      aggregatesDescription:
-        "Ramène les fans des plateformes de streaming et de réseaux sociaux fragmentées vers une seule plateforme que vous contrôlez",
+      cards: {
+        aggregates: {
+          title: "Agrégats",
+          description:
+            "Ramène les fans des plateformes de streaming et de réseaux sociaux fragmentées vers une seule plateforme que vous contrôlez",
+        },
+        converts: {
+          title: "Convertit",
+          description: "Transforme l'attention et la portée en clients payants",
+        },
+        sustainable: {
+          title: "Durable",
+          description:
+            "Continue de fonctionner sans effort, investissement ou incitation constants de la part du détenteur des droits",
+        },
+        valuable: {
+          title: "Précieux",
+          description:
+            "Les fans comme les détenteurs de droits peuvent raisonnablement attendre un retour clair sur leur contribution",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -685,9 +799,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Behoeften",
       subtitle: "Wat moet de oplossing hebben wat eerdere pogingen hebben gemist?",
-      aggregatesTitle: "Aggregaten",
-      aggregatesDescription:
-        "Brengt fans van versnipperde streaming- en socialmediaplatforms naar één platform dat je beheert",
+      cards: {
+        aggregates: {
+          title: "Aggregaten",
+          description:
+            "Brengt fans van versnipperde streaming- en socialmediaplatforms naar één platform dat je beheert",
+        },
+        converts: {
+          title: "Converteert",
+          description: "Zet aandacht en bereik om in betalende klanten",
+        },
+        sustainable: {
+          title: "Duurzaam",
+          description:
+            "Blijft werken zonder constante inspanning, investering of stimulering door de rechthebbende",
+        },
+        valuable: {
+          title: "Waardevol",
+          description:
+            "Zowel fans als rechthebbenden kunnen redelijkerwijs een duidelijk rendement op hun inzet verwachten",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -783,9 +915,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "ज़रूरतें",
       subtitle: "समाधान में ऐसा क्या होना चाहिए जो पिछले प्रयासों में नहीं था?",
-      aggregatesTitle: "समेकन",
-      aggregatesDescription:
-        "प्रशंसकों को बिखरे हुए स्ट्रीमिंग और सोशल मीडिया प्लेटफ़ॉर्म से आपके नियंत्रण वाले एक ही प्लेटफ़ॉर्म पर लाता है",
+      cards: {
+        aggregates: {
+          title: "समेकन",
+          description:
+            "प्रशंसकों को बिखरे हुए स्ट्रीमिंग और सोशल मीडिया प्लेटफ़ॉर्म से आपके नियंत्रण वाले एक ही प्लेटफ़ॉर्म पर लाता है",
+        },
+        converts: {
+          title: "रूपांतरण",
+          description: "ध्यान और पहुंच को भुगतान करने वाले ग्राहकों में बदलता है",
+        },
+        sustainable: {
+          title: "टिकाऊ",
+          description:
+            "अधिकार-धारक के निरंतर प्रयास, निवेश या प्रोत्साहन के बिना भी काम करता रहता है",
+        },
+        valuable: {
+          title: "मूल्यवान",
+          description:
+            "प्रशंसक और अधिकार-धारक दोनों अपने योगदान पर स्पष्ट लाभ की उचित अपेक्षा कर सकते हैं",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -881,9 +1031,25 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "需求",
       subtitle: "这个解决方案必须具备什么，才能弥补以往尝试的不足？",
-      aggregatesTitle: "聚合",
-      aggregatesDescription:
-        "将粉丝从分散的流媒体和社交媒体平台带回到一个由你控制的平台",
+      cards: {
+        aggregates: {
+          title: "聚合",
+          description:
+            "将粉丝从分散的流媒体和社交媒体平台带回到一个由你控制的平台",
+        },
+        converts: {
+          title: "转化",
+          description: "将关注度和触达转化为付费客户",
+        },
+        sustainable: {
+          title: "可持续",
+          description: "无需权利方持续投入精力、资金或激励，也能持续运作",
+        },
+        valuable: {
+          title: "有价值",
+          description: "粉丝和权利方都可以合理期待从投入中获得明确回报",
+        },
+      },
     },
     features: {
       ownThePlays: {
@@ -978,9 +1144,27 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "ニーズ",
       subtitle: "これまでの試みが見落としていた、解決策に必要なものは何でしょうか？",
-      aggregatesTitle: "アグリゲーション",
-      aggregatesDescription:
-        "ファンを分散したストリーミングやソーシャルメディアのプラットフォームから、あなたが管理する一つのプラットフォームへ導きます",
+      cards: {
+        aggregates: {
+          title: "アグリゲーション",
+          description:
+            "ファンを分散したストリーミングやソーシャルメディアのプラットフォームから、あなたが管理する一つのプラットフォームへ導きます",
+        },
+        converts: {
+          title: "コンバージョン",
+          description: "注目とリーチを有料顧客へと変換します",
+        },
+        sustainable: {
+          title: "持続可能",
+          description:
+            "権利者による継続的な努力、投資、インセンティブなしで機能し続けます",
+        },
+        valuable: {
+          title: "価値がある",
+          description:
+            "ファンと権利者の双方が、投入したものに対して明確なリターンを合理的に期待できます",
+        },
+      },
     },
     features: {
       ownThePlays: {

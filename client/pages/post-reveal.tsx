@@ -113,6 +113,44 @@ const featureCards: FeatureCard[] = [
   },
 ];
 
+type NeedsCardProps = {
+  image: string;
+  language: string;
+  title: string;
+  description: string;
+};
+
+function NeedsCard({ image, language, title, description }: NeedsCardProps) {
+  return (
+    <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black text-center text-white">
+      <img
+        src={image}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-100"
+        loading="lazy"
+      />
+      <h3
+        lang={language}
+        className="absolute inset-x-0 top-[7.5%] z-10 box-border w-full px-3 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
+        style={{ textShadow: "3px 3px 10px rgba(74, 74, 74, 1)" }}
+      >
+        {title}
+      </h3>
+      <p
+        lang={language}
+        className="absolute inset-x-0 bottom-[7.5%] z-10 box-border w-full px-3 text-center text-[24px] leading-tight break-normal sm:text-[22px]"
+        style={{
+          outline: "none",
+          textShadow: "3px 3px 12px rgba(74, 74, 74, 1)",
+        }}
+      >
+        {description}
+      </p>
+    </div>
+  );
+}
+
 function FeatureCarousel() {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
@@ -187,49 +225,29 @@ function FeatureCarousel() {
             </p>
           </div>
           <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-            <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black text-center text-white">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
-                alt=""
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-100"
-                loading="lazy"
-              />
-              <h3
-                lang={language}
-                className="absolute inset-x-0 top-[7.5%] z-10 box-border w-full px-3 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
-                style={{ textShadow: "3px 3px 10px rgba(74, 74, 74, 1)" }}
-              >
-                {copy.needs.aggregatesTitle}
-              </h3>
-              <p
-                lang={language}
-                className="absolute inset-x-0 bottom-[7.5%] z-10 box-border w-full px-3 text-center text-[24px] leading-tight break-normal sm:text-[22px]"
-                style={{
-                  outline: "none",
-                  textShadow: "3px 3px 12px rgba(74, 74, 74, 1)",
-                }}
-              >
-                {copy.needs.aggregatesDescription}
-              </p>
-            </div>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
-              alt={copy.needs.title}
-              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
-              loading="lazy"
+            <NeedsCard
+              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
+              language={language}
+              title={copy.needs.cards.aggregates.title}
+              description={copy.needs.cards.aggregates.description}
             />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F4f234cc2be154ce1befa99fd986f3f59"
-              alt={copy.needs.title}
-              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
-              loading="lazy"
+            <NeedsCard
+              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
+              language={language}
+              title={copy.needs.cards.converts.title}
+              description={copy.needs.cards.converts.description}
             />
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F7ec4639454334c3fbc05c890a0bc0ea7"
-              alt={copy.needs.title}
-              className="mx-auto mt-4 h-full max-h-[360px] w-full object-contain"
-              loading="lazy"
+            <NeedsCard
+              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F4f234cc2be154ce1befa99fd986f3f59"
+              language={language}
+              title={copy.needs.cards.sustainable.title}
+              description={copy.needs.cards.sustainable.description}
+            />
+            <NeedsCard
+              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F7ec4639454334c3fbc05c890a0bc0ea7"
+              language={language}
+              title={copy.needs.cards.valuable.title}
+              description={copy.needs.cards.valuable.description}
             />
           </div>
         </div>
