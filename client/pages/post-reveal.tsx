@@ -188,15 +188,22 @@ function FeatureCarousel() {
           </div>
           <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black px-4 text-center text-white">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-60"
+                loading="lazy"
+              />
               <h3
                 lang={language}
-                className="absolute inset-x-4 top-1/4 -translate-y-1/2 text-[40px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-4 top-1/4 z-10 -translate-y-1/2 text-[40px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesTitle}
               </h3>
               <p
                 lang={language}
-                className="absolute inset-x-4 bottom-1/4 translate-y-1/2 text-[18px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-4 bottom-1/4 z-10 translate-y-1/2 text-[18px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesDescription}
               </p>
