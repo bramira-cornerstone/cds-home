@@ -10,7 +10,7 @@ export default function AppHeader() {
   return (
     <>
       <header className="w-full border-b border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10">
-        <div className="container mx-auto flex flex-wrap items-center gap-2 px-4 py-2 mt-6 mb-6 md:flex-nowrap">
+        <div className="container mx-auto flex flex-wrap items-center gap-2 px-4 py-1.5 mt-6 mb-6 md:flex-nowrap">
           <div className="order-1 flex w-full min-w-0 items-center gap-2 md:order-none md:w-auto">
             <img
               src="/images/cds-logo-color-text.webp"
