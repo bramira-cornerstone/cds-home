@@ -197,7 +197,7 @@ function FeatureCarousel() {
               />
               <h3
                 lang={language}
-                className="absolute inset-x-4 top-[10%] z-10 -translate-y-1/2 text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-4 top-[15%] z-10 -translate-y-1/2 text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesTitle}
               </h3>
