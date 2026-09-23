@@ -203,7 +203,7 @@ function FeatureCarousel() {
               </h3>
               <p
                 lang={language}
-                className="absolute inset-x-4 bottom-1/4 z-10 translate-y-1/2 text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-4 bottom-[15%] z-10 text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesDescription}
               </p>
