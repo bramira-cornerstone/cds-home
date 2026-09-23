@@ -197,13 +197,13 @@ function FeatureCarousel() {
               />
               <h3
                 lang={language}
-                className="absolute inset-x-4 top-[15%] z-10 -translate-y-1/2 text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-0 top-[15%] z-10 mx-auto w-[calc(100%_-_2rem)] -translate-y-1/2 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesTitle}
               </h3>
               <p
                 lang={language}
-                className="absolute inset-x-4 bottom-[15%] z-10 text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-0 bottom-[15%] z-10 mx-auto w-[calc(100%_-_2rem)] text-center text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesDescription}
               </p>
