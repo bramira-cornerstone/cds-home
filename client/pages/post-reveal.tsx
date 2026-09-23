@@ -183,6 +183,14 @@ function FeatureCarousel() {
               {copy.needs.title}
             </h2>
           </div>
+          <div className="flex items-center justify-center lg:col-span-2">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
+              alt={copy.needs.title}
+              className="mt-4 max-h-[360px] w-full max-w-2xl object-contain"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
       <div
