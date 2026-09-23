@@ -13,9 +13,9 @@ export default function AppLayout({ children }: PropsWithChildren) {
   }, [location.pathname]);
 
   return (
-    <div className="flex flex-col overflow-x-hidden bg-gradient-to-br from-slate-50 via-slate-50 to-slate-100 text-foreground dark:bg-black dark:bg-none dark:text-white min-h-screen">
+    <div className="flex min-h-screen flex-col overflow-x-hidden bg-gradient-to-br from-[#004FFF]/50 to-[#FF6300]/50 text-foreground dark:text-white">
       <AppHeader />
-      <main className="flex flex-col flex-1 overflow-x-hidden pb-0 dark:bg-black dark:text-white" style={{ backgroundColor: "rgba(255, 255, 255, 1)" }}>
+      <main className="flex flex-1 flex-col overflow-x-hidden bg-transparent pb-0 dark:text-white">
         {children}
       </main>
       <FixedContactBar />

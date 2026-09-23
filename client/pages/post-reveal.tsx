@@ -25,7 +25,7 @@ const featureCards: FeatureCard[] = [
     descriptionClassName: "text-[22px]",
     image: "/images/relicGif2.gif",
     imageAlt: "Relic Card",
-    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)",
+    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
     imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900",
     imageContainerStyle: { height: "280px" },
     imageClassName: "w-full h-full object-contain",
@@ -42,7 +42,7 @@ const featureCards: FeatureCard[] = [
     descriptionClassName: "text-[19px]",
     image: "/images/voteGif.gif",
     imageAlt: "Vote Card",
-    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)",
+    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.5) 0%, rgba(0, 79, 255, 0.5) 100%)",
     imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900",
     imageContainerStyle: { height: "280px" },
     imageClassName: "w-full h-full object-contain",
@@ -58,7 +58,7 @@ const featureCards: FeatureCard[] = [
     descriptionClassName: "text-[20px]",
     image: "/images/basicBox.webp",
     imageAlt: "Basic Box",
-    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)",
+    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
     imageContainerClassName: "rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg flex flex-col justify-center items-start",
     imageContainerStyle: { height: "200px" },
     imageClassName: "object-cover",
@@ -81,7 +81,7 @@ const featureCards: FeatureCard[] = [
     descriptionClassName: "text-[20px]",
     image: "/images/teamGrid.webp",
     imageAlt: "Team Grid",
-    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)",
+    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.5) 0%, rgba(0, 79, 255, 0.5) 100%)",
     imageContainerClassName: "rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex flex-col justify-center items-center flex-shrink-0",
     imageContainerStyle: { height: "250px" },
     imageClassName: "object-scale-down",
@@ -97,7 +97,7 @@ const featureCards: FeatureCard[] = [
     descriptionClassName: "text-[20px]",
     image: "/images/trophyCaseSplash.webp",
     imageAlt: "Trophy Case",
-    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.05) 0%, rgba(255, 99, 0, 0.05) 100%)",
+    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
     imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center",
     imageContainerStyle: { height: "250px" },
     imageClassName: "w-full h-auto object-cover",
@@ -269,7 +269,7 @@ export default function Home() {
           className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
           style={{
             background:
-              "linear-gradient(135deg, rgba(255, 99, 0, 0.05) 0%, rgba(0, 79, 255, 0.05) 100%)",
+              "linear-gradient(135deg, rgba(255, 99, 0, 0.5) 0%, rgba(0, 79, 255, 0.5) 100%)",
           }}
         >
           <div className="flex items-center justify-center">
