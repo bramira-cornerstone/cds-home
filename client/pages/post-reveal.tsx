@@ -187,7 +187,7 @@ function FeatureCarousel() {
             </p>
           </div>
           <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-            <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black px-4 text-center text-white">
+            <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black text-center text-white">
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
                 alt=""
@@ -197,13 +197,13 @@ function FeatureCarousel() {
               />
               <h3
                 lang={language}
-                className="absolute inset-x-0 top-[15%] z-10 mx-auto w-[calc(100%_-_2rem)] -translate-y-1/2 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-0 top-[15%] z-10 box-border w-full px-4 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesTitle}
               </h3>
               <p
                 lang={language}
-                className="absolute inset-x-0 bottom-[15%] z-10 mx-auto w-[calc(100%_-_2rem)] text-center text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-0 bottom-[15%] z-10 box-border w-full px-4 text-center text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
               >
                 {copy.needs.aggregatesDescription}
               </p>
