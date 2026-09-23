@@ -192,7 +192,7 @@ function FeatureCarousel() {
                 src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
                 alt=""
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-60"
+                className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-100"
                 loading="lazy"
               />
               <h3
