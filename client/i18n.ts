@@ -41,6 +41,8 @@ export type TranslationSet = {
   needs: {
     title: string;
     subtitle: string;
+    aggregatesTitle: string;
+    aggregatesDescription: string;
   };
   features: Record<FeatureKey, FeatureCopy>;
   carousel: {
@@ -89,6 +91,9 @@ const english: TranslationSet = {
   needs: {
     title: "Needs",
     subtitle: "What must the solution have that prior attempts have missed?",
+    aggregatesTitle: "Aggregates",
+    aggregatesDescription:
+      "Returns fans to your core product from wherever they initially viewed",
   },
   features: {
     ownThePlays: {
@@ -190,6 +195,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Necesidades",
       subtitle: "¿Qué debe tener la solución que los intentos anteriores no tuvieron?",
+      aggregatesTitle: "Agregados",
+      aggregatesDescription:
+        "Devuelve a los fans a tu producto principal desde cualquier lugar donde lo hayan visto inicialmente",
     },
     features: {
       ownThePlays: {
@@ -285,6 +293,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Necessidades",
       subtitle: "O que a solução precisa ter que as tentativas anteriores não tiveram?",
+      aggregatesTitle: "Agregados",
+      aggregatesDescription:
+        "Traz os fãs de volta ao seu produto principal de onde quer que o tenham visto inicialmente",
     },
     features: {
       ownThePlays: {
@@ -380,6 +391,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "الاحتياجات",
       subtitle: "ما الذي يجب أن يتوفر في الحل وغاب عن المحاولات السابقة؟",
+      aggregatesTitle: "التجميع",
+      aggregatesDescription:
+        "يعيد المشجعين إلى منتجك الأساسي من أي مكان شاهدوه فيه أولًا",
     },
     features: {
       ownThePlays: {
@@ -475,6 +489,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Bedürfnisse",
       subtitle: "Was muss die Lösung haben, das frühere Versuche übersehen haben?",
+      aggregatesTitle: "Aggregationen",
+      aggregatesDescription:
+        "Bringt Fans von überall, wo sie es zuerst gesehen haben, zu deinem Kernprodukt zurück",
     },
     features: {
       ownThePlays: {
@@ -570,6 +587,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Besoins",
       subtitle: "Que doit avoir la solution que les tentatives précédentes n'avaient pas ?",
+      aggregatesTitle: "Agrégats",
+      aggregatesDescription:
+        "Ramène les fans vers votre produit principal, quel que soit l'endroit où ils l'ont découvert",
     },
     features: {
       ownThePlays: {
@@ -665,6 +685,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "Behoeften",
       subtitle: "Wat moet de oplossing hebben wat eerdere pogingen hebben gemist?",
+      aggregatesTitle: "Aggregaten",
+      aggregatesDescription:
+        "Brengt fans terug naar je kernproduct, vanaf de plek waar ze het eerst kwamen tegenkomen",
     },
     features: {
       ownThePlays: {
@@ -760,6 +783,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "ज़रूरतें",
       subtitle: "समाधान में ऐसा क्या होना चाहिए जो पिछले प्रयासों में नहीं था?",
+      aggregatesTitle: "समेकन",
+      aggregatesDescription:
+        "प्रशंसकों को उस जगह से आपके मुख्य उत्पाद पर वापस लाता है जहां उन्होंने इसे पहली बार देखा था",
     },
     features: {
       ownThePlays: {
@@ -855,6 +881,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "需求",
       subtitle: "这个解决方案必须具备什么，才能弥补以往尝试的不足？",
+      aggregatesTitle: "聚合",
+      aggregatesDescription:
+        "无论粉丝最初在哪里看到，都能将他们带回你的核心产品",
     },
     features: {
       ownThePlays: {
@@ -949,6 +978,9 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "ニーズ",
       subtitle: "これまでの試みが見落としていた、解決策に必要なものは何でしょうか？",
+      aggregatesTitle: "アグリゲーション",
+      aggregatesDescription:
+        "ファンが最初に見た場所から、あなたのコア製品へ呼び戻します",
     },
     features: {
       ownThePlays: {
