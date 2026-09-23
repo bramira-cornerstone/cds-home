@@ -1,13 +1,14 @@
 export const languageOptions = [
   { code: "en", label: "ENG", name: "English" },
-  { code: "es", label: "ESP", name: "Español" },
-  { code: "pt", label: "POR", name: "Português" },
+  { code: "ar", label: "العربية", name: "العربية" },
   { code: "de", label: "DEU", name: "Deutsch" },
+  { code: "es", label: "ESP", name: "Español" },
   { code: "fr", label: "FRA", name: "Français" },
-  { code: "nl", label: "NLD", name: "Nederlands" },
   { code: "hi", label: "HIN", name: "हिन्दी" },
-  { code: "zh", label: "中文", name: "简体中文" },
+  { code: "nl", label: "NLD", name: "Nederlands" },
+  { code: "pt", label: "POR", name: "Português" },
   { code: "ja", label: "日本語", name: "日本語" },
+  { code: "zh", label: "简体中文", name: "简体中文" },
 ] as const;
 
 export type LanguageCode = (typeof languageOptions)[number]["code"];
@@ -350,6 +351,97 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       inviteDescription: "E-mail para receber um código de convite:",
     },
     notFound: { message: "Ops! Página não encontrada", returnHome: "Voltar ao início" },
+  },
+  ar: {
+    language: { select: "اختر اللغة" },
+    header: { contactUs: "اتصل بنا" },
+    hero: {
+      title: "تجزئة الإعلام",
+      description:
+        "تُعد الرياضات المباشرة من أغلى حقوق الملكية الفكرية في العالم. لكن بعد المباراة، تجذب منصات أخرى مزيدًا من الاهتمام وتستحوذ على مزيد من القيمة.",
+      callToAction: "نساعدك على استعادتها.",
+    },
+    features: {
+      ownThePlays: {
+        title: "امتلك اللحظات",
+        description: [
+          "بطاقات رقمية تفاعلية ثلاثية الأبعاد بإصدارات محدودة توثق تاريخ الرياضة، مع اسم المالك وبيانات السوق على البطاقة",
+        ],
+        imageAlt: "بطاقة تذكارية",
+        caption: "*منتج تجريبي مع دوري نموذجي",
+      },
+      voting: {
+        title: "التصويت",
+        description: [
+          "يصوت المستخدمون على الكمية المطروحة.",
+          "يصبح الخيار الأكثر شعبية هو الأندر.",
+          "لا يُطرح الخيار الأقل شعبية على الإطلاق.",
+        ],
+        imageAlt: "بطاقة التصويت",
+      },
+      confidence: {
+        title: "الثقة",
+        description: [
+          "لا صناديق غنائم ولا مقامرة.",
+          "مقتنيات مضمونة، ولا خاسرين.",
+          "وصول إلى مستويات أعلى لدعم الجامعين.",
+        ],
+        imageAlt: "الصندوق الأساسي",
+      },
+      utility: {
+        title: "المنفعة",
+        description: [
+          "استبدل تذكارات الفرق بمنفعة جديدة.",
+          "منفعة يمكنك الوثوق بها، بلا احتيال",
+          "ولا عشوائية.",
+        ],
+        imageAlt: "شبكة الفرق",
+      },
+      social: {
+        title: "اجتماعي",
+        description: [
+          "لا مزيد من الأسواق المنعزلة.",
+          "يمكن للأصدقاء متابعة خزانة جوائزك وفعاليات الجمع والشارات والرتب",
+        ],
+        imageAlt: "خزانة الجوائز",
+      },
+    },
+    carousel: {
+      previousFeature: "الميزة السابقة",
+      nextFeature: "الميزة التالية",
+      featureLabels: {
+        ownThePlays: "عرض ميزة امتلك اللحظات",
+        voting: "عرض ميزة التصويت",
+        confidence: "عرض ميزة الثقة",
+        utility: "عرض ميزة المنفعة",
+        social: "عرض الميزة الاجتماعية",
+      },
+      pauseCarousel: "إيقاف العرض مؤقتًا",
+      resumeCarousel: "استئناف العرض",
+    },
+    whitepaper: {
+      description:
+        "اقرأ الورقة البيضاء لفهم كيف سنحافظ على المستخدمين والقيمة والطلب حيث فشل الآخرون:",
+      downloadTitle: "التنزيل من Google Drive",
+      driveAlt: "Google Drive",
+    },
+    footer: {
+      logoAlt: "شعار Cornerstone Digital Sports",
+      tagline: "حيث يحمل شغف المشجعين قيمة",
+      copyright: "© {year} Cornerstone Digital Sports",
+    },
+    contact: {
+      close: "إغلاق نموذج التواصل",
+      investors: "المستثمرون",
+      investorDescription: "سيتم الإعلان عن عرض الأسهم قريبًا. انضم إلى قائمة الانتظار ليصلك إشعار:",
+      leaguePartners: "شركاء الدوريات",
+      leagueDescription: "هل ترغب في مناقشة كيفية تقديم هذا إلى دوريك؟",
+      email: "البريد الإلكتروني:",
+      collectors: "الجامعون",
+      collectorDescription: "تم إطلاق عرض تجريبي عملي ضمن نسخة تجريبية مغلقة.",
+      inviteDescription: "البريد الإلكتروني للحصول على رمز الدعوة:",
+    },
+    notFound: { message: "عذرًا! الصفحة غير موجودة", returnHome: "العودة إلى الرئيسية" },
   },
   de: {
     language: { select: "Sprache auswählen" },
