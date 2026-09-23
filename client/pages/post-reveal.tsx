@@ -189,7 +189,7 @@ function FeatureCarousel() {
           <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black px-4 text-center text-white">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
+                src="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
                 alt=""
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-100"
