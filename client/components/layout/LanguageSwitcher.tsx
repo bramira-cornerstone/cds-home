@@ -11,7 +11,7 @@ export default function LanguageSwitcher({ className = "" }: LanguageSwitcherPro
   return (
     <div
       aria-label={copy.language.select}
-      className={`flex flex-wrap items-center gap-1 ${className}`}
+      className={`flex flex-nowrap items-center gap-0.5 whitespace-nowrap ${className}`}
       role="group"
     >
       {languageOptions.map((option) => (
@@ -21,10 +21,10 @@ export default function LanguageSwitcher({ className = "" }: LanguageSwitcherPro
           onClick={() => setLanguage(option.code)}
           aria-label={option.name}
           aria-pressed={language === option.code}
-          className={`rounded border px-2 py-1 text-xs font-semibold transition ${
+          className={`px-0.5 text-[10px] font-semibold underline underline-offset-2 transition ${
             language === option.code
-              ? "border-[#004FFF] bg-[#004FFF] text-white"
-              : "border-slate-300 bg-white/70 text-slate-700 hover:border-[#004FFF] hover:text-[#004FFF] dark:border-slate-600 dark:bg-slate-900/70 dark:text-slate-200"
+              ? "text-[#004FFF]"
+              : "text-slate-700 hover:text-[#004FFF] dark:text-slate-200"
           }`}
         >
           {option.label}
