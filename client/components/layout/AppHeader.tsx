@@ -11,14 +11,16 @@ export default function AppHeader() {
     <>
       <header className="w-full border-b border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10">
         <div className="container mx-auto flex flex-wrap items-center gap-2 px-4 py-2 mt-6 mb-6 md:flex-nowrap">
-          <img
-            src="/images/cds-logo-color-text.webp"
-            alt="Cornerstone Digital Sports"
-            className="h-[80px] w-[80px] object-contain flex-shrink-0"
-          />
-          <h1 className="text-[36px] md:text-[50px] lg:text-[60px] leading-[36px] md:leading-[50px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
-            Cornerstone Digital Sports
-          </h1>
+          <div className="order-1 flex w-full min-w-0 items-center gap-2 md:order-none md:w-auto">
+            <img
+              src="/images/cds-logo-color-text.webp"
+              alt="Cornerstone Digital Sports"
+              className="h-[80px] w-[80px] flex-shrink-0 object-contain"
+            />
+            <h1 className="min-w-0 flex-1 text-[36px] leading-[36px] md:text-[50px] md:leading-[50px] lg:text-[60px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
+              Cornerstone Digital Sports
+            </h1>
+          </div>
           <LanguageSwitcher className="order-3 w-full justify-center md:order-none md:ml-auto md:w-auto md:justify-start" />
           <button
             onClick={() => setIsContactFormOpen(true)}
