@@ -137,7 +137,6 @@ function FeatureCarousel() {
           src="/images/problem.mp4"
           autoPlay
           muted
-          loop
           playsInline
           aria-hidden="true"
         />
