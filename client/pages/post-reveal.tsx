@@ -154,7 +154,7 @@ function FeatureCarousel() {
       </div>
       <div
         className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
-        style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.75)" }}
       >
         <div className="flex items-center justify-center">
           <div>
