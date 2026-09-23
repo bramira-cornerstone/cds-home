@@ -171,7 +171,7 @@ function FeatureCarousel() {
           className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
         >
-          <div className="flex items-center justify-center lg:col-span-2">
+          <div className="flex flex-col items-center justify-center lg:col-span-2">
             <h2
               className="text-center text-[42px] uppercase tracking-wider mb-2"
               style={{
@@ -182,6 +182,9 @@ function FeatureCarousel() {
             >
               {copy.needs.title}
             </h2>
+            <p className="max-w-3xl text-center text-xl leading-relaxed text-black">
+              {copy.needs.subtitle}
+            </p>
           </div>
           <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
             <img
