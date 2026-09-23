@@ -93,7 +93,7 @@ const english: TranslationSet = {
     subtitle: "What must the solution have that prior attempts have missed?",
     aggregatesTitle: "Aggregates",
     aggregatesDescription:
-      "Returns fans to your core product from wherever they initially viewed",
+      "Brings fans off fragmented streaming and social media platforms and onto one you control",
   },
   features: {
     ownThePlays: {
@@ -197,7 +197,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "¿Qué debe tener la solución que los intentos anteriores no tuvieron?",
       aggregatesTitle: "Agregados",
       aggregatesDescription:
-        "Devuelve a los fans a tu producto principal desde cualquier lugar donde lo hayan visto inicialmente",
+        "Devuelve a los fans desde plataformas fragmentadas de streaming y redes sociales a una sola plataforma que controlas",
     },
     features: {
       ownThePlays: {
@@ -295,7 +295,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "O que a solução precisa ter que as tentativas anteriores não tiveram?",
       aggregatesTitle: "Agregados",
       aggregatesDescription:
-        "Traz os fãs de volta ao seu produto principal de onde quer que o tenham visto inicialmente",
+        "Traz os fãs de plataformas fragmentadas de streaming e redes sociais para uma única plataforma que você controla",
     },
     features: {
       ownThePlays: {
@@ -393,7 +393,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "ما الذي يجب أن يتوفر في الحل وغاب عن المحاولات السابقة؟",
       aggregatesTitle: "التجميع",
       aggregatesDescription:
-        "يعيد المشجعين إلى منتجك الأساسي من أي مكان شاهدوه فيه أولًا",
+        "ينقل المشجعين من منصات البث ووسائل التواصل الاجتماعي المتفرقة إلى منصة واحدة تسيطر عليها",
     },
     features: {
       ownThePlays: {
@@ -491,7 +491,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "Was muss die Lösung haben, das frühere Versuche übersehen haben?",
       aggregatesTitle: "Aggregationen",
       aggregatesDescription:
-        "Bringt Fans von überall, wo sie es zuerst gesehen haben, zu deinem Kernprodukt zurück",
+        "Bringt Fans von fragmentierten Streaming- und Social-Media-Plattformen auf eine Plattform, die du kontrollierst",
     },
     features: {
       ownThePlays: {
@@ -589,7 +589,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "Que doit avoir la solution que les tentatives précédentes n'avaient pas ?",
       aggregatesTitle: "Agrégats",
       aggregatesDescription:
-        "Ramène les fans vers votre produit principal, quel que soit l'endroit où ils l'ont découvert",
+        "Ramène les fans des plateformes de streaming et de réseaux sociaux fragmentées vers une seule plateforme que vous contrôlez",
     },
     features: {
       ownThePlays: {
@@ -687,7 +687,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "Wat moet de oplossing hebben wat eerdere pogingen hebben gemist?",
       aggregatesTitle: "Aggregaten",
       aggregatesDescription:
-        "Brengt fans terug naar je kernproduct, vanaf de plek waar ze het eerst kwamen tegenkomen",
+        "Brengt fans van versnipperde streaming- en socialmediaplatforms naar één platform dat je beheert",
     },
     features: {
       ownThePlays: {
@@ -785,7 +785,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "समाधान में ऐसा क्या होना चाहिए जो पिछले प्रयासों में नहीं था?",
       aggregatesTitle: "समेकन",
       aggregatesDescription:
-        "प्रशंसकों को उस जगह से आपके मुख्य उत्पाद पर वापस लाता है जहां उन्होंने इसे पहली बार देखा था",
+        "प्रशंसकों को बिखरे हुए स्ट्रीमिंग और सोशल मीडिया प्लेटफ़ॉर्म से आपके नियंत्रण वाले एक ही प्लेटफ़ॉर्म पर लाता है",
     },
     features: {
       ownThePlays: {
@@ -883,7 +883,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "这个解决方案必须具备什么，才能弥补以往尝试的不足？",
       aggregatesTitle: "聚合",
       aggregatesDescription:
-        "无论粉丝最初在哪里看到，都能将他们带回你的核心产品",
+        "将粉丝从分散的流媒体和社交媒体平台带回到一个由你控制的平台",
     },
     features: {
       ownThePlays: {
@@ -980,7 +980,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       subtitle: "これまでの試みが見落としていた、解決策に必要なものは何でしょうか？",
       aggregatesTitle: "アグリゲーション",
       aggregatesDescription:
-        "ファンが最初に見た場所から、あなたのコア製品へ呼び戻します",
+        "ファンを分散したストリーミングやソーシャルメディアのプラットフォームから、あなたが管理する一つのプラットフォームへ導きます",
     },
     features: {
       ownThePlays: {

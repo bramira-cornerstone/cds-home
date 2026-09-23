@@ -198,12 +198,17 @@ function FeatureCarousel() {
               <h3
                 lang={language}
                 className="absolute inset-x-0 top-[7.5%] z-10 box-border w-full px-3 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
+                style={{ textShadow: "3px 3px 10px rgba(74, 74, 74, 1)" }}
               >
                 {copy.needs.aggregatesTitle}
               </h3>
               <p
                 lang={language}
-                className="absolute inset-x-0 bottom-[7.5%] z-10 box-border w-full px-3 text-center text-[24px] leading-tight hyphens-auto sm:text-[22px] [overflow-wrap:anywhere]"
+                className="absolute inset-x-0 bottom-[7.5%] z-10 box-border w-full px-3 text-center text-[24px] leading-tight break-normal sm:text-[22px]"
+                style={{
+                  outline: "none",
+                  textShadow: "3px 3px 12px rgba(74, 74, 74, 1)",
+                }}
               >
                 {copy.needs.aggregatesDescription}
               </p>
