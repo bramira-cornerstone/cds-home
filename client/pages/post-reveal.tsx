@@ -1,6 +1,10 @@
 import { useEffect, useState, type CSSProperties } from "react";
 
+import { useLanguage } from "@/contexts/LanguageContext";
+import { type FeatureKey } from "@/i18n";
+
 type FeatureCard = {
+  key: FeatureKey;
   title: string;
   titleColor: string;
   description: string[];
@@ -17,6 +21,7 @@ type FeatureCard = {
 
 const featureCards: FeatureCard[] = [
   {
+    key: "ownThePlays",
     title: "OWN THE PLAYS",
     titleColor: "#FF6300",
     description: [
@@ -32,6 +37,7 @@ const featureCards: FeatureCard[] = [
     caption: "*Sample product with sample league",
   },
   {
+    key: "voting",
     title: "VOTING",
     titleColor: "#FF6300",
     description: [
@@ -48,6 +54,7 @@ const featureCards: FeatureCard[] = [
     imageClassName: "w-full h-full object-contain",
   },
   {
+    key: "confidence",
     title: "CONFIDENCE",
     titleColor: "#FF6300",
     description: [
@@ -71,6 +78,7 @@ const featureCards: FeatureCard[] = [
     },
   },
   {
+    key: "utility",
     title: "UTILITY",
     titleColor: "#004FFF",
     description: [
@@ -88,6 +96,7 @@ const featureCards: FeatureCard[] = [
     imageStyle: { marginLeft: "auto", marginRight: "auto", height: "300px" },
   },
   {
+    key: "social",
     title: "SOCIAL",
     titleColor: "#FF6300",
     description: [
@@ -108,6 +117,8 @@ function FeatureCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const activeCard = featureCards[activeIndex];
+  const { copy } = useLanguage();
+  const activeCopy = copy.features[activeCard.key];
 
   useEffect(() => {
     if (isPaused) return;
@@ -142,13 +153,13 @@ function FeatureCarousel() {
         />
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-black/20 px-6 text-center text-white">
           <h2 className="text-[50px] font-bold leading-tight md:text-[96px]">
-            Media Fragmentation
+            {copy.hero.title}
           </h2>
           <p className="mt-4 max-w-3xl text-[24px] leading-relaxed md:text-[40px]">
-            Live sports are among the most valuable IP in the world. But after the match, other platforms attract more of the attention and extract more of the value.
+            {copy.hero.description}
             <br />
             <br />
-            We help you bring it back.
+            {copy.hero.callToAction}
           </p>
         </div>
       </div>
@@ -167,7 +178,7 @@ function FeatureCarousel() {
                 marginTop: "24px",
               }}
             >
-              {activeCard.title}
+              {activeCopy.title}
             </p>
             <p
               className={`text-center ${activeCard.descriptionClassName} dark:text-white`}
@@ -181,10 +192,10 @@ function FeatureCarousel() {
                 marginBottom: "36px",
               }}
             >
-              {activeCard.description.map((line, index) => (
+              {activeCopy.description.map((line, index) => (
                 <span key={line}>
                   {line}
-                  {index < activeCard.description.length - 1 ? <br /> : null}
+                  {index < activeCopy.description.length - 1 ? <br /> : null}
                 </span>
               ))}
             </p>
@@ -199,15 +210,15 @@ function FeatureCarousel() {
             >
               <img
                 src={activeCard.image}
-                alt={activeCard.imageAlt}
+                alt={activeCopy.imageAlt}
                 className={activeCard.imageClassName}
                 loading="lazy"
                 style={activeCard.imageStyle}
               />
             </div>
-            {activeCard.caption ? (
+            {activeCopy.caption ? (
               <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
-                {activeCard.caption}
+                {activeCopy.caption}
               </p>
             ) : null}
           </div>
@@ -216,7 +227,7 @@ function FeatureCarousel() {
         <button
           type="button"
           onClick={showPrevious}
-          aria-label="Previous feature"
+          aria-label={copy.carousel.previousFeature}
           className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-2xl leading-none text-slate-700 shadow-sm transition hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-900"
         >
           ‹
@@ -224,7 +235,7 @@ function FeatureCarousel() {
         <button
           type="button"
           onClick={showNext}
-          aria-label="Next feature"
+          aria-label={copy.carousel.nextFeature}
           className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-2xl leading-none text-slate-700 shadow-sm transition hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-900"
         >
           ›
@@ -236,7 +247,7 @@ function FeatureCarousel() {
               key={card.title}
               type="button"
               onClick={() => setActiveIndex(index)}
-              aria-label={`Show ${card.title.toLowerCase()} feature`}
+              aria-label={copy.carousel.featureLabels[card.key]}
               className={`h-2.5 w-2.5 rounded-full border transition ${
                 index === activeIndex
                   ? "border-slate-700 bg-slate-700 dark:border-slate-200 dark:bg-slate-200"
@@ -247,7 +258,9 @@ function FeatureCarousel() {
           <button
             type="button"
             onClick={() => setIsPaused((currentPaused) => !currentPaused)}
-            aria-label={isPaused ? "Resume carousel" : "Pause carousel"}
+            aria-label={
+              isPaused ? copy.carousel.resumeCarousel : copy.carousel.pauseCarousel
+            }
             className="ml-1 rounded border border-slate-400 px-1.5 text-[10px] leading-[10px] text-slate-600 transition hover:bg-white dark:border-slate-500 dark:text-slate-300 dark:hover:bg-slate-900"
           >
             {isPaused ? "▶" : "Ⅱ"}
@@ -259,6 +272,8 @@ function FeatureCarousel() {
 }
 
 export default function Home() {
+  const { copy } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex flex-col">
       <FeatureCarousel />
@@ -275,7 +290,7 @@ export default function Home() {
                 className="text-center text-[28px] leading-tight text-black dark:text-white px-6"
                 style={{ marginTop: "36px", marginBottom: "36px" }}
               >
-                Read the whitepaper to understand how we will succeed to hold users, value, and demand where others have failed:
+                {copy.whitepaper.description}
               </p>
             </div>
           </div>
@@ -286,11 +301,11 @@ export default function Home() {
               rel="noopener noreferrer"
               className="flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
               style={{ maxWidth: "165px" }}
-              title="Download from Google Drive"
+              title={copy.whitepaper.downloadTitle}
             >
               <img
                 src="/images/drive-icon.webp"
-                alt="Google Drive"
+                alt={copy.whitepaper.driveAlt}
                 className="w-full h-full object-contain"
               />
             </a>
@@ -304,13 +319,18 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <img
               src="/images/cornerstone-logo.webp"
-              alt="Cornerstone Digital Sports logo"
+              alt={copy.footer.logoAlt}
               className="h-6 w-6 rounded-md object-cover shadow-md"
             />
-            <p>© {new Date().getFullYear()} Cornerstone Digital Sports</p>
+            <p>
+              {copy.footer.copyright.replace(
+                "{year}",
+                String(new Date().getFullYear()),
+              )}
+            </p>
           </div>
           <div>
-            <p>Where fandom has value</p>
+            <p>{copy.footer.tagline}</p>
           </div>
         </div>
       </section>

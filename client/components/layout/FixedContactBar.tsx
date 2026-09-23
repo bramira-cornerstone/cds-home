@@ -1,8 +1,10 @@
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function FixedContactBar() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const { copy } = useLanguage();
 
   return (
     <>
@@ -13,7 +15,7 @@ export default function FixedContactBar() {
             className="px-8 py-3 text-lg bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition"
             style={{ backgroundColor: "#004FFF" }}
           >
-            Contact Us
+            {copy.header.contactUs}
           </button>
         </div>
       </div>

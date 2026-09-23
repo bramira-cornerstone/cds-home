@@ -1,13 +1,16 @@
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AppHeader() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const { copy } = useLanguage();
 
   return (
     <>
       <header className="w-full border-b border-black/5 bg-white/80 dark:bg-black/80 dark:border-white/10">
-        <div className="container mx-auto px-4 py-2 flex items-center gap-2 mt-6 mb-6">
+        <div className="container mx-auto flex flex-wrap items-center gap-2 px-4 py-2 mt-6 mb-6 md:flex-nowrap">
           <img
             src="/images/cds-logo-color-text.webp"
             alt="Cornerstone Digital Sports"
@@ -16,12 +19,13 @@ export default function AppHeader() {
           <h1 className="text-[36px] md:text-[50px] lg:text-[60px] leading-[36px] md:leading-[50px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
             Cornerstone Digital Sports
           </h1>
+          <LanguageSwitcher className="order-3 w-full justify-center md:order-none md:ml-auto md:w-auto md:justify-start" />
           <button
             onClick={() => setIsContactFormOpen(true)}
-            className="hidden md:block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex-shrink-0 text-[28px] ml-auto overflow-hidden"
+            className="hidden md:block px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition flex-shrink-0 text-[28px] md:ml-4 overflow-hidden"
             style={{ backgroundColor: "#004FFF", boxShadow: "3px 3px 6px 0 rgba(155, 155, 155, 1)" }}
           >
-            Contact Us
+            {copy.header.contactUs}
           </button>
         </div>
       </header>
