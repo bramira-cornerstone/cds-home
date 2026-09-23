@@ -114,7 +114,7 @@ const featureCards: FeatureCard[] = [
 ];
 
 function FeatureCarousel() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
   const [isPaused, setIsPaused] = useState(false);
   const activeCard = featureCards[activeIndex];
   const { copy } = useLanguage();
