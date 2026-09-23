@@ -154,7 +154,7 @@ function FeatureCarousel() {
       </div>
       <div
         className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
-        style={{ background: activeCard.background }}
+        style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
       >
         <div className="flex items-center justify-center">
           <div>
@@ -267,10 +267,7 @@ export default function Home() {
       <section className="container mx-auto px-2 py-0 pb-0">
         <div
           className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(255, 99, 0, 0.5) 0%, rgba(0, 79, 255, 0.5) 100%)",
-          }}
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
         >
           <div className="flex items-center justify-center">
             <div>
