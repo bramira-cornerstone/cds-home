@@ -142,7 +142,7 @@ function FeatureCarousel() {
 
   return (
     <section className="container mx-auto px-2 py-0 pb-0">
-      <div className="relative left-1/2 h-[calc(100dvh-232px)] w-screen -translate-x-1/2 overflow-hidden bg-black/30 md:h-screen">
+      <div className="relative left-1/2 h-[calc(100dvh-216px)] w-screen -translate-x-1/2 overflow-hidden bg-black/30 md:h-screen">
         <video
           className="h-full w-full object-cover"
           src="/images/problem.mp4"
