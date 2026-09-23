@@ -38,6 +38,9 @@ export type TranslationSet = {
     description: string;
     callToAction: string;
   };
+  needs: {
+    title: string;
+  };
   features: Record<FeatureKey, FeatureCopy>;
   carousel: {
     previousFeature: string;
@@ -82,6 +85,7 @@ const english: TranslationSet = {
       "Live sports are among the most valuable IP in the world. But after the match, other platforms attract more of the attention and extract more of the value.",
     callToAction: "We help you bring it back.",
   },
+  needs: { title: "Needs" },
   features: {
     ownThePlays: {
       title: "OWN THE PLAYS",
@@ -179,6 +183,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Los deportes en vivo son una de las propiedades intelectuales más valiosas del mundo. Pero después del partido, otras plataformas atraen más atención y extraen más valor.",
       callToAction: "Te ayudamos a recuperarlo.",
     },
+    needs: { title: "Necesidades" },
     features: {
       ownThePlays: {
         title: "DOMINA LAS JUGADAS",
@@ -270,6 +275,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Os esportes ao vivo estão entre as propriedades intelectuais mais valiosas do mundo. Mas, depois da partida, outras plataformas atraem mais atenção e extraem mais valor.",
       callToAction: "Nós ajudamos você a trazer isso de volta.",
     },
+    needs: { title: "Necessidades" },
     features: {
       ownThePlays: {
         title: "DOMINE AS JOGADAS",
@@ -361,6 +367,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "تُعد الرياضات المباشرة من أغلى حقوق الملكية الفكرية في العالم. لكن بعد المباراة، تجذب منصات أخرى مزيدًا من الاهتمام وتستحوذ على مزيد من القيمة.",
       callToAction: "نساعدك على استعادتها.",
     },
+    needs: { title: "الاحتياجات" },
     features: {
       ownThePlays: {
         title: "امتلك اللحظات",
@@ -452,6 +459,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Live-Sport gehört zu den wertvollsten geistigen Eigentumsrechten der Welt. Doch nach dem Spiel ziehen andere Plattformen mehr Aufmerksamkeit an und schöpfen mehr Wert ab.",
       callToAction: "Wir helfen dir, ihn zurückzuholen.",
     },
+    needs: { title: "Bedürfnisse" },
     features: {
       ownThePlays: {
         title: "DIE SPIELE BESITZEN",
@@ -543,6 +551,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Le sport en direct compte parmi les propriétés intellectuelles les plus précieuses au monde. Mais après le match, d'autres plateformes attirent davantage l'attention et captent davantage de valeur.",
       callToAction: "Nous vous aidons à la récupérer.",
     },
+    needs: { title: "Besoins" },
     features: {
       ownThePlays: {
         title: "POSSÉDEZ LES ACTIONS",
@@ -634,6 +643,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Live sport behoort tot het meest waardevolle intellectuele eigendom ter wereld. Maar na de wedstrijd trekken andere platforms meer aandacht en halen ze meer waarde weg.",
       callToAction: "Wij helpen je die terug te brengen.",
     },
+    needs: { title: "Behoeften" },
     features: {
       ownThePlays: {
         title: "BEZIT DE SPELMOMENTEN",
@@ -725,6 +735,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "लाइव खेल दुनिया की सबसे मूल्यवान बौद्धिक संपदाओं में से हैं। लेकिन मैच के बाद दूसरे प्लेटफ़ॉर्म अधिक ध्यान आकर्षित करते हैं और अधिक मूल्य हासिल करते हैं।",
       callToAction: "हम इसे वापस लाने में आपकी मदद करते हैं।",
     },
+    needs: { title: "ज़रूरतें" },
     features: {
       ownThePlays: {
         title: "खेल पर अपना अधिकार",
@@ -816,6 +827,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "现场体育赛事是世界上最有价值的知识产权之一。但比赛结束后，其他平台吸引了更多关注，也获取了更多价值。",
       callToAction: "我们帮助你把这些带回来。",
     },
+    needs: { title: "需求" },
     features: {
       ownThePlays: {
         title: "拥有精彩时刻",
@@ -906,6 +918,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "ライブスポーツは世界で最も価値のある知的財産の一つです。しかし試合後は、他のプラットフォームがより多くの注目を集め、より多くの価値を取り出しています。",
       callToAction: "私たちはその価値を取り戻すお手伝いをします。",
     },
+    needs: { title: "ニーズ" },
     features: {
       ownThePlays: {
         title: "プレーを所有する",

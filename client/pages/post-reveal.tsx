@@ -166,6 +166,25 @@ function FeatureCarousel() {
           </p>
         </div>
       </div>
+      <section className="container mx-auto px-2 py-0 pb-0">
+        <div
+          className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
+        >
+          <div className="flex items-center justify-center lg:col-span-2">
+            <h2
+              className="text-center text-[42px] uppercase tracking-wider mb-2"
+              style={{
+                color: "#FF6300",
+                fontWeight: 700,
+                lineHeight: "50px",
+              }}
+            >
+              {copy.needs.title}
+            </h2>
+          </div>
+        </div>
+      </section>
       <div
         className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
         style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
