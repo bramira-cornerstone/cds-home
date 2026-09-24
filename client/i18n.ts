@@ -223,7 +223,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "Agregados",
           description:
-            "Devuelve a los fans desde plataformas fragmentadas de streaming y redes sociales a una sola plataforma que controlas",
+            "Lleva a los fans desde las plataformas de streaming y redes sociales de vuelta a tu producto principal",
         },
         converts: {
           title: "Convierte",
@@ -232,7 +232,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "Sostenible",
           description:
-            "Sigue funcionando sin esfuerzo, inversión ni incentivos constantes por parte del titular de los derechos",
+            "Crea una demanda continua sin esfuerzo, inversión ni incentivos constantes",
         },
         valuable: {
           title: "Valioso",
@@ -339,7 +339,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "Agregados",
           description:
-            "Traz os fãs de plataformas fragmentadas de streaming e redes sociais para uma única plataforma que você controla",
+            "Leva os fãs das plataformas de streaming e redes sociais de volta ao seu produto principal",
         },
         converts: {
           title: "Converte",
@@ -348,7 +348,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "Sustentável",
           description:
-            "Continua funcionando sem esforço, investimento ou incentivos constantes do detentor dos direitos",
+            "Cria demanda contínua sem esforço, investimento ou incentivos constantes",
         },
         valuable: {
           title: "Valioso",
@@ -455,7 +455,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "التجميع",
           description:
-            "ينقل المشجعين من منصات البث ووسائل التواصل الاجتماعي المتفرقة إلى منصة واحدة تسيطر عليها",
+            "يقود المشجعين من منصات البث ووسائل التواصل الاجتماعي ويعيدهم إلى منتجك الأساسي",
         },
         converts: {
           title: "التحويل",
@@ -464,7 +464,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "مستدام",
           description:
-            "يستمر في العمل دون جهد أو استثمار أو تحفيز مستمر من مالك الحقوق",
+            "يخلق طلبًا مستمرًا دون جهد أو استثمار أو تحفيز مستمر",
         },
         valuable: {
           title: "قيّم",
@@ -571,7 +571,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "Aggregationen",
           description:
-            "Bringt Fans von fragmentierten Streaming- und Social-Media-Plattformen auf eine Plattform, die du kontrollierst",
+            "Bringt Fans von Streaming- und Social-Media-Plattformen zurück zu deinem Kernprodukt",
         },
         converts: {
           title: "Konvertiert",
@@ -580,7 +580,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "Nachhaltig",
           description:
-            "Funktioniert ohne ständigen Aufwand, Investitionen oder Anreize durch den Rechteinhaber",
+            "Schafft anhaltende Nachfrage ohne ständigen Aufwand, Investitionen oder Anreize",
         },
         valuable: {
           title: "Wertvoll",
@@ -687,7 +687,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "Agrégats",
           description:
-            "Ramène les fans des plateformes de streaming et de réseaux sociaux fragmentées vers une seule plateforme que vous contrôlez",
+            "Ramène les fans des plateformes de streaming et de réseaux sociaux vers votre produit principal",
         },
         converts: {
           title: "Convertit",
@@ -696,7 +696,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "Durable",
           description:
-            "Continue de fonctionner sans effort, investissement ou incitation constants de la part du détenteur des droits",
+            "Crée une demande continue sans effort, investissement ou incitation constants",
         },
         valuable: {
           title: "Précieux",
@@ -803,7 +803,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "Aggregaten",
           description:
-            "Brengt fans van versnipperde streaming- en socialmediaplatforms naar één platform dat je beheert",
+            "Brengt fans van streaming- en socialmediaplatforms terug naar je kernproduct",
         },
         converts: {
           title: "Converteert",
@@ -812,7 +812,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "Duurzaam",
           description:
-            "Blijft werken zonder constante inspanning, investering of stimulering door de rechthebbende",
+            "Creëert aanhoudende vraag zonder constante inspanning, investering of stimulering",
         },
         valuable: {
           title: "Waardevol",
@@ -919,7 +919,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "समेकन",
           description:
-            "प्रशंसकों को बिखरे हुए स्ट्रीमिंग और सोशल मीडिया प्लेटफ़ॉर्म से आपके नियंत्रण वाले एक ही प्लेटफ़ॉर्म पर लाता है",
+            "प्रशंसकों को स्ट्रीमिंग और सोशल मीडिया प्लेटफ़ॉर्म से आपके मुख्य उत्पाद पर वापस लाता है",
         },
         converts: {
           title: "रूपांतरण",
@@ -928,7 +928,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "टिकाऊ",
           description:
-            "अधिकार-धारक के निरंतर प्रयास, निवेश या प्रोत्साहन के बिना भी काम करता रहता है",
+            "निरंतर प्रयास, निवेश या प्रोत्साहन के बिना लगातार मांग पैदा करता है",
         },
         valuable: {
           title: "मूल्यवान",
@@ -1035,7 +1035,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "聚合",
           description:
-            "将粉丝从分散的流媒体和社交媒体平台带回到一个由你控制的平台",
+            "将粉丝从流媒体和社交媒体平台带回你的核心产品",
         },
         converts: {
           title: "转化",
@@ -1043,7 +1043,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         },
         sustainable: {
           title: "可持续",
-          description: "无需权利方持续投入精力、资金或激励，也能持续运作",
+          description: "无需持续投入精力、资金或激励，也能创造持续需求",
         },
         valuable: {
           title: "有价值",
@@ -1148,7 +1148,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         aggregates: {
           title: "アグリゲーション",
           description:
-            "ファンを分散したストリーミングやソーシャルメディアのプラットフォームから、あなたが管理する一つのプラットフォームへ導きます",
+            "ファンをストリーミングやソーシャルメディアのプラットフォームから、あなたの中核製品へ呼び戻します",
         },
         converts: {
           title: "コンバージョン",
@@ -1157,7 +1157,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         sustainable: {
           title: "持続可能",
           description:
-            "権利者による継続的な努力、投資、インセンティブなしで機能し続けます",
+            "継続的な努力、投資、インセンティブなしに、継続的な需要を生み出します",
         },
         valuable: {
           title: "価値がある",
