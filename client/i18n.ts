@@ -101,7 +101,7 @@ const english: TranslationSet = {
       aggregates: {
         title: "Aggregates",
         description:
-          "Drives fans off streaming and social media platforms and back to your core product",
+          "Drives fans from streaming and social media platforms and back to your core product",
       },
       converts: {
         title: "Converts",
@@ -110,7 +110,7 @@ const english: TranslationSet = {
       sustainable: {
         title: "Sustainable",
         description:
-          "Continues working without constant effort, investment, or incentivizing from rights-holder",
+          "Continues working without constant effort, investment, or incentivizing",
       },
       valuable: {
         title: "Valuable",
