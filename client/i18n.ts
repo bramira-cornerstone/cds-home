@@ -110,7 +110,7 @@ const english: TranslationSet = {
       sustainable: {
         title: "Sustainable",
         description:
-          "Continues working without constant effort, investment, or incentivizing",
+          "Creates ongoing demand without constant effort, investment, or incentivizing",
       },
       valuable: {
         title: "Valuable",
