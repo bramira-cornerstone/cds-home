@@ -95,8 +95,8 @@ const english: TranslationSet = {
     callToAction: "We help you bring it back.",
   },
   needs: {
-    title: "Needs",
-    subtitle: "What must the solution have that prior attempts have missed?",
+    title: "OPPORTUNITY",
+    subtitle: "What we can provide that others have missed?",
     cards: {
       aggregates: {
         title: "Aggregates",
@@ -217,8 +217,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Te ayudamos a recuperarlo.",
     },
     needs: {
-      title: "Necesidades",
-      subtitle: "¿Qué debe tener la solución que los intentos anteriores no tuvieron?",
+      title: "OPORTUNIDAD",
+      subtitle: "¿Qué podemos ofrecer que otros han pasado por alto?",
       cards: {
         aggregates: {
           title: "Agregados",
@@ -333,8 +333,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Nós ajudamos você a trazer isso de volta.",
     },
     needs: {
-      title: "Necessidades",
-      subtitle: "O que a solução precisa ter que as tentativas anteriores não tiveram?",
+      title: "OPORTUNIDADE",
+      subtitle: "O que podemos oferecer que outros não ofereceram?",
       cards: {
         aggregates: {
           title: "Agregados",
@@ -449,8 +449,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "نساعدك على استعادتها.",
     },
     needs: {
-      title: "الاحتياجات",
-      subtitle: "ما الذي يجب أن يتوفر في الحل وغاب عن المحاولات السابقة؟",
+      title: "الفرصة",
+      subtitle: "ما الذي يمكننا تقديمه وقد أغفله الآخرون؟",
       cards: {
         aggregates: {
           title: "التجميع",
@@ -565,8 +565,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Wir helfen dir, ihn zurückzuholen.",
     },
     needs: {
-      title: "Bedürfnisse",
-      subtitle: "Was muss die Lösung haben, das frühere Versuche übersehen haben?",
+      title: "CHANCE",
+      subtitle: "Was können wir bieten, das andere übersehen haben?",
       cards: {
         aggregates: {
           title: "Aggregationen",
@@ -681,8 +681,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Nous vous aidons à la récupérer.",
     },
     needs: {
-      title: "Besoins",
-      subtitle: "Que doit avoir la solution que les tentatives précédentes n'avaient pas ?",
+      title: "OPPORTUNITÉ",
+      subtitle: "Que pouvons-nous offrir que les autres ont manqué ?",
       cards: {
         aggregates: {
           title: "Agrégats",
@@ -797,8 +797,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Wij helpen je die terug te brengen.",
     },
     needs: {
-      title: "Behoeften",
-      subtitle: "Wat moet de oplossing hebben wat eerdere pogingen hebben gemist?",
+      title: "KANS",
+      subtitle: "Wat kunnen wij bieden wat anderen hebben gemist?",
       cards: {
         aggregates: {
           title: "Aggregaten",
@@ -913,8 +913,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "हम इसे वापस लाने में आपकी मदद करते हैं।",
     },
     needs: {
-      title: "ज़रूरतें",
-      subtitle: "समाधान में ऐसा क्या होना चाहिए जो पिछले प्रयासों में नहीं था?",
+      title: "अवसर",
+      subtitle: "हम ऐसा क्या प्रदान कर सकते हैं जिसे दूसरों ने नज़रअंदाज़ किया है?",
       cards: {
         aggregates: {
           title: "समेकन",
@@ -1029,8 +1029,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "我们帮助你把这些带回来。",
     },
     needs: {
-      title: "需求",
-      subtitle: "这个解决方案必须具备什么，才能弥补以往尝试的不足？",
+      title: "机会",
+      subtitle: "我们能提供什么，是其他人所忽略的？",
       cards: {
         aggregates: {
           title: "聚合",
@@ -1142,8 +1142,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "私たちはその価値を取り戻すお手伝いをします。",
     },
     needs: {
-      title: "ニーズ",
-      subtitle: "これまでの試みが見落としていた、解決策に必要なものは何でしょうか？",
+      title: "機会",
+      subtitle: "私たちは、他社が見落としてきた何を提供できるでしょうか？",
       cards: {
         aggregates: {
           title: "アグリゲーション",
