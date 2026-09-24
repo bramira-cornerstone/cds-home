@@ -96,7 +96,7 @@ const english: TranslationSet = {
   },
   needs: {
     title: "OPPORTUNITY",
-    subtitle: "What we can provide that others have missed?",
+    subtitle: "What we can provide that others have missed",
     cards: {
       aggregates: {
         title: "Aggregates",
