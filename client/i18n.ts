@@ -47,6 +47,7 @@ export type TranslationSet = {
   needs: {
     title: string;
     subtitle: string;
+    cardItems: Record<NeedsCardKey, string[]>;
     cards: Record<NeedsCardKey, NeedsCardCopy>;
   };
   features: Record<FeatureKey, FeatureCopy>;
@@ -96,6 +97,12 @@ const english: TranslationSet = {
   needs: {
     title: "OPPORTUNITY",
     subtitle: "The missing piece that we help deliver",
+    cardItems: {
+      aggregates: ["Streaming / OTT", "Social Platforms", "Physical Cards", "Digital Collectibles", "Fan Reward Tokens"],
+      converts: ["Social Platforms", "Physical Cards", "Digital Collectibles", "Non-monetized"],
+      sustainable: ["Fan Reward Tokens", "Gameified Fan Apps"],
+      valuable: ["Sports Betting", "Prediction Markets", "Gameified Fan Apps", "Physical Cards", "Digital Collectibles"],
+    },
     cards: {
       aggregates: {
         title: "Aggregates",
@@ -208,6 +215,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "OPORTUNIDAD",
       subtitle: "La pieza que falta y que ayudamos a ofrecer",
+      cardItems: {
+        aggregates: ["Streaming / OTT", "Plataformas sociales", "Tarjetas físicas", "Coleccionables digitales", "Tokens de recompensa para fans"],
+        converts: ["Plataformas sociales", "Tarjetas físicas", "Coleccionables digitales", "Sin monetizar"],
+        sustainable: ["Tokens de recompensa para fans", "Aplicaciones gamificadas para fans"],
+        valuable: ["Apuestas deportivas", "Mercados de predicción", "Aplicaciones gamificadas para fans", "Tarjetas físicas", "Coleccionables digitales"],
+      },
       cards: {
         aggregates: {
           title: "Agregados",
@@ -314,6 +327,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "OPORTUNIDADE",
       subtitle: "A peça que falta e que ajudamos a entregar",
+      cardItems: {
+        aggregates: ["Streaming / OTT", "Plataformas sociais", "Cartões físicos", "Colecionáveis digitais", "Tokens de recompensa para fãs"],
+        converts: ["Plataformas sociais", "Cartões físicos", "Colecionáveis digitais", "Não monetizado"],
+        sustainable: ["Tokens de recompensa para fãs", "Aplicativos gamificados para fãs"],
+        valuable: ["Apostas esportivas", "Mercados de previsão", "Aplicativos gamificados para fãs", "Cartões físicos", "Colecionáveis digitais"],
+      },
       cards: {
         aggregates: {
           title: "Agregados",
@@ -420,6 +439,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "الفرصة",
       subtitle: "القطعة المفقودة التي نساعد على تقديمها",
+      cardItems: {
+        aggregates: ["البث / OTT", "منصات التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "رموز مكافآت المشجعين"],
+        converts: ["منصات التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "غير مُدرّج لتحقيق الدخل"],
+        sustainable: ["رموز مكافآت المشجعين", "تطبيقات مشجعين مُلعبة"],
+        valuable: ["المراهنات الرياضية", "أسواق التنبؤ", "تطبيقات مشجعين مُلعبة", "بطاقات فعلية", "مقتنيات رقمية"],
+      },
       cards: {
         aggregates: {
           title: "التجميع",
@@ -526,6 +551,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "CHANCE",
       subtitle: "Das fehlende Puzzlestück, zu dessen Umsetzung wir beitragen",
+      cardItems: {
+        aggregates: ["Streaming / OTT", "Social-Media-Plattformen", "Physische Karten", "Digitale Sammelobjekte", "Fan-Belohnungstoken"],
+        converts: ["Social-Media-Plattformen", "Physische Karten", "Digitale Sammelobjekte", "Nicht monetarisiert"],
+        sustainable: ["Fan-Belohnungstoken", "Gamifizierte Fan-Apps"],
+        valuable: ["Sportwetten", "Prognosemärkte", "Gamifizierte Fan-Apps", "Physische Karten", "Digitale Sammelobjekte"],
+      },
       cards: {
         aggregates: {
           title: "Aggregationen",
@@ -632,6 +663,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "OPPORTUNITÉ",
       subtitle: "La pièce manquante que nous contribuons à apporter",
+      cardItems: {
+        aggregates: ["Streaming / OTT", "Plateformes sociales", "Cartes physiques", "Objets de collection numériques", "Jetons de récompense pour fans"],
+        converts: ["Plateformes sociales", "Cartes physiques", "Objets de collection numériques", "Non monétisé"],
+        sustainable: ["Jetons de récompense pour fans", "Applications de fans gamifiées"],
+        valuable: ["Paris sportifs", "Marchés prédictifs", "Applications de fans gamifiées", "Cartes physiques", "Objets de collection numériques"],
+      },
       cards: {
         aggregates: {
           title: "Agrégats",
@@ -738,6 +775,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "KANS",
       subtitle: "Het ontbrekende onderdeel dat wij helpen leveren",
+      cardItems: {
+        aggregates: ["Streaming / OTT", "Sociale platforms", "Fysieke kaarten", "Digitale verzamelobjecten", "Fanbeloningstokens"],
+        converts: ["Sociale platforms", "Fysieke kaarten", "Digitale verzamelobjecten", "Niet gemonetiseerd"],
+        sustainable: ["Fanbeloningstokens", "Gegamificeerde fan-apps"],
+        valuable: ["Sportweddenschappen", "Voorspellingsmarkten", "Gegamificeerde fan-apps", "Fysieke kaarten", "Digitale verzamelobjecten"],
+      },
       cards: {
         aggregates: {
           title: "Aggregaten",
@@ -844,6 +887,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "अवसर",
       subtitle: "वह कमी जिसे पूरा करने में हम मदद करते हैं",
+      cardItems: {
+        aggregates: ["स्ट्रीमिंग / OTT", "सोशल प्लेटफ़ॉर्म", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "प्रशंसक पुरस्कार टोकन"],
+        converts: ["सोशल प्लेटफ़ॉर्म", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "गैर-मुद्रीकृत"],
+        sustainable: ["प्रशंसक पुरस्कार टोकन", "गेमिफाइड फ़ैन ऐप्स"],
+        valuable: ["खेल सट्टेबाज़ी", "पूर्वानुमान बाज़ार", "गेमिफाइड फ़ैन ऐप्स", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ"],
+      },
       cards: {
         aggregates: {
           title: "समेकन",
@@ -950,6 +999,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "机会",
       subtitle: "我们助力交付的关键缺失环节",
+      cardItems: {
+        aggregates: ["流媒体 / OTT", "社交平台", "实体卡片", "数字收藏品", "球迷奖励代币"],
+        converts: ["社交平台", "实体卡片", "数字收藏品", "未货币化"],
+        sustainable: ["球迷奖励代币", "游戏化球迷应用"],
+        valuable: ["体育博彩", "预测市场", "游戏化球迷应用", "实体卡片", "数字收藏品"],
+      },
       cards: {
         aggregates: {
           title: "聚合",
@@ -1053,6 +1108,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "機会",
       subtitle: "私たちが提供を支援する、欠けていたもの",
+      cardItems: {
+        aggregates: ["ストリーミング / OTT", "ソーシャルプラットフォーム", "物理カード", "デジタルコレクティブル", "ファン報酬トークン"],
+        converts: ["ソーシャルプラットフォーム", "物理カード", "デジタルコレクティブル", "収益化なし"],
+        sustainable: ["ファン報酬トークン", "ゲーミフィケーション対応ファンアプリ"],
+        valuable: ["スポーツベッティング", "予測市場", "ゲーミフィケーション対応ファンアプリ", "物理カード", "デジタルコレクティブル"],
+      },
       cards: {
         aggregates: {
           title: "アグリゲーション",

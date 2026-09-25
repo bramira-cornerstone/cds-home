@@ -94,9 +94,10 @@ type NeedsCardProps = {
   language: string;
   title: string;
   description: string;
+  items: string[];
 };
 
-function NeedsCard({ image, language, title, description }: NeedsCardProps) {
+function NeedsCard({ image, language, title, description, items }: NeedsCardProps) {
   return (
     <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black text-center text-white">
       <img
@@ -123,6 +124,19 @@ function NeedsCard({ image, language, title, description }: NeedsCardProps) {
       >
         {description}
       </p>
+      <ul
+        lang={language}
+        className="absolute inset-x-0 bottom-2 z-10 space-y-0.5 px-3 text-left text-[13px] leading-[18px] sm:text-sm sm:leading-5"
+      >
+        {items.map((item) => (
+          <li key={item} className="flex items-center gap-2">
+            <span aria-hidden="true" className="shrink-0 text-lg font-bold leading-none text-red-500">
+              ✕
+            </span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
@@ -206,24 +220,28 @@ function FeatureCarousel() {
               language={language}
               title={copy.needs.cards.aggregates.title}
               description={copy.needs.cards.aggregates.description}
+              items={copy.needs.cardItems.aggregates}
             />
             <NeedsCard
               image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
               language={language}
               title={copy.needs.cards.converts.title}
               description={copy.needs.cards.converts.description}
+              items={copy.needs.cardItems.converts}
             />
             <NeedsCard
               image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F4f234cc2be154ce1befa99fd986f3f59"
               language={language}
               title={copy.needs.cards.sustainable.title}
               description={copy.needs.cards.sustainable.description}
+              items={copy.needs.cardItems.sustainable}
             />
             <NeedsCard
               image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F7ec4639454334c3fbc05c890a0bc0ea7"
               language={language}
               title={copy.needs.cards.valuable.title}
               description={copy.needs.cards.valuable.description}
+              items={copy.needs.cardItems.valuable}
             />
           </div>
         </div>
