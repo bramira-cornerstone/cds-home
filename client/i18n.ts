@@ -121,7 +121,7 @@ const english: TranslationSet = {
       valuable: {
         title: "Valuable",
         description:
-          "Both the fan and rights-holder can reasonably expect a clear return on what they put in",
+          "The fan can reasonably expect a positive long-term financial benefit to participate",
       },
     },
   },
@@ -239,7 +239,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "Valioso",
           description:
-            "Tanto el fan como el titular de los derechos pueden esperar razonablemente un retorno claro de lo que aportan",
+            "El fan puede esperar razonablemente un beneficio financiero positivo a largo plazo por participar",
         },
       },
     },
@@ -351,7 +351,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "Valioso",
           description:
-            "Tanto o fã quanto o detentor dos direitos podem esperar razoavelmente um retorno claro sobre o que investem",
+            "O fã pode esperar razoavelmente um benefício financeiro positivo a longo prazo ao participar",
         },
       },
     },
@@ -463,7 +463,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "قيّم",
           description:
-            "يمكن للمشجع ومالك الحقوق توقع عائد واضح بشكل معقول مقابل ما يقدمانه",
+            "يمكن للمشجع أن يتوقع بشكل معقول منفعة مالية إيجابية على المدى الطويل من المشاركة",
         },
       },
     },
@@ -575,7 +575,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "Wertvoll",
           description:
-            "Sowohl Fans als auch Rechteinhaber können vernünftigerweise eine klare Rendite für ihren Einsatz erwarten",
+            "Der Fan kann vernünftigerweise erwarten, durch seine Teilnahme langfristig einen positiven finanziellen Vorteil zu erzielen",
         },
       },
     },
@@ -687,7 +687,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "Précieux",
           description:
-            "Les fans comme les détenteurs de droits peuvent raisonnablement attendre un retour clair sur leur contribution",
+            "Le fan peut raisonnablement s'attendre à bénéficier d'un avantage financier positif à long terme en participant",
         },
       },
     },
@@ -799,7 +799,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "Waardevol",
           description:
-            "Zowel fans als rechthebbenden kunnen redelijkerwijs een duidelijk rendement op hun inzet verwachten",
+            "De fan kan redelijkerwijs verwachten door deelname op lange termijn een positief financieel voordeel te behalen",
         },
       },
     },
@@ -911,7 +911,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "मूल्यवान",
           description:
-            "प्रशंसक और अधिकार-धारक दोनों अपने योगदान पर स्पष्ट लाभ की उचित अपेक्षा कर सकते हैं",
+            "प्रशंसक भाग लेने से दीर्घकालिक सकारात्मक वित्तीय लाभ की उचित अपेक्षा कर सकता है",
         },
       },
     },
@@ -1021,7 +1021,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         },
         valuable: {
           title: "有价值",
-          description: "粉丝和权利方都可以合理期待从投入中获得明确回报",
+          description: "粉丝可以合理期待通过参与获得长期的正向经济收益",
         },
       },
     },
@@ -1132,7 +1132,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         valuable: {
           title: "価値がある",
           description:
-            "ファンと権利者の双方が、投入したものに対して明確なリターンを合理的に期待できます",
+            "ファンは参加することで、長期的にプラスの経済的利益を得られると合理的に期待できます",
         },
       },
     },
