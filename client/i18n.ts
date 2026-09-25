@@ -100,7 +100,7 @@ const english: TranslationSet = {
     cardItems: {
       aggregates: ["Streaming / OTT", "Social Platforms", "Physical Cards", "Digital Collectibles", "Fan Reward Tokens"],
       converts: ["Social Platforms", "Physical Cards", "Digital Collectibles", "Non-monetized"],
-      sustainable: ["Fan Reward Tokens", "Gameified Fan Apps"],
+      sustainable: ["Social Media", "Gameified Fan Apps", "Fan Reward Tokens"],
       valuable: ["Sports Betting", "Prediction Markets", "Gameified Fan Apps", "Physical Cards", "Digital Collectibles"],
     },
     cards: {
@@ -218,7 +218,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["Streaming / OTT", "Plataformas sociales", "Tarjetas físicas", "Coleccionables digitales", "Tokens de recompensa para fans"],
         converts: ["Plataformas sociales", "Tarjetas físicas", "Coleccionables digitales", "Sin monetizar"],
-        sustainable: ["Tokens de recompensa para fans", "Aplicaciones gamificadas para fans"],
+        sustainable: ["Redes sociales", "Aplicaciones gamificadas para fans", "Tokens de recompensa para fans"],
         valuable: ["Apuestas deportivas", "Mercados de predicción", "Aplicaciones gamificadas para fans", "Tarjetas físicas", "Coleccionables digitales"],
       },
       cards: {
@@ -330,7 +330,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["Streaming / OTT", "Plataformas sociais", "Cartões físicos", "Colecionáveis digitais", "Tokens de recompensa para fãs"],
         converts: ["Plataformas sociais", "Cartões físicos", "Colecionáveis digitais", "Não monetizado"],
-        sustainable: ["Tokens de recompensa para fãs", "Aplicativos gamificados para fãs"],
+        sustainable: ["Redes sociais", "Aplicativos gamificados para fãs", "Tokens de recompensa para fãs"],
         valuable: ["Apostas esportivas", "Mercados de previsão", "Aplicativos gamificados para fãs", "Cartões físicos", "Colecionáveis digitais"],
       },
       cards: {
@@ -442,7 +442,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["البث / OTT", "منصات التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "رموز مكافآت المشجعين"],
         converts: ["منصات التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "غير مُدرّج لتحقيق الدخل"],
-        sustainable: ["رموز مكافآت المشجعين", "تطبيقات مشجعين مُلعبة"],
+        sustainable: ["وسائل التواصل الاجتماعي", "تطبيقات مشجعين مُلعبة", "رموز مكافآت المشجعين"],
         valuable: ["المراهنات الرياضية", "أسواق التنبؤ", "تطبيقات مشجعين مُلعبة", "بطاقات فعلية", "مقتنيات رقمية"],
       },
       cards: {
@@ -554,7 +554,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["Streaming / OTT", "Social-Media-Plattformen", "Physische Karten", "Digitale Sammelobjekte", "Fan-Belohnungstoken"],
         converts: ["Social-Media-Plattformen", "Physische Karten", "Digitale Sammelobjekte", "Nicht monetarisiert"],
-        sustainable: ["Fan-Belohnungstoken", "Gamifizierte Fan-Apps"],
+        sustainable: ["Soziale Medien", "Gamifizierte Fan-Apps", "Fan-Belohnungstoken"],
         valuable: ["Sportwetten", "Prognosemärkte", "Gamifizierte Fan-Apps", "Physische Karten", "Digitale Sammelobjekte"],
       },
       cards: {
@@ -666,7 +666,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["Streaming / OTT", "Plateformes sociales", "Cartes physiques", "Objets de collection numériques", "Jetons de récompense pour fans"],
         converts: ["Plateformes sociales", "Cartes physiques", "Objets de collection numériques", "Non monétisé"],
-        sustainable: ["Jetons de récompense pour fans", "Applications de fans gamifiées"],
+        sustainable: ["Réseaux sociaux", "Applications de fans gamifiées", "Jetons de récompense pour fans"],
         valuable: ["Paris sportifs", "Marchés prédictifs", "Applications de fans gamifiées", "Cartes physiques", "Objets de collection numériques"],
       },
       cards: {
@@ -778,7 +778,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["Streaming / OTT", "Sociale platforms", "Fysieke kaarten", "Digitale verzamelobjecten", "Fanbeloningstokens"],
         converts: ["Sociale platforms", "Fysieke kaarten", "Digitale verzamelobjecten", "Niet gemonetiseerd"],
-        sustainable: ["Fanbeloningstokens", "Gegamificeerde fan-apps"],
+        sustainable: ["Sociale media", "Gegamificeerde fan-apps", "Fanbeloningstokens"],
         valuable: ["Sportweddenschappen", "Voorspellingsmarkten", "Gegamificeerde fan-apps", "Fysieke kaarten", "Digitale verzamelobjecten"],
       },
       cards: {
@@ -890,7 +890,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["स्ट्रीमिंग / OTT", "सोशल प्लेटफ़ॉर्म", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "प्रशंसक पुरस्कार टोकन"],
         converts: ["सोशल प्लेटफ़ॉर्म", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "गैर-मुद्रीकृत"],
-        sustainable: ["प्रशंसक पुरस्कार टोकन", "गेमिफाइड फ़ैन ऐप्स"],
+        sustainable: ["सोशल मीडिया", "गेमिफाइड फ़ैन ऐप्स", "प्रशंसक पुरस्कार टोकन"],
         valuable: ["खेल सट्टेबाज़ी", "पूर्वानुमान बाज़ार", "गेमिफाइड फ़ैन ऐप्स", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ"],
       },
       cards: {
@@ -1002,7 +1002,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["流媒体 / OTT", "社交平台", "实体卡片", "数字收藏品", "球迷奖励代币"],
         converts: ["社交平台", "实体卡片", "数字收藏品", "未货币化"],
-        sustainable: ["球迷奖励代币", "游戏化球迷应用"],
+        sustainable: ["社交媒体", "游戏化球迷应用", "球迷奖励代币"],
         valuable: ["体育博彩", "预测市场", "游戏化球迷应用", "实体卡片", "数字收藏品"],
       },
       cards: {
@@ -1111,7 +1111,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       cardItems: {
         aggregates: ["ストリーミング / OTT", "ソーシャルプラットフォーム", "物理カード", "デジタルコレクティブル", "ファン報酬トークン"],
         converts: ["ソーシャルプラットフォーム", "物理カード", "デジタルコレクティブル", "収益化なし"],
-        sustainable: ["ファン報酬トークン", "ゲーミフィケーション対応ファンアプリ"],
+        sustainable: ["ソーシャルメディア", "ゲーミフィケーション対応ファンアプリ", "ファン報酬トークン"],
         valuable: ["スポーツベッティング", "予測市場", "ゲーミフィケーション対応ファンアプリ", "物理カード", "デジタルコレクティブル"],
       },
       cards: {
