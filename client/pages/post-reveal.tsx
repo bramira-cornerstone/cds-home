@@ -115,7 +115,7 @@ function NeedsCard({ image, language, title, description }: NeedsCardProps) {
       </h3>
       <p
         lang={language}
-        className="absolute inset-x-0 bottom-[7.5%] z-10 box-border w-full px-3 text-center text-[24px] leading-tight break-normal sm:text-[22px]"
+        className="absolute inset-x-0 top-1/2 z-10 box-border w-full -translate-y-1/2 px-3 text-center text-[24px] leading-tight break-normal sm:text-[22px]"
         style={{
           outline: "none",
           textShadow: "3px 3px 12px rgba(74, 74, 74, 1)",
