@@ -9,7 +9,7 @@ export default function AppHeader() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-black/5 bg-white/85 dark:bg-black/85 dark:border-white/10">
+      <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-black/5 bg-white/95 dark:bg-black/85 dark:border-white/10">
         <div className="container mx-auto flex flex-wrap items-center gap-2 px-4 py-1.5 mt-2 mb-2 md:flex-nowrap">
           <div className="order-1 flex w-full min-w-0 items-center gap-2 md:order-none md:w-auto">
             <img
