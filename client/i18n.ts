@@ -44,6 +44,10 @@ export type TranslationSet = {
     description: string;
     callToAction: string;
   };
+  pitch: {
+    headlines: string[];
+    paragraphs: string[];
+  };
   needs: {
     title: string;
     subtitle: string;
@@ -93,6 +97,14 @@ const english: TranslationSet = {
     description:
       "Live sports are among the most valuable IP in the world. But after the match, other platforms attract more of the attention and extract more of the value.",
     callToAction: "We help you bring it back.",
+  },
+  pitch: {
+    headlines: ["Own the Long Tail", "Reward and Create Lasting Fans", "Close the Loop on Fragmentation"],
+    paragraphs: [
+      "Bring your fans a user-driven economy that has never existed in sports collectibles, with the speed-to-market only digital fan engagement can deliver, that drives and protects their value to hold.",
+      "Your highlights become collectibles - user votes determine the supply - no more gambling pack losers.",
+      "Team redeem - gamers can upgrade their cards for the latest - collectors see greater scarcity over time",
+    ],
   },
   needs: {
     title: "OPPORTUNITY",
@@ -212,6 +224,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Los deportes en vivo son una de las propiedades intelectuales más valiosas del mundo. Pero después del partido, otras plataformas atraen más atención y extraen más valor.",
       callToAction: "Te ayudamos a recuperarlo.",
     },
+    pitch: {
+      headlines: ["Aprovecha el Long Tail", "Recompensa y crea fans duraderos", "Cierra el ciclo de la fragmentación"],
+      paragraphs: [
+        "Ofrece a tus fans una economía impulsada por los usuarios, inédita en los coleccionables deportivos, con la rapidez de lanzamiento que solo puede ofrecer la interacción digital con fans, y que impulsa y protege el valor que conservan.",
+        "Tus mejores jugadas se convierten en coleccionables: los votos de los usuarios determinan la oferta; se acabaron los perdedores de los paquetes de azar.",
+        "Canje de equipo: los jugadores pueden mejorar sus tarjetas con las últimas novedades y los coleccionistas ven cómo aumenta la escasez con el tiempo.",
+      ],
+    },
     needs: {
       title: "OPORTUNIDAD",
       subtitle: "La pieza que falta y que ayudamos a ofrecer",
@@ -323,6 +343,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       description:
         "Os esportes ao vivo estão entre as propriedades intelectuais mais valiosas do mundo. Mas, depois da partida, outras plataformas atraem mais atenção e extraem mais valor.",
       callToAction: "Nós ajudamos você a trazer isso de volta.",
+    },
+    pitch: {
+      headlines: ["Aproveite o Long Tail", "Recompense e crie fãs duradouros", "Feche o ciclo da fragmentação"],
+      paragraphs: [
+        "Ofereça aos seus fãs uma economia guiada pelos usuários, inédita em colecionáveis esportivos, com a velocidade de lançamento que só o engajamento digital dos fãs pode proporcionar, impulsionando e protegendo o valor que eles mantêm.",
+        "Seus melhores momentos viram colecionáveis: os votos dos usuários determinam a oferta; chega de perdedores em pacotes de aposta.",
+        "Resgate de times: os jogadores podem aprimorar seus cartões com as novidades, enquanto os colecionadores veem a escassez aumentar com o tempo.",
+      ],
     },
     needs: {
       title: "OPORTUNIDADE",
@@ -436,6 +464,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "تُعد الرياضات المباشرة من أغلى حقوق الملكية الفكرية في العالم. لكن بعد المباراة، تجذب منصات أخرى مزيدًا من الاهتمام وتستحوذ على مزيد من القيمة.",
       callToAction: "نساعدك على استعادتها.",
     },
+    pitch: {
+      headlines: ["استثمر في ذيل السوق الطويل", "كافئ المشجعين واصنع ولاءً دائمًا", "أغلق حلقة التجزئة"],
+      paragraphs: [
+        "قدّم لمشجعيك اقتصادًا يقوده المستخدمون، لم يسبق له مثيل في المقتنيات الرياضية، بسرعة الوصول إلى السوق التي لا يوفرها إلا التفاعل الرقمي مع المشجعين، بما يعزز قيمة مقتنياتهم ويحميها للاحتفاظ بها.",
+        "تتحول أبرز لقطاتك إلى مقتنيات؛ وتحدد أصوات المستخدمين الكمية المعروضة؛ بلا خاسرين في حزم المقامرة بعد الآن.",
+        "استبدال مقتنيات الفريق: يمكن للاعبين ترقية بطاقاتهم بأحدث الإصدارات، بينما يرى الجامعون الندرة تزداد بمرور الوقت.",
+      ],
+    },
     needs: {
       title: "الفرصة",
       subtitle: "القطعة المفقودة التي نساعد على تقديمها",
@@ -547,6 +583,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       description:
         "Live-Sport gehört zu den wertvollsten geistigen Eigentumsrechten der Welt. Doch nach dem Spiel ziehen andere Plattformen mehr Aufmerksamkeit an und schöpfen mehr Wert ab.",
       callToAction: "Wir helfen dir, ihn zurückzuholen.",
+    },
+    pitch: {
+      headlines: ["Nutze den Long Tail", "Belohne Fans und schaffe dauerhafte Bindung", "Schließe den Kreislauf der Fragmentierung"],
+      paragraphs: [
+        "Biete deinen Fans eine nutzergesteuerte Ökonomie, die es bei Sport-Sammelobjekten noch nie gab – mit der Markteinführungsgeschwindigkeit, die nur digitales Fan-Engagement ermöglicht und den Wert ihrer Sammelobjekte steigert und schützt.",
+        "Deine Highlights werden zu Sammelobjekten – Nutzer bestimmen per Abstimmung die Menge – keine Verlierer mehr durch Glücksspiel-Packs.",
+        "Team-Einlösung: Spieler können ihre Karten mit den neuesten Inhalten aufwerten, während Sammler mit der Zeit eine größere Knappheit erleben.",
+      ],
     },
     needs: {
       title: "CHANCE",
@@ -660,6 +704,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "Le sport en direct compte parmi les propriétés intellectuelles les plus précieuses au monde. Mais après le match, d'autres plateformes attirent davantage l'attention et captent davantage de valeur.",
       callToAction: "Nous vous aidons à la récupérer.",
     },
+    pitch: {
+      headlines: ["Misez sur la longue traîne", "Récompensez les fans et fidélisez-les durablement", "Bouclez la boucle de la fragmentation"],
+      paragraphs: [
+        "Offrez à vos fans une économie pilotée par les utilisateurs, inédite dans les objets de collection sportifs, avec la rapidité de mise sur le marché que seul l'engagement numérique des fans peut apporter, pour stimuler et protéger la valeur qu'ils détiennent.",
+        "Vos moments forts deviennent des objets de collection : les votes des utilisateurs déterminent l'offre ; fini les perdants des pochettes de jeu d'argent.",
+        "Échange d'équipe : les joueurs peuvent améliorer leurs cartes avec les dernières nouveautés, tandis que les collectionneurs voient la rareté augmenter avec le temps.",
+      ],
+    },
     needs: {
       title: "OPPORTUNITÉ",
       subtitle: "La pièce manquante que nous contribuons à apporter",
@@ -771,6 +823,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       description:
         "Live sport behoort tot het meest waardevolle intellectuele eigendom ter wereld. Maar na de wedstrijd trekken andere platforms meer aandacht en halen ze meer waarde weg.",
       callToAction: "Wij helpen je die terug te brengen.",
+    },
+    pitch: {
+      headlines: ["Benut de long tail", "Beloon fans en bouw duurzame fanbinding op", "Sluit de cirkel van versnippering"],
+      paragraphs: [
+        "Bied je fans een door gebruikers gestuurde economie die nog nooit bestond in sportverzamelobjecten, met de snelheid naar de markt die alleen digitale fanbetrokkenheid kan bieden en die de waarde die fans aanhouden vergroot en beschermt.",
+        "Je hoogtepunten worden verzamelobjecten: gebruikersstemmen bepalen het aanbod; geen verliezers van gokpakketten meer.",
+        "Team-inwisseling: gamers kunnen hun kaarten upgraden met de nieuwste items, terwijl verzamelaars de schaarste in de loop van de tijd zien toenemen.",
+      ],
     },
     needs: {
       title: "KANS",
@@ -884,6 +944,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "लाइव खेल दुनिया की सबसे मूल्यवान बौद्धिक संपदाओं में से हैं। लेकिन मैच के बाद दूसरे प्लेटफ़ॉर्म अधिक ध्यान आकर्षित करते हैं और अधिक मूल्य हासिल करते हैं।",
       callToAction: "हम इसे वापस लाने में आपकी मदद करते हैं।",
     },
+    pitch: {
+      headlines: ["लॉन्ग टेल का लाभ उठाएँ", "इनाम दें और लंबे समय तक प्रशंसक बनाएँ", "विखंडन का चक्र पूरा करें"],
+      paragraphs: [
+        "अपने प्रशंसकों को खेल संग्रहणीय वस्तुओं में पहले कभी न देखी गई उपयोगकर्ता-संचालित अर्थव्यवस्था दें, डिजिटल फ़ैन सहभागिता की तेज़ बाज़ार-पहुँच के साथ, जो उनके पास रखी वस्तुओं का मूल्य बढ़ाती और सुरक्षित रखती है।",
+        "आपकी शानदार झलकियाँ संग्रहणीय बनती हैं—उपयोगकर्ताओं के वोट आपूर्ति तय करते हैं—अब जुए वाले पैक में कोई हारने वाला नहीं।",
+        "टीम रिडीम: गेमर नवीनतम कार्ड पाने के लिए अपने कार्ड अपग्रेड कर सकते हैं, जबकि संग्रहकर्ताओं को समय के साथ बढ़ती दुर्लभता दिखती है।",
+      ],
+    },
     needs: {
       title: "अवसर",
       subtitle: "वह कमी जिसे पूरा करने में हम मदद करते हैं",
@@ -996,6 +1064,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         "现场体育赛事是世界上最有价值的知识产权之一。但比赛结束后，其他平台吸引了更多关注，也获取了更多价值。",
       callToAction: "我们帮助你把这些带回来。",
     },
+    pitch: {
+      headlines: ["深耕长尾价值", "奖励粉丝，打造持久连接", "打通碎片化闭环"],
+      paragraphs: [
+        "为球迷带来体育收藏领域前所未有的用户驱动型经济，并以只有数字化球迷互动才能实现的上市速度，推动并守护他们持有藏品的价值。",
+        "精彩瞬间成为收藏品——用户投票决定发行数量——不再有人输掉博彩盲包。",
+        "球队兑换：玩家可以升级卡片获取最新内容，收藏者则能看到稀缺性随时间不断提升。",
+      ],
+    },
     needs: {
       title: "机会",
       subtitle: "我们助力交付的关键缺失环节",
@@ -1104,6 +1180,14 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       description:
         "ライブスポーツは世界で最も価値のある知的財産の一つです。しかし試合後は、他のプラットフォームがより多くの注目を集め、より多くの価値を取り出しています。",
       callToAction: "私たちはその価値を取り戻すお手伝いをします。",
+    },
+    pitch: {
+      headlines: ["ロングテールを活かす", "ファンに報い、長く愛される関係を築く", "分断のループを閉じる"],
+      paragraphs: [
+        "スポーツコレクティブルにはこれまでなかった、ファン主導の経済圏を届けます。デジタルなファンエンゲージメントならではの市場投入スピードで、ファンが保有する価値を高め、守ります。",
+        "ハイライトがコレクティブルに。ユーザー投票で供給量が決まり、ギャンブル性のあるパックで負けることはもうありません。",
+        "チームでの交換：ゲーマーはカードを最新の内容にアップグレードでき、コレクターは時間とともに希少性が高まるのを実感できます。",
+      ],
     },
     needs: {
       title: "機会",

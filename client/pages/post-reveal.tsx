@@ -141,6 +141,43 @@ function NeedsCard({ image, language, title, description, items }: NeedsCardProp
   );
 }
 
+function RotatingPitchSection() {
+  const { copy, language } = useLanguage();
+  const [activeHeadlineIndex, setActiveHeadlineIndex] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const interval = window.setInterval(() => {
+      setActiveHeadlineIndex((index) => (index + 1) % copy.pitch.headlines.length);
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, [copy.pitch.headlines.length]);
+
+  return (
+    <section
+      lang={language}
+      className="homepage-section my-6 rounded-lg px-4 py-8 text-center"
+      style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
+    >
+      <h2 className="mx-auto flex min-h-[2.5em] max-w-5xl items-center justify-center text-[32px] font-bold leading-tight text-[#FF6300] sm:min-h-[1.5em] sm:text-4xl lg:text-5xl">
+        <span
+          key={activeHeadlineIndex}
+          className="inline-block animate-pulse motion-reduce:animate-none"
+        >
+          {copy.pitch.headlines[activeHeadlineIndex]}
+        </span>
+      </h2>
+      <div className="mx-auto mt-4 max-w-5xl space-y-4 text-[17px] leading-relaxed text-[rgba(74,74,74,1)] sm:text-xl">
+        {copy.pitch.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function FeatureCarousel() {
   const [activeIndex, setActiveIndex] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
@@ -194,6 +231,7 @@ function FeatureCarousel() {
           </p>
         </div>
       </div>
+      <RotatingPitchSection />
       <section className="container mx-auto px-0 py-0 pb-0">
         <div
           className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
