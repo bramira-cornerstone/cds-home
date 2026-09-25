@@ -15,7 +15,6 @@ export type LanguageCode = (typeof languageOptions)[number]["code"];
 export type FeatureKey =
   | "ownThePlays"
   | "voting"
-  | "confidence"
   | "utility"
   | "social";
 
@@ -96,7 +95,7 @@ const english: TranslationSet = {
   },
   needs: {
     title: "OPPORTUNITY",
-    subtitle: "What we can provide that others have missed",
+    subtitle: "The missing piece that we help deliver",
     cards: {
       aggregates: {
         title: "Aggregates",
@@ -137,15 +136,6 @@ const english: TranslationSet = {
       ],
       imageAlt: "Vote Card",
     },
-    confidence: {
-      title: "CONFIDENCE",
-      description: [
-        "No loot boxes, no gambling.",
-        "Guaranteed pulls, no losers.",
-        "Higher tier access for supporting collectors.",
-      ],
-      imageAlt: "Basic Box",
-    },
     utility: {
       title: "UTILITY",
       description: [
@@ -170,7 +160,6 @@ const english: TranslationSet = {
     featureLabels: {
       ownThePlays: "Show own the plays feature",
       voting: "Show voting feature",
-      confidence: "Show confidence feature",
       utility: "Show utility feature",
       social: "Show social feature",
     },
@@ -218,7 +207,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "OPORTUNIDAD",
-      subtitle: "¿Qué podemos ofrecer que otros han pasado por alto?",
+      subtitle: "La pieza que falta y que ayudamos a ofrecer",
       cards: {
         aggregates: {
           title: "Agregados",
@@ -259,15 +248,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "Tarjeta de votación",
       },
-      confidence: {
-        title: "CONFIANZA",
-        description: [
-          "Sin cajas de botín ni apuestas.",
-          "Obtenciones garantizadas, nadie pierde.",
-          "Acceso a niveles superiores para quienes apoyan a los coleccionistas.",
-        ],
-        imageAlt: "Caja básica",
-      },
       utility: {
         title: "UTILIDAD",
         description: [
@@ -292,7 +272,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "Mostrar la característica domina las jugadas",
         voting: "Mostrar la característica de votación",
-        confidence: "Mostrar la característica de confianza",
         utility: "Mostrar la característica de utilidad",
         social: "Mostrar la característica social",
       },
@@ -334,7 +313,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "OPORTUNIDADE",
-      subtitle: "O que podemos oferecer que outros não ofereceram?",
+      subtitle: "A peça que falta e que ajudamos a entregar",
       cards: {
         aggregates: {
           title: "Agregados",
@@ -375,15 +354,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "Cartão de votação",
       },
-      confidence: {
-        title: "CONFIANÇA",
-        description: [
-          "Sem caixas surpresa nem apostas.",
-          "Itens garantidos, ninguém perde.",
-          "Acesso a níveis superiores para quem apoia colecionadores.",
-        ],
-        imageAlt: "Caixa básica",
-      },
       utility: {
         title: "UTILIDADE",
         description: [
@@ -408,7 +378,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "Mostrar recurso domine as jogadas",
         voting: "Mostrar recurso de votação",
-        confidence: "Mostrar recurso de confiança",
         utility: "Mostrar recurso de utilidade",
         social: "Mostrar recurso social",
       },
@@ -450,7 +419,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "الفرصة",
-      subtitle: "ما الذي يمكننا تقديمه وقد أغفله الآخرون؟",
+      subtitle: "القطعة المفقودة التي نساعد على تقديمها",
       cards: {
         aggregates: {
           title: "التجميع",
@@ -491,15 +460,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "بطاقة التصويت",
       },
-      confidence: {
-        title: "الثقة",
-        description: [
-          "لا صناديق غنائم ولا مقامرة.",
-          "مقتنيات مضمونة، ولا خاسرين.",
-          "وصول إلى مستويات أعلى لدعم الجامعين.",
-        ],
-        imageAlt: "الصندوق الأساسي",
-      },
       utility: {
         title: "المنفعة",
         description: [
@@ -524,7 +484,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "عرض ميزة امتلك اللحظات",
         voting: "عرض ميزة التصويت",
-        confidence: "عرض ميزة الثقة",
         utility: "عرض ميزة المنفعة",
         social: "عرض الميزة الاجتماعية",
       },
@@ -566,7 +525,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "CHANCE",
-      subtitle: "Was können wir bieten, das andere übersehen haben?",
+      subtitle: "Das fehlende Puzzlestück, zu dessen Umsetzung wir beitragen",
       cards: {
         aggregates: {
           title: "Aggregationen",
@@ -607,15 +566,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "Abstimmungskarte",
       },
-      confidence: {
-        title: "VERTRAUEN",
-        description: [
-          "Keine Lootboxen, kein Glücksspiel.",
-          "Garantierte Treffer, niemand verliert.",
-          "Höhere Zugangsstufen für Unterstützer von Sammlern.",
-        ],
-        imageAlt: "Basisbox",
-      },
       utility: {
         title: "NUTZEN",
         description: [
@@ -640,7 +590,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "Funktion die Spiele besitzen anzeigen",
         voting: "Abstimmungsfunktion anzeigen",
-        confidence: "Vertrauensfunktion anzeigen",
         utility: "Nutzenfunktion anzeigen",
         social: "Soziale Funktion anzeigen",
       },
@@ -682,7 +631,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "OPPORTUNITÉ",
-      subtitle: "Que pouvons-nous offrir que les autres ont manqué ?",
+      subtitle: "La pièce manquante que nous contribuons à apporter",
       cards: {
         aggregates: {
           title: "Agrégats",
@@ -723,15 +672,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "Carte de vote",
       },
-      confidence: {
-        title: "CONFIANCE",
-        description: [
-          "Pas de loot boxes, pas de jeux d'argent.",
-          "Des tirages garantis, aucun perdant.",
-          "Un accès supérieur pour soutenir les collectionneurs.",
-        ],
-        imageAlt: "Boîte de base",
-      },
       utility: {
         title: "UTILITÉ",
         description: [
@@ -756,7 +696,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "Afficher la fonctionnalité possédez les actions",
         voting: "Afficher la fonctionnalité de vote",
-        confidence: "Afficher la fonctionnalité de confiance",
         utility: "Afficher la fonctionnalité d'utilité",
         social: "Afficher la fonctionnalité sociale",
       },
@@ -798,7 +737,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "KANS",
-      subtitle: "Wat kunnen wij bieden wat anderen hebben gemist?",
+      subtitle: "Het ontbrekende onderdeel dat wij helpen leveren",
       cards: {
         aggregates: {
           title: "Aggregaten",
@@ -839,15 +778,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "Stemkaart",
       },
-      confidence: {
-        title: "VERTROUWEN",
-        description: [
-          "Geen lootboxes, geen gokken.",
-          "Gegarandeerde items, niemand verliest.",
-          "Toegang tot hogere niveaus voor supporters van verzamelaars.",
-        ],
-        imageAlt: "Basispakket",
-      },
       utility: {
         title: "NUT",
         description: [
@@ -872,7 +802,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "Functie bezit de spelmomenten tonen",
         voting: "Stemfunctie tonen",
-        confidence: "Vertrouwensfunctie tonen",
         utility: "Nutfunctie tonen",
         social: "Sociale functie tonen",
       },
@@ -914,7 +843,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "अवसर",
-      subtitle: "हम ऐसा क्या प्रदान कर सकते हैं जिसे दूसरों ने नज़रअंदाज़ किया है?",
+      subtitle: "वह कमी जिसे पूरा करने में हम मदद करते हैं",
       cards: {
         aggregates: {
           title: "समेकन",
@@ -955,15 +884,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "वोट कार्ड",
       },
-      confidence: {
-        title: "विश्वास",
-        description: [
-          "कोई लूट बॉक्स नहीं, कोई जुआ नहीं।",
-          "गारंटीकृत प्राप्तियां, कोई हारने वाला नहीं।",
-          "संग्रहकर्ताओं का समर्थन करने वालों के लिए उच्च स्तर की पहुंच।",
-        ],
-        imageAlt: "बेसिक बॉक्स",
-      },
       utility: {
         title: "उपयोगिता",
         description: [
@@ -988,7 +908,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "खेल पर अपना अधिकार सुविधा दिखाएं",
         voting: "मतदान सुविधा दिखाएं",
-        confidence: "विश्वास सुविधा दिखाएं",
         utility: "उपयोगिता सुविधा दिखाएं",
         social: "सामाजिक सुविधा दिखाएं",
       },
@@ -1030,7 +949,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "机会",
-      subtitle: "我们能提供什么，是其他人所忽略的？",
+      subtitle: "我们助力交付的关键缺失环节",
       cards: {
         aggregates: {
           title: "聚合",
@@ -1069,15 +988,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "投票卡片",
       },
-      confidence: {
-        title: "信心",
-        description: [
-          "没有盲盒，也没有赌博。",
-          "获得物品有保障，没有输家。",
-          "支持收藏者即可获得更高等级的权益。",
-        ],
-        imageAlt: "基础盒",
-      },
       utility: {
         title: "实用价值",
         description: [
@@ -1102,7 +1012,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "显示拥有精彩时刻功能",
         voting: "显示投票功能",
-        confidence: "显示信心功能",
         utility: "显示实用价值功能",
         social: "显示社交功能",
       },
@@ -1143,7 +1052,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     needs: {
       title: "機会",
-      subtitle: "私たちは、他社が見落としてきた何を提供できるでしょうか？",
+      subtitle: "私たちが提供を支援する、欠けていたもの",
       cards: {
         aggregates: {
           title: "アグリゲーション",
@@ -1184,15 +1093,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
         ],
         imageAlt: "投票カード",
       },
-      confidence: {
-        title: "信頼",
-        description: [
-          "ルートボックスもギャンブルもありません。",
-          "獲得できるものは保証され、負ける人はいません。",
-          "コレクターを支援する人には上位レベルのアクセスを提供します。",
-        ],
-        imageAlt: "ベーシックボックス",
-      },
       utility: {
         title: "ユーティリティ",
         description: [
@@ -1217,7 +1117,6 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       featureLabels: {
         ownThePlays: "プレーを所有する機能を表示",
         voting: "投票機能を表示",
-        confidence: "信頼機能を表示",
         utility: "ユーティリティ機能を表示",
         social: "ソーシャル機能を表示",
       },

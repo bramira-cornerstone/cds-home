@@ -54,28 +54,20 @@ const featureCards: FeatureCard[] = [
     imageClassName: "w-full h-full object-contain",
   },
   {
-    key: "confidence",
-    title: "CONFIDENCE",
+    key: "social",
+    title: "SOCIAL",
     titleColor: "#FF6300",
     description: [
-      "No loot boxes, no gambling.",
-      "Guaranteed pulls, no losers.",
-      "Higher tier access for supporting collectors.",
+      "No more lonely marketplace.",
+      "Friends can follow your trophy case, collecting events, badges, and ranks",
     ],
     descriptionClassName: "text-[20px]",
-    image: "/images/basicBox.webp",
-    imageAlt: "Basic Box",
+    image: "/images/trophyCaseSplash.webp",
+    imageAlt: "Trophy Case",
     background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
-    imageContainerClassName: "rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg flex flex-col justify-center items-start",
-    imageContainerStyle: { height: "200px" },
-    imageClassName: "object-cover",
-    imageStyle: {
-      width: "300px",
-      height: "220px",
-      marginLeft: "auto",
-      marginRight: "auto",
-      objectPosition: "center",
-    },
+    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center",
+    imageContainerStyle: { height: "250px" },
+    imageClassName: "w-full h-auto object-cover",
   },
   {
     key: "utility",
@@ -94,22 +86,6 @@ const featureCards: FeatureCard[] = [
     imageContainerStyle: { height: "250px" },
     imageClassName: "object-scale-down",
     imageStyle: { marginLeft: "auto", marginRight: "auto", height: "300px" },
-  },
-  {
-    key: "social",
-    title: "SOCIAL",
-    titleColor: "#FF6300",
-    description: [
-      "No more lonely marketplace.",
-      "Friends can follow your trophy case, collecting events, badges, and ranks",
-    ],
-    descriptionClassName: "text-[20px]",
-    image: "/images/trophyCaseSplash.webp",
-    imageAlt: "Trophy Case",
-    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
-    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center",
-    imageContainerStyle: { height: "250px" },
-    imageClassName: "w-full h-auto object-cover",
   },
 ];
 
@@ -211,7 +187,7 @@ function FeatureCarousel() {
         >
           <div className="flex flex-col items-center justify-center lg:col-span-2">
             <h2
-              className="text-center text-[42px] uppercase tracking-wider mb-2"
+              className="text-center text-[42px] uppercase tracking-wider mb-0"
               style={{
                 color: "#000000",
                 fontWeight: 700,
