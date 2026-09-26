@@ -186,7 +186,7 @@ function RotatingPitchSection() {
         <h2 className="relative z-10 w-full text-center text-[32px] font-bold leading-tight text-[#FF6300] sm:text-4xl lg:text-5xl">
           <span
             key={activeHeadlineIndex}
-            className="inline-block animate-pulse motion-reduce:animate-none"
+            className="inline-block"
           >
             {copy.pitch.headlines[activeHeadlineIndex]}
           </span>
