@@ -145,14 +145,14 @@ function OpportunityMatrix() {
               })}
             </tr>
           ))}
-          <tr className="bg-emerald-50">
-            <th scope="row" className="rounded-bl-lg border-t-2 border-emerald-500 px-2 py-2 text-left font-bold leading-tight text-slate-900 sm:px-3">
+          <tr className="bg-white">
+            <th scope="row" className="rounded-bl-lg border-t-2 border-slate-200 px-2 py-2 text-left font-bold leading-tight text-slate-900 sm:px-3">
               {copy.needs.matrix.cornerstoneModel}
             </th>
             {columns.map((column, index) => (
               <td
                 key={column.label}
-                className={`border-t-2 border-emerald-500 px-1 py-2 text-center ${index === columns.length - 1 ? "rounded-br-lg" : ""}`}
+                className={`border-t-2 border-slate-200 px-1 py-2 text-center ${index === columns.length - 1 ? "rounded-br-lg" : ""}`}
               >
                 <span aria-label={copy.needs.matrix.included} className="text-lg font-bold leading-none text-green-600 sm:text-xl">
                   ✓
