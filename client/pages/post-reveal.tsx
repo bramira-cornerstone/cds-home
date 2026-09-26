@@ -182,7 +182,7 @@ function RotatingPitchSection() {
           playsInline
           aria-hidden="true"
         />
-        <div aria-hidden="true" className="absolute inset-0 z-[1] bg-black/25" />
+        <div aria-hidden="true" className="absolute inset-0 z-[1] bg-black/50" />
         <h2 className="relative z-10 w-full text-center text-[32px] font-bold leading-tight text-[#FF6300] sm:text-4xl lg:text-5xl">
           <span
             key={activeHeadlineIndex}
