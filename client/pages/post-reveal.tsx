@@ -161,7 +161,18 @@ function RotatingPitchSection() {
       className="homepage-section my-6 rounded-lg px-4 py-8 text-center"
       style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
     >
-      <h2 className="mx-auto flex min-h-[2.5em] max-w-5xl items-center justify-center text-[32px] font-bold leading-tight text-[#FF6300] sm:min-h-[1.5em] sm:text-4xl lg:text-5xl">
+      <h2
+        className="mx-auto mb-0 max-w-5xl text-center text-[42px] uppercase tracking-wider text-black"
+        style={{ fontWeight: 700, lineHeight: "50px" }}
+      >
+        {copy.pitch.sectionHeadingLines.map((line, index) => (
+          <span key={line}>
+            {line}
+            {index < copy.pitch.sectionHeadingLines.length - 1 ? <br /> : null}
+          </span>
+        ))}
+      </h2>
+      <h2 className="mx-auto mt-4 flex min-h-[2.5em] max-w-5xl items-center justify-center text-[32px] font-bold leading-tight text-[#FF6300] sm:min-h-[1.5em] sm:text-4xl lg:text-5xl">
         <span
           key={activeHeadlineIndex}
           className="inline-block animate-pulse motion-reduce:animate-none"

@@ -45,6 +45,7 @@ export type TranslationSet = {
     callToAction: string;
   };
   pitch: {
+    sectionHeadingLines: string[];
     headlines: string[];
     paragraphs: string[];
   };
@@ -99,6 +100,7 @@ const english: TranslationSet = {
     callToAction: "We help you bring it back.",
   },
   pitch: {
+    sectionHeadingLines: ["Fans Want to Collect.", "They just don't want to lose money doing it."],
     headlines: ["Own the Long Tail", "Reward and Create Lasting Fans", "Close the Loop on Fragmentation"],
     paragraphs: [
       "Bring your fans a user-driven economy that has never existed in sports collectibles, with the speed-to-market only digital fan engagement can deliver, that drives and protects their value to hold.",
@@ -225,6 +227,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Te ayudamos a recuperarlo.",
     },
     pitch: {
+      sectionHeadingLines: ["Los fans quieren coleccionar.", "Simplemente no quieren perder dinero al hacerlo."],
       headlines: ["Aprovecha el Long Tail", "Recompensa y crea fans duraderos", "Cierra el ciclo de la fragmentación"],
       paragraphs: [
         "Ofrece a tus fans una economía impulsada por los usuarios, inédita en los coleccionables deportivos, con la rapidez de lanzamiento que solo puede ofrecer la interacción digital con fans, y que impulsa y protege el valor que conservan.",
@@ -345,6 +348,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Nós ajudamos você a trazer isso de volta.",
     },
     pitch: {
+      sectionHeadingLines: ["Os fãs querem colecionar.", "Só não querem perder dinheiro com isso."],
       headlines: ["Aproveite o Long Tail", "Recompense e crie fãs duradouros", "Feche o ciclo da fragmentação"],
       paragraphs: [
         "Ofereça aos seus fãs uma economia guiada pelos usuários, inédita em colecionáveis esportivos, com a velocidade de lançamento que só o engajamento digital dos fãs pode proporcionar, impulsionando e protegendo o valor que eles mantêm.",
@@ -465,6 +469,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "نساعدك على استعادتها.",
     },
     pitch: {
+      sectionHeadingLines: ["يريد المشجعون الجمع.", "لكنهم لا يريدون خسارة المال بسبب ذلك."],
       headlines: ["استثمر في ذيل السوق الطويل", "كافئ المشجعين واصنع ولاءً دائمًا", "أغلق حلقة التجزئة"],
       paragraphs: [
         "قدّم لمشجعيك اقتصادًا يقوده المستخدمون، لم يسبق له مثيل في المقتنيات الرياضية، بسرعة الوصول إلى السوق التي لا يوفرها إلا التفاعل الرقمي مع المشجعين، بما يعزز قيمة مقتنياتهم ويحميها للاحتفاظ بها.",
@@ -585,6 +590,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Wir helfen dir, ihn zurückzuholen.",
     },
     pitch: {
+      sectionHeadingLines: ["Fans wollen sammeln.", "Sie wollen dabei nur kein Geld verlieren."],
       headlines: ["Nutze den Long Tail", "Belohne Fans und schaffe dauerhafte Bindung", "Schließe den Kreislauf der Fragmentierung"],
       paragraphs: [
         "Biete deinen Fans eine nutzergesteuerte Ökonomie, die es bei Sport-Sammelobjekten noch nie gab – mit der Markteinführungsgeschwindigkeit, die nur digitales Fan-Engagement ermöglicht und den Wert ihrer Sammelobjekte steigert und schützt.",
@@ -705,6 +711,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Nous vous aidons à la récupérer.",
     },
     pitch: {
+      sectionHeadingLines: ["Les fans veulent collectionner.", "Ils ne veulent simplement pas perdre d'argent en le faisant."],
       headlines: ["Misez sur la longue traîne", "Récompensez les fans et fidélisez-les durablement", "Bouclez la boucle de la fragmentation"],
       paragraphs: [
         "Offrez à vos fans une économie pilotée par les utilisateurs, inédite dans les objets de collection sportifs, avec la rapidité de mise sur le marché que seul l'engagement numérique des fans peut apporter, pour stimuler et protéger la valeur qu'ils détiennent.",
@@ -825,6 +832,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "Wij helpen je die terug te brengen.",
     },
     pitch: {
+      sectionHeadingLines: ["Fans willen verzamelen.", "Ze willen er alleen geen geld aan verliezen."],
       headlines: ["Benut de long tail", "Beloon fans en bouw duurzame fanbinding op", "Sluit de cirkel van versnippering"],
       paragraphs: [
         "Bied je fans een door gebruikers gestuurde economie die nog nooit bestond in sportverzamelobjecten, met de snelheid naar de markt die alleen digitale fanbetrokkenheid kan bieden en die de waarde die fans aanhouden vergroot en beschermt.",
@@ -945,6 +953,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "हम इसे वापस लाने में आपकी मदद करते हैं।",
     },
     pitch: {
+      sectionHeadingLines: ["प्रशंसक संग्रह करना चाहते हैं।", "वे ऐसा करते हुए बस अपना पैसा नहीं खोना चाहते।"],
       headlines: ["लॉन्ग टेल का लाभ उठाएँ", "इनाम दें और लंबे समय तक प्रशंसक बनाएँ", "विखंडन का चक्र पूरा करें"],
       paragraphs: [
         "अपने प्रशंसकों को खेल संग्रहणीय वस्तुओं में पहले कभी न देखी गई उपयोगकर्ता-संचालित अर्थव्यवस्था दें, डिजिटल फ़ैन सहभागिता की तेज़ बाज़ार-पहुँच के साथ, जो उनके पास रखी वस्तुओं का मूल्य बढ़ाती और सुरक्षित रखती है।",
@@ -1065,6 +1074,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "我们帮助你把这些带回来。",
     },
     pitch: {
+      sectionHeadingLines: ["球迷想要收藏。", "他们只是不想因此亏钱。"],
       headlines: ["深耕长尾价值", "奖励粉丝，打造持久连接", "打通碎片化闭环"],
       paragraphs: [
         "为球迷带来体育收藏领域前所未有的用户驱动型经济，并以只有数字化球迷互动才能实现的上市速度，推动并守护他们持有藏品的价值。",
@@ -1182,6 +1192,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       callToAction: "私たちはその価値を取り戻すお手伝いをします。",
     },
     pitch: {
+      sectionHeadingLines: ["ファンは集めたい。", "ただ、そのためにお金を失いたくない。"],
       headlines: ["ロングテールを活かす", "ファンに報い、長く愛される関係を築く", "分断のループを閉じる"],
       paragraphs: [
         "スポーツコレクティブルにはこれまでなかった、ファン主導の経済圏を届けます。デジタルなファンエンゲージメントならではの市場投入スピードで、ファンが保有する価値を高め、守ります。",
