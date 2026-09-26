@@ -172,14 +172,26 @@ function RotatingPitchSection() {
           </span>
         ))}
       </h2>
-      <h2 className="mx-auto mt-4 flex min-h-[2.5em] max-w-5xl items-center justify-center text-[32px] font-bold leading-tight text-[#FF6300] sm:min-h-[1.5em] sm:text-4xl lg:text-5xl">
-        <span
-          key={activeHeadlineIndex}
-          className="inline-block animate-pulse motion-reduce:animate-none"
-        >
-          {copy.pitch.headlines[activeHeadlineIndex]}
-        </span>
-      </h2>
+      <div className="relative mx-auto mt-4 flex min-h-[140px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg bg-black px-4 py-3 sm:min-h-[110px] lg:min-h-[100px]">
+        <video
+          className="absolute inset-0 z-0 h-full w-full object-cover"
+          src="/images/onboarding-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+        <div aria-hidden="true" className="absolute inset-0 z-[1] bg-black/25" />
+        <h2 className="relative z-10 w-full text-center text-[32px] font-bold leading-tight text-[#FF6300] sm:text-4xl lg:text-5xl">
+          <span
+            key={activeHeadlineIndex}
+            className="inline-block animate-pulse motion-reduce:animate-none"
+          >
+            {copy.pitch.headlines[activeHeadlineIndex]}
+          </span>
+        </h2>
+      </div>
       <div className="mx-auto mt-4 max-w-5xl space-y-4 text-[17px] leading-relaxed text-[rgba(74,74,74,1)] sm:text-xl">
         {copy.pitch.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
