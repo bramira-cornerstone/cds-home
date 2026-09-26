@@ -30,6 +30,14 @@ type NeedsCardCopy = {
   description: string;
 };
 
+type OpportunityMatrixCopy = {
+  options: string;
+  value: string;
+  cornerstoneModel: string;
+  included: string;
+  notIncluded: string;
+};
+
 type NeedsCardKey = "aggregates" | "converts" | "sustainable" | "valuable";
 
 export type TranslationSet = {
@@ -54,6 +62,7 @@ export type TranslationSet = {
     subtitle: string;
     cardItems: Record<NeedsCardKey, string[]>;
     cards: Record<NeedsCardKey, NeedsCardCopy>;
+    matrix: OpportunityMatrixCopy;
   };
   features: Record<FeatureKey, FeatureCopy>;
   carousel: {
@@ -111,6 +120,7 @@ const english: TranslationSet = {
   needs: {
     title: "OPPORTUNITY",
     subtitle: "The missing piece that we help deliver",
+    matrix: { options: "Options", value: "Value", cornerstoneModel: "The Cornerstone Model", included: "Included", notIncluded: "Not included" },
     cardItems: {
       aggregates: ["Streaming / OTT", "Social Platforms", "Physical Cards", "Digital Collectibles", "Fan Reward Tokens"],
       converts: ["Social Platforms", "Physical Cards", "Digital Collectibles", "Non-monetized"],
@@ -238,6 +248,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "OPORTUNIDAD",
       subtitle: "La pieza que falta y que ayudamos a ofrecer",
+      matrix: { options: "Opciones", value: "Valor", cornerstoneModel: "El modelo Cornerstone", included: "Incluido", notIncluded: "No incluido" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Plataformas sociales", "Tarjetas físicas", "Coleccionables digitales", "Tokens de recompensa para fans"],
         converts: ["Plataformas sociales", "Tarjetas físicas", "Coleccionables digitales", "Sin monetizar"],
@@ -359,6 +370,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "OPORTUNIDADE",
       subtitle: "A peça que falta e que ajudamos a entregar",
+      matrix: { options: "Opções", value: "Valor", cornerstoneModel: "O modelo Cornerstone", included: "Incluído", notIncluded: "Não incluído" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Plataformas sociais", "Cartões físicos", "Colecionáveis digitais", "Tokens de recompensa para fãs"],
         converts: ["Plataformas sociais", "Cartões físicos", "Colecionáveis digitais", "Não monetizado"],
@@ -480,6 +492,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "الفرصة",
       subtitle: "القطعة المفقودة التي نساعد على تقديمها",
+      matrix: { options: "الخيارات", value: "القيمة", cornerstoneModel: "نموذج كورنرستون", included: "مُدرج", notIncluded: "غير مُدرج" },
       cardItems: {
         aggregates: ["البث / OTT", "منصات التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "رموز مكافآت المشجعين"],
         converts: ["منصات التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "غير مُدرّج لتحقيق الدخل"],
@@ -601,6 +614,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "CHANCE",
       subtitle: "Das fehlende Puzzlestück, zu dessen Umsetzung wir beitragen",
+      matrix: { options: "Optionen", value: "Wert", cornerstoneModel: "Das Cornerstone-Modell", included: "Enthalten", notIncluded: "Nicht enthalten" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Social-Media-Plattformen", "Physische Karten", "Digitale Sammelobjekte", "Fan-Belohnungstoken"],
         converts: ["Social-Media-Plattformen", "Physische Karten", "Digitale Sammelobjekte", "Nicht monetarisiert"],
@@ -722,6 +736,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "OPPORTUNITÉ",
       subtitle: "La pièce manquante que nous contribuons à apporter",
+      matrix: { options: "Options", value: "Valeur", cornerstoneModel: "Le modèle Cornerstone", included: "Inclus", notIncluded: "Non inclus" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Plateformes sociales", "Cartes physiques", "Objets de collection numériques", "Jetons de récompense pour fans"],
         converts: ["Plateformes sociales", "Cartes physiques", "Objets de collection numériques", "Non monétisé"],
@@ -843,6 +858,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "KANS",
       subtitle: "Het ontbrekende onderdeel dat wij helpen leveren",
+      matrix: { options: "Opties", value: "Waarde", cornerstoneModel: "Het Cornerstone-model", included: "Inbegrepen", notIncluded: "Niet inbegrepen" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Sociale platforms", "Fysieke kaarten", "Digitale verzamelobjecten", "Fanbeloningstokens"],
         converts: ["Sociale platforms", "Fysieke kaarten", "Digitale verzamelobjecten", "Niet gemonetiseerd"],
@@ -964,6 +980,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "अवसर",
       subtitle: "वह कमी जिसे पूरा करने में हम मदद करते हैं",
+      matrix: { options: "विकल्प", value: "मूल्य", cornerstoneModel: "कॉर्नरस्टोन मॉडल", included: "शामिल", notIncluded: "शामिल नहीं" },
       cardItems: {
         aggregates: ["स्ट्रीमिंग / OTT", "सोशल प्लेटफ़ॉर्म", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "प्रशंसक पुरस्कार टोकन"],
         converts: ["सोशल प्लेटफ़ॉर्म", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "गैर-मुद्रीकृत"],
@@ -1085,6 +1102,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "机会",
       subtitle: "我们助力交付的关键缺失环节",
+      matrix: { options: "选项", value: "价值", cornerstoneModel: "Cornerstone 模型", included: "包含", notIncluded: "不包含" },
       cardItems: {
         aggregates: ["流媒体 / OTT", "社交平台", "实体卡片", "数字收藏品", "球迷奖励代币"],
         converts: ["社交平台", "实体卡片", "数字收藏品", "未货币化"],
@@ -1203,6 +1221,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     needs: {
       title: "機会",
       subtitle: "私たちが提供を支援する、欠けていたもの",
+      matrix: { options: "選択肢", value: "価値", cornerstoneModel: "Cornerstoneモデル", included: "対象", notIncluded: "対象外" },
       cardItems: {
         aggregates: ["ストリーミング / OTT", "ソーシャルプラットフォーム", "物理カード", "デジタルコレクティブル", "ファン報酬トークン"],
         converts: ["ソーシャルプラットフォーム", "物理カード", "デジタルコレクティブル", "収益化なし"],

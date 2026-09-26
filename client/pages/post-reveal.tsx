@@ -89,54 +89,79 @@ const featureCards: FeatureCard[] = [
   },
 ];
 
-type NeedsCardProps = {
-  image: string;
-  language: string;
-  title: string;
-  description: string;
-  items: string[];
-};
+function OpportunityMatrix() {
+  const { copy, language } = useLanguage();
+  const columns = [
+    { label: copy.needs.cards.aggregates.title, items: copy.needs.cardItems.aggregates },
+    { label: copy.needs.cards.converts.title, items: copy.needs.cardItems.converts },
+    { label: copy.needs.cards.sustainable.title, items: copy.needs.cardItems.sustainable },
+    { label: copy.needs.matrix.value, items: copy.needs.cardItems.valuable },
+  ];
+  const rows = [...new Set(columns.flatMap((column) => column.items))];
 
-function NeedsCard({ image, language, title, description, items }: NeedsCardProps) {
   return (
-    <div className="relative mx-auto mt-4 h-[360px] w-full overflow-hidden bg-black text-center text-white">
-      <img
-        src={image}
-        alt=""
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover opacity-100"
-        loading="lazy"
-      />
-      <h3
-        lang={language}
-        className="absolute inset-x-0 top-[7.5%] z-10 box-border w-full px-3 text-center text-[50px] font-bold leading-tight hyphens-auto sm:text-[48px] [overflow-wrap:anywhere]"
-        style={{ textShadow: "3px 3px 10px rgba(74, 74, 74, 1)" }}
+    <div lang={language} className="mt-5 w-full overflow-x-auto">
+      <table
+        aria-label={copy.needs.title}
+        className="w-full min-w-[320px] table-fixed border-separate border-spacing-0 overflow-hidden rounded-lg text-[11px] sm:text-sm"
       >
-        {title}
-      </h3>
-      <p
-        lang={language}
-        className="absolute inset-x-0 top-1/2 z-10 box-border w-full -translate-y-1/2 px-3 text-center text-[24px] leading-tight break-normal sm:text-[22px]"
-        style={{
-          outline: "none",
-          textShadow: "3px 3px 12px rgba(74, 74, 74, 1)",
-        }}
-      >
-        {description}
-      </p>
-      <ul
-        lang={language}
-        className="absolute inset-x-0 bottom-2 z-10 space-y-0.5 px-3 text-left text-[13px] leading-[18px] sm:text-sm sm:leading-5"
-      >
-        {items.map((item) => (
-          <li key={item} className="flex items-center gap-2">
-            <span aria-hidden="true" className="shrink-0 text-lg font-bold leading-none text-red-500">
-              ✕
-            </span>
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
+        <caption className="sr-only">{copy.needs.title}</caption>
+        <thead>
+          <tr>
+            <th scope="col" className="w-[36%] rounded-tl-lg bg-[#004FFF] px-2 py-2 text-left font-bold text-white sm:px-3">
+              {copy.needs.matrix.options}
+            </th>
+            {columns.map((column, index) => (
+              <th
+                key={column.label}
+                scope="col"
+                className={`bg-[#004FFF] px-1 py-2 text-center font-bold leading-tight text-white sm:px-2 ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
+              >
+                {column.label}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((item) => (
+            <tr key={item} className="odd:bg-white even:bg-slate-50">
+              <th scope="row" className="border-b border-slate-200 px-2 py-1.5 text-left font-medium leading-tight text-slate-800 sm:px-3">
+                {item}
+              </th>
+              {columns.map((column) => {
+                const included = column.items.includes(item);
+
+                return (
+                  <td key={column.label} className="border-b border-slate-200 px-1 py-1.5 text-center">
+                    {included ? (
+                      <span aria-label={copy.needs.matrix.notIncluded} className="text-base font-bold leading-none text-red-600 sm:text-lg">
+                        ✕
+                      </span>
+                    ) : (
+                      <span className="sr-only">{copy.needs.matrix.notIncluded}</span>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+          <tr className="bg-emerald-50">
+            <th scope="row" className="rounded-bl-lg border-t-2 border-emerald-500 px-2 py-2 text-left font-bold leading-tight text-slate-900 sm:px-3">
+              {copy.needs.matrix.cornerstoneModel}
+            </th>
+            {columns.map((column, index) => (
+              <td
+                key={column.label}
+                className={`border-t-2 border-emerald-500 px-1 py-2 text-center ${index === columns.length - 1 ? "rounded-br-lg" : ""}`}
+              >
+                <span aria-label={copy.needs.matrix.included} className="text-lg font-bold leading-none text-green-600 sm:text-xl">
+                  ✓
+                </span>
+              </td>
+            ))}
+          </tr>
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -257,10 +282,10 @@ function FeatureCarousel() {
       <RotatingPitchSection />
       <section className="container mx-auto px-0 py-0 pb-0">
         <div
-          className="homepage-section grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg"
+          className="homepage-section my-4 flex min-h-[calc(100dvh-2rem)] flex-col justify-center rounded-lg px-2 py-4 sm:px-4 sm:py-6"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
         >
-          <div className="flex flex-col items-center justify-center lg:col-span-2">
+          <div className="flex flex-col items-center justify-center">
             <h2
               className="text-center text-[42px] uppercase tracking-wider mb-0"
               style={{
@@ -275,36 +300,7 @@ function FeatureCarousel() {
               {copy.needs.subtitle}
             </p>
           </div>
-          <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-            <NeedsCard
-              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2Fb3d86b9005b64cbe9fd6ef035c04b13c"
-              language={language}
-              title={copy.needs.cards.aggregates.title}
-              description={copy.needs.cards.aggregates.description}
-              items={copy.needs.cardItems.aggregates}
-            />
-            <NeedsCard
-              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F16508181892a4e419b74c45a60048d70"
-              language={language}
-              title={copy.needs.cards.converts.title}
-              description={copy.needs.cards.converts.description}
-              items={copy.needs.cardItems.converts}
-            />
-            <NeedsCard
-              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F4f234cc2be154ce1befa99fd986f3f59"
-              language={language}
-              title={copy.needs.cards.sustainable.title}
-              description={copy.needs.cards.sustainable.description}
-              items={copy.needs.cardItems.sustainable}
-            />
-            <NeedsCard
-              image="https://cdn.builder.io/api/v1/image/assets%2F1fc926a98c3145c69dfab54fa66e93f8%2F7ec4639454334c3fbc05c890a0bc0ea7"
-              language={language}
-              title={copy.needs.cards.valuable.title}
-              description={copy.needs.cards.valuable.description}
-              items={copy.needs.cardItems.valuable}
-            />
-          </div>
+          <OpportunityMatrix />
         </div>
       </section>
       <div
