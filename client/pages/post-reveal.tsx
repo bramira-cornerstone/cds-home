@@ -134,7 +134,7 @@ function OpportunityMatrix() {
                 return (
                   <td key={column.label} className="border-b border-slate-200 px-1 py-1.5 text-center">
                     {included ? (
-                      <span aria-label={copy.needs.matrix.notIncluded} className="text-base font-bold leading-none text-red-600 sm:text-lg">
+                      <span aria-label={copy.needs.matrix.notIncluded} className="text-[24px] font-bold leading-none text-red-600">
                         ✕
                       </span>
                     ) : (
@@ -154,7 +154,7 @@ function OpportunityMatrix() {
                 key={column.label}
                 className={`border-t-2 border-slate-200 px-1 py-2 text-center ${index === columns.length - 1 ? "rounded-br-lg" : ""}`}
               >
-                <span aria-label={copy.needs.matrix.included} className="text-lg font-bold leading-none text-green-600 sm:text-xl">
+                <span aria-label={copy.needs.matrix.included} className="text-[24px] font-bold leading-none text-green-600">
                   ✓
                 </span>
               </td>
