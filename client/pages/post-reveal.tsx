@@ -103,7 +103,7 @@ function OpportunityMatrix() {
     <div lang={language} className="mt-5 w-full overflow-x-auto">
       <table
         aria-label={copy.needs.title}
-        className="w-full min-w-[320px] table-fixed border-separate border-spacing-0 overflow-hidden rounded-lg text-[11px] sm:text-sm"
+        className="w-full min-w-[320px] table-fixed border-separate border-spacing-0 overflow-hidden rounded-lg text-[15px]"
       >
         <caption className="sr-only">{copy.needs.title}</caption>
         <thead>
