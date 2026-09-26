@@ -108,14 +108,14 @@ function OpportunityMatrix() {
         <caption className="sr-only">{copy.needs.title}</caption>
         <thead>
           <tr>
-            <th scope="col" className="w-[36%] rounded-tl-lg bg-[#004FFF] px-2 py-2 text-left font-bold text-white sm:px-3">
+            <th scope="col" className="w-[36%] rounded-tl-lg bg-[#004FFF] px-2 py-2 text-left text-[11px] font-bold text-white sm:px-3">
               {copy.needs.matrix.options}
             </th>
             {columns.map((column, index) => (
               <th
                 key={column.label}
                 scope="col"
-                className={`bg-[#004FFF] px-1 py-2 text-center font-bold leading-tight text-white sm:px-2 ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
+                className={`bg-[#004FFF] px-1 py-2 text-center text-[11px] font-bold leading-tight text-white sm:px-2 ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
               >
                 {column.label}
               </th>
