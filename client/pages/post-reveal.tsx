@@ -282,7 +282,7 @@ function FeatureCarousel() {
       <RotatingPitchSection />
       <section className="container mx-auto px-0 py-0 pb-0">
         <div
-          className="homepage-section my-4 flex min-h-[calc(100dvh-2rem)] flex-col justify-center rounded-lg px-2 py-4 sm:px-4 sm:py-6"
+          className="homepage-section my-4 flex flex-col justify-center rounded-lg px-2 py-4 sm:px-4 sm:py-6"
           style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
         >
           <div className="flex flex-col items-center justify-center">
