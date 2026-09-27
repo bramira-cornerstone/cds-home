@@ -195,12 +195,11 @@ function RotatingPitchSection() {
             key={line}
             className={
               index === 1
-                ? "text-[20px] leading-normal font-normal italic tracking-[1px] text-[rgba(74,74,74,1)]"
-                : undefined
+                ? "block text-[20px] leading-normal font-normal italic tracking-[1px] text-[rgba(74,74,74,1)]"
+                : "block"
             }
           >
             {line}
-            {index < copy.pitch.sectionHeadingLines.length - 1 ? <br /> : null}
           </span>
         ))}
       </h2>
