@@ -187,7 +187,7 @@ function RotatingPitchSection() {
       style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
     >
       <h2
-        className="mx-auto mb-0 max-w-5xl text-center text-[42px] uppercase tracking-wider text-black"
+        className="mx-auto mb-0 max-w-5xl text-center text-[42px] tracking-wider text-black"
         style={{ fontWeight: 700, lineHeight: "50px" }}
       >
         {copy.pitch.sectionHeadingLines.map((line, index) => (
@@ -195,7 +195,7 @@ function RotatingPitchSection() {
             key={line}
             className={
               index === 1
-                ? "text-[20px] leading-[20px] font-normal italic tracking-[1px] text-[rgba(74,74,74,1)]"
+                ? "text-[20px] leading-normal font-normal italic tracking-[1px] text-[rgba(74,74,74,1)]"
                 : undefined
             }
           >
