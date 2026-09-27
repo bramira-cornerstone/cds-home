@@ -352,7 +352,6 @@ function FeatureCarousel() {
           </p>
         </div>
       </div>
-      <RotatingPitchSection />
       <section className="container mx-auto px-0 py-0 pb-0">
         <div
           className="homepage-section !mt-6 !mb-6 flex flex-col justify-center rounded-lg px-2 py-4 sm:px-4 sm:py-6"
@@ -376,6 +375,7 @@ function FeatureCarousel() {
           <OpportunityMatrix />
         </div>
       </section>
+      <RotatingPitchSection />
       <div
         className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
         style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
