@@ -102,7 +102,7 @@ export type TranslationSet = {
 
 const english: TranslationSet = {
   language: { select: "Select language" },
-  header: { contactUs: "Contact Us", buildPrompt: "Let us build it, or build your own: " },
+  header: { contactUs: "Contact Us", buildPrompt: "Let us build it\nOr build your own" },
   hero: {
     title: "Media Fragmentation",
     description:
@@ -230,7 +230,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   en: english,
   es: {
     language: { select: "Seleccionar idioma" },
-    header: { contactUs: "Contáctanos", buildPrompt: "Deja que lo construyamos, o construye el tuyo: " },
+    header: { contactUs: "Contáctanos", buildPrompt: "Deja que lo construyamos\nO construye el tuyo" },
     hero: {
       title: "Fragmentación de los medios",
       description:
@@ -352,7 +352,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   pt: {
     language: { select: "Selecionar idioma" },
-    header: { contactUs: "Fale conosco", buildPrompt: "Deixe-nos construir, ou construa o seu: " },
+    header: { contactUs: "Fale conosco", buildPrompt: "Deixe-nos construir\nOu construa o seu" },
     hero: {
       title: "Fragmentação da mídia",
       description:
@@ -474,7 +474,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   ar: {
     language: { select: "اختر اللغة" },
-    header: { contactUs: "اتصل بنا", buildPrompt: "دعنا نبنيه، أو ابنِ مشروعك الخاص: " },
+    header: { contactUs: "اتصل بنا", buildPrompt: "دعنا نبنيه\nأو ابنِ مشروعك الخاص" },
     hero: {
       title: "تجزئة الإعلام",
       description:
@@ -596,7 +596,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   de: {
     language: { select: "Sprache auswählen" },
-    header: { contactUs: "Kontakt", buildPrompt: "Lass uns es aufbauen, oder baue dein eigenes: " },
+    header: { contactUs: "Kontakt", buildPrompt: "Lass es uns bauen\nOder baue dein eigenes" },
     hero: {
       title: "Medienfragmentierung",
       description:
@@ -718,7 +718,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   fr: {
     language: { select: "Choisir la langue" },
-    header: { contactUs: "Contactez-nous", buildPrompt: "Confiez-nous sa création, ou créez le vôtre : " },
+    header: { contactUs: "Contactez-nous", buildPrompt: "Confiez-nous sa création\nOu créez le vôtre" },
     hero: {
       title: "Fragmentation des médias",
       description:
@@ -840,7 +840,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   nl: {
     language: { select: "Taal selecteren" },
-    header: { contactUs: "Neem contact op", buildPrompt: "Laat ons het bouwen, of bouw je eigen versie: " },
+    header: { contactUs: "Neem contact op", buildPrompt: "Laat ons het bouwen\nOf bouw je eigen versie" },
     hero: {
       title: "Versnippering van media",
       description:
@@ -962,7 +962,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   hi: {
     language: { select: "भाषा चुनें" },
-    header: { contactUs: "संपर्क करें", buildPrompt: "हमें इसे बनाने दें, या अपना खुद बनाएं: " },
+    header: { contactUs: "संपर्क करें", buildPrompt: "हमें इसे बनाने दें\nया अपना खुद बनाएं" },
     hero: {
       title: "मीडिया विखंडन",
       description:
@@ -1084,7 +1084,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   zh: {
     language: { select: "选择语言" },
-    header: { contactUs: "联系我们", buildPrompt: "让我们来打造，或打造你自己的：" },
+    header: { contactUs: "联系我们", buildPrompt: "让我们来打造\n或打造你自己的" },
     hero: {
       title: "媒体碎片化",
       description:
@@ -1203,7 +1203,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
   },
   ja: {
     language: { select: "言語を選択" },
-    header: { contactUs: "お問い合わせ", buildPrompt: "私たちに任せるか、自分で作るか：" },
+    header: { contactUs: "お問い合わせ", buildPrompt: "私たちにお任せください\nまたはご自身でお作りください" },
     hero: {
       title: "メディアの分断",
       description:
