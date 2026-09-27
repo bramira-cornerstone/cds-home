@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 function OpportunityMatrix() {
@@ -299,18 +300,26 @@ export default function Home() {
       {/* Footer Content Section */}
       <section className="container relative z-40 mx-auto px-2 py-0 pb-0">
         <div className="flex flex-col items-center justify-center gap-6 px-4 py-12 text-sm text-slate-600 dark:text-slate-400 sm:flex-row md:text-base lg:text-lg">
-          <div className="flex items-center gap-2">
-            <img
-              src="/images/cornerstone-logo.webp"
-              alt={copy.footer.logoAlt}
-              className="h-6 w-6 rounded-md object-cover shadow-md"
-            />
-            <p>
-              {copy.footer.copyright.replace(
-                "{year}",
-                String(new Date().getFullYear()),
-              )}
-            </p>
+          <div className="flex flex-col items-center gap-2">
+            <Link
+              to="/privacy"
+              className="text-[#004FFF] underline underline-offset-2 hover:text-[#003BCC]"
+            >
+              Privacy Policy
+            </Link>
+            <div className="flex items-center gap-2">
+              <img
+                src="/images/cornerstone-logo.webp"
+                alt={copy.footer.logoAlt}
+                className="h-6 w-6 rounded-md object-cover shadow-md"
+              />
+              <p>
+                {copy.footer.copyright.replace(
+                  "{year}",
+                  String(new Date().getFullYear()),
+                )}
+              </p>
+            </div>
           </div>
           <div>
             <p>{copy.footer.tagline}</p>

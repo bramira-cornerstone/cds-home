@@ -9,6 +9,7 @@ import { CookieConsentProvider } from "@/contexts/CookieConsentContext";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import PostReveal from "./pages/post-reveal";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AppLayout from "@/components/layout/AppLayout";
 
 const queryClient = new QueryClient();
@@ -55,6 +56,7 @@ function AppContent() {
             <Routes>
               <Route path="/" element={<PostReveal />} />
               <Route path="/post-reveal" element={<PostReveal />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AppLayout>
