@@ -133,9 +133,9 @@ function OpportunityMatrix() {
                 const included = column.items.includes(item);
 
                 return (
-                  <td key={column.label} className="border-b border-slate-200 px-1 py-1.5 text-center">
+                  <td key={column.label} className="border-b border-slate-200 px-0.5 py-1 text-center">
                     {included ? (
-                      <span aria-label={copy.needs.matrix.notIncluded} className="text-[24px] font-bold leading-none text-red-600">
+                      <span aria-label={copy.needs.matrix.notIncluded} className="text-[26px] font-bold leading-none text-red-600">
                         ✕
                       </span>
                     ) : (
