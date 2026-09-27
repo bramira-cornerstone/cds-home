@@ -1,4 +1,5 @@
 import { useEffect, useState, type CSSProperties } from "react";
+import { createPortal } from "react-dom";
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import { type FeatureKey } from "@/i18n";
@@ -169,6 +170,8 @@ function OpportunityMatrix() {
 function RotatingPitchSection() {
   const { copy, language } = useLanguage();
   const [activeHeadlineIndex, setActiveHeadlineIndex] = useState(0);
+  const [isFullscreenMounted, setIsFullscreenMounted] = useState(false);
+  const [isFullscreenVisible, setIsFullscreenVisible] = useState(false);
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -179,6 +182,24 @@ function RotatingPitchSection() {
 
     return () => window.clearInterval(interval);
   }, [copy.pitch.headlines.length]);
+
+  useEffect(() => {
+    if (!isFullscreenMounted) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const animationFrame = window.requestAnimationFrame(() => {
+      setIsFullscreenVisible(true);
+    });
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isFullscreenMounted]);
+
+  const openFullscreen = () => setIsFullscreenMounted(true);
+  const closeFullscreen = () => setIsFullscreenVisible(false);
 
   return (
     <section
@@ -203,7 +224,7 @@ function RotatingPitchSection() {
           </span>
         ))}
       </h2>
-      <div className="relative mx-auto mt-4 flex min-h-[140px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg bg-black px-4 py-3 sm:min-h-[110px] lg:min-h-[100px]">
+      <div className="group relative mx-auto mt-4 flex min-h-[140px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg bg-black px-4 py-3 sm:min-h-[110px] lg:min-h-[100px]">
         <video
           className="absolute inset-0 z-0 h-full w-full object-cover"
           src="/images/onboarding-video.mp4"
@@ -214,6 +235,17 @@ function RotatingPitchSection() {
           aria-hidden="true"
         />
         <div aria-hidden="true" className="absolute inset-0 z-[1] bg-black/50" />
+        <button
+          type="button"
+          aria-label="Open fullscreen video"
+          title="Open fullscreen video"
+          onClick={openFullscreen}
+          className="absolute bottom-2 right-2 z-20 flex h-9 w-9 items-center justify-center rounded-md bg-black/60 text-white opacity-0 transition-opacity hover:bg-black/80 focus-visible:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m8 0h3a2 2 0 0 0 2-2v-3" />
+          </svg>
+        </button>
         <h2 className="relative z-10 w-full text-center text-[32px] font-bold leading-tight text-[#FF6300] sm:text-4xl lg:text-5xl">
           <span
             key={activeHeadlineIndex}
@@ -228,6 +260,41 @@ function RotatingPitchSection() {
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
+      {isFullscreenMounted &&
+        createPortal(
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Fullscreen video"
+            onTransitionEnd={(event) => {
+              if (event.target === event.currentTarget && !isFullscreenVisible) {
+                setIsFullscreenMounted(false);
+              }
+            }}
+            className={`fixed inset-0 z-[30] flex items-center justify-center bg-black/90 p-4 transition-opacity duration-500 ${isFullscreenVisible ? "opacity-100" : "opacity-0"}`}
+          >
+            <button
+              type="button"
+              autoFocus
+              aria-label="Close fullscreen video"
+              onClick={closeFullscreen}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") closeFullscreen();
+              }}
+              className="absolute inset-0 cursor-zoom-out"
+            />
+            <video
+              className="pointer-events-none relative z-10 h-[min(100vw_-_2rem,100dvh_-_2rem)] w-[min(100vw_-_2rem,100dvh_-_2rem)] object-cover"
+              src="/images/onboarding-video.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-hidden="true"
+            />
+          </div>,
+          document.body,
+        )}
     </section>
   );
 }
@@ -460,7 +527,7 @@ export default function Home() {
       </section>
 
       {/* Footer Content Section */}
-      <section className="container mx-auto px-2 py-0 pb-0">
+      <section className="container relative z-40 mx-auto px-2 py-0 pb-0">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400 py-12 px-4">
           <div className="flex items-center gap-2">
             <img
