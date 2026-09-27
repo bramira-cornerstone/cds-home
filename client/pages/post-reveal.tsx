@@ -148,12 +148,15 @@ function RotatingPitchSection() {
           </svg>
         </button>
         <h2 className="relative z-10 w-full text-center text-[32px] font-bold leading-tight text-[#FF6300] sm:text-4xl lg:text-5xl">
-          <span className="inline-block">{copy.pitch.headlines[0]}</span>
+          <span className="inline-block animate-sample-product">{copy.pitch.sampleProduct}</span>
         </h2>
       </div>
       <div className="mx-auto mt-4 max-w-5xl space-y-4 text-[17px] leading-relaxed text-[rgba(74,74,74,1)] sm:text-xl md:text-2xl lg:text-[28px]">
-        {copy.pitch.paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+        {copy.pitch.paragraphs.map((paragraph, index) => (
+          <p key={paragraph}>
+            <strong>{copy.pitch.paragraphPrefixes[index]}</strong>{" "}
+            {paragraph}
+          </p>
         ))}
       </div>
       {isFullscreenMounted &&

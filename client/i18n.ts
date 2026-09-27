@@ -55,7 +55,8 @@ export type TranslationSet = {
   };
   pitch: {
     sectionHeadingLines: string[];
-    headlines: string[];
+    sampleProduct: string;
+    paragraphPrefixes: string[];
     paragraphs: string[];
   };
   needs: {
@@ -111,11 +112,12 @@ const english: TranslationSet = {
   },
   pitch: {
     sectionHeadingLines: ["Fans Want to Collect.", "They just don't want to lose money doing it."],
-    headlines: ["Own the Long Tail"],
+    sampleProduct: "Sample Product",
+    paragraphPrefixes: ["Own the long tail:", "Vote to Mint:", "Team Redeem:"],
     paragraphs: [
       "Bring your fans a user-driven economy that has never existed in sports collectibles, with the speed-to-market only digital fan engagement can deliver, that drives and protects their value to hold.",
       "Your highlights become collectibles - user votes determine the supply - no more gambling pack losers.",
-      "Team redeem - gamers can upgrade their cards for the latest - collectors see greater scarcity over time",
+      "Gamers can upgrade their cards for the latest - collectors see greater scarcity over time",
     ],
   },
   needs: {
@@ -239,11 +241,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Los fans quieren coleccionar.", "Simplemente no quieren perder dinero al hacerlo."],
-      headlines: ["Aprovecha el Long Tail"],
+      sampleProduct: "Producto de muestra",
+      paragraphPrefixes: ["Aprovecha el long tail:", "Vota para acuñar:", "Canje del equipo:"],
       paragraphs: [
         "Ofrece a tus fans una economía impulsada por los usuarios, inédita en los coleccionables deportivos, con la rapidez de lanzamiento que solo puede ofrecer la interacción digital con fans, y que impulsa y protege el valor que conservan.",
         "Tus mejores jugadas se convierten en coleccionables: los votos de los usuarios determinan la oferta; se acabaron los perdedores de los paquetes de azar.",
-        "Canje de equipo: los jugadores pueden mejorar sus tarjetas con las últimas novedades y los coleccionistas ven cómo aumenta la escasez con el tiempo.",
+        "Los jugadores pueden mejorar sus tarjetas con las últimas novedades y los coleccionistas ven cómo aumenta la escasez con el tiempo.",
       ],
     },
     needs: {
@@ -361,11 +364,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Os fãs querem colecionar.", "Só não querem perder dinheiro com isso."],
-      headlines: ["Aproveite o Long Tail"],
+      sampleProduct: "Produto de demonstração",
+      paragraphPrefixes: ["Aproveite o long tail:", "Vote para cunhar:", "Resgate do time:"],
       paragraphs: [
         "Ofereça aos seus fãs uma economia guiada pelos usuários, inédita em colecionáveis esportivos, com a velocidade de lançamento que só o engajamento digital dos fãs pode proporcionar, impulsionando e protegendo o valor que eles mantêm.",
         "Seus melhores momentos viram colecionáveis: os votos dos usuários determinam a oferta; chega de perdedores em pacotes de aposta.",
-        "Resgate de times: os jogadores podem aprimorar seus cartões com as novidades, enquanto os colecionadores veem a escassez aumentar com o tempo.",
+        "Os jogadores podem aprimorar seus cartões com as novidades, enquanto os colecionadores veem a escassez aumentar com o tempo.",
       ],
     },
     needs: {
@@ -483,11 +487,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["يريد المشجعون الجمع.", "لكنهم لا يريدون خسارة المال بسبب ذلك."],
-      headlines: ["استثمر في ذيل السوق الطويل"],
+      sampleProduct: "منتج تجريبي",
+      paragraphPrefixes: ["استثمر في القيمة طويلة الأمد:", "صوّت للإصدار:", "استبدال الفريق:"],
       paragraphs: [
         "قدّم لمشجعيك اقتصادًا يقوده المستخدمون، لم يسبق له مثيل في المقتنيات الرياضية، بسرعة الوصول إلى السوق التي لا يوفرها إلا التفاعل الرقمي مع المشجعين، بما يعزز قيمة مقتنياتهم ويحميها للاحتفاظ بها.",
         "تتحول أبرز لقطاتك إلى مقتنيات؛ وتحدد أصوات المستخدمين الكمية المعروضة؛ بلا خاسرين في حزم المقامرة بعد الآن.",
-        "استبدال مقتنيات الفريق: يمكن للاعبين ترقية بطاقاتهم بأحدث الإصدارات، بينما يرى الجامعون الندرة تزداد بمرور الوقت.",
+        "يمكن للاعبين ترقية بطاقاتهم بأحدث الإصدارات، بينما يرى الجامعون الندرة تزداد بمرور الوقت.",
       ],
     },
     needs: {
@@ -605,11 +610,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Fans wollen sammeln.", "Sie wollen dabei nur kein Geld verlieren."],
-      headlines: ["Nutze den Long Tail"],
+      sampleProduct: "Musterprodukt",
+      paragraphPrefixes: ["Nutze den Long Tail:", "Stimme für das Prägen ab:", "Team-Einlösung:"],
       paragraphs: [
         "Biete deinen Fans eine nutzergesteuerte Ökonomie, die es bei Sport-Sammelobjekten noch nie gab – mit der Markteinführungsgeschwindigkeit, die nur digitales Fan-Engagement ermöglicht und den Wert ihrer Sammelobjekte steigert und schützt.",
         "Deine Highlights werden zu Sammelobjekten – Nutzer bestimmen per Abstimmung die Menge – keine Verlierer mehr durch Glücksspiel-Packs.",
-        "Team-Einlösung: Spieler können ihre Karten mit den neuesten Inhalten aufwerten, während Sammler mit der Zeit eine größere Knappheit erleben.",
+        "Spieler können ihre Karten mit den neuesten Inhalten aufwerten, während Sammler mit der Zeit eine größere Knappheit erleben.",
       ],
     },
     needs: {
@@ -727,11 +733,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Les fans veulent collectionner.", "Ils ne veulent simplement pas perdre d'argent en le faisant."],
-      headlines: ["Misez sur la longue traîne"],
+      sampleProduct: "Produit exemple",
+      paragraphPrefixes: ["Misez sur la longue traîne :", "Votez pour la création :", "Échange d'équipe :"],
       paragraphs: [
         "Offrez à vos fans une économie pilotée par les utilisateurs, inédite dans les objets de collection sportifs, avec la rapidité de mise sur le marché que seul l'engagement numérique des fans peut apporter, pour stimuler et protéger la valeur qu'ils détiennent.",
         "Vos moments forts deviennent des objets de collection : les votes des utilisateurs déterminent l'offre ; fini les perdants des pochettes de jeu d'argent.",
-        "Échange d'équipe : les joueurs peuvent améliorer leurs cartes avec les dernières nouveautés, tandis que les collectionneurs voient la rareté augmenter avec le temps.",
+        "Les joueurs peuvent améliorer leurs cartes avec les dernières nouveautés, tandis que les collectionneurs voient la rareté augmenter avec le temps.",
       ],
     },
     needs: {
@@ -849,11 +856,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Fans willen verzamelen.", "Ze willen er alleen geen geld aan verliezen."],
-      headlines: ["Benut de long tail"],
+      sampleProduct: "Voorbeeldproduct",
+      paragraphPrefixes: ["Benut de long tail:", "Stem om te minten:", "Team-inwisseling:"],
       paragraphs: [
         "Bied je fans een door gebruikers gestuurde economie die nog nooit bestond in sportverzamelobjecten, met de snelheid naar de markt die alleen digitale fanbetrokkenheid kan bieden en die de waarde die fans aanhouden vergroot en beschermt.",
         "Je hoogtepunten worden verzamelobjecten: gebruikersstemmen bepalen het aanbod; geen verliezers van gokpakketten meer.",
-        "Team-inwisseling: gamers kunnen hun kaarten upgraden met de nieuwste items, terwijl verzamelaars de schaarste in de loop van de tijd zien toenemen.",
+        "Gamers kunnen hun kaarten upgraden met de nieuwste items, terwijl verzamelaars de schaarste in de loop van de tijd zien toenemen.",
       ],
     },
     needs: {
@@ -971,11 +979,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["प्रशंसक संग्रह करना चाहते हैं।", "वे ऐसा करते हुए बस अपना पैसा नहीं खोना चाहते।"],
-      headlines: ["लॉन्ग टेल का लाभ उठाएँ"],
+      sampleProduct: "नमूना उत्पाद",
+      paragraphPrefixes: ["लॉन्ग टेल का लाभ उठाएँ:", "मिंट करने के लिए वोट दें:", "टीम रिडीम:"],
       paragraphs: [
         "अपने प्रशंसकों को खेल संग्रहणीय वस्तुओं में पहले कभी न देखी गई उपयोगकर्ता-संचालित अर्थव्यवस्था दें, डिजिटल फ़ैन सहभागिता की तेज़ बाज़ार-पहुँच के साथ, जो उनके पास रखी वस्तुओं का मूल्य बढ़ाती और सुरक्षित रखती है।",
         "आपकी शानदार झलकियाँ संग्रहणीय बनती हैं—उपयोगकर्ताओं के वोट आपूर्ति तय करते हैं—अब जुए वाले पैक में कोई हारने वाला नहीं।",
-        "टीम रिडीम: गेमर नवीनतम कार्ड पाने के लिए अपने कार्ड अपग्रेड कर सकते हैं, जबकि संग्रहकर्ताओं को समय के साथ बढ़ती दुर्लभता दिखती है।",
+        "गेमर नवीनतम कार्ड पाने के लिए अपने कार्ड अपग्रेड कर सकते हैं, जबकि संग्रहकर्ताओं को समय के साथ बढ़ती दुर्लभता दिखती है।",
       ],
     },
     needs: {
@@ -1093,11 +1102,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["球迷想要收藏。", "他们只是不想因此亏钱。"],
-      headlines: ["深耕长尾价值"],
+      sampleProduct: "示例产品",
+      paragraphPrefixes: ["深耕长尾价值：", "投票决定铸造：", "球队兑换："],
       paragraphs: [
         "为球迷带来体育收藏领域前所未有的用户驱动型经济，并以只有数字化球迷互动才能实现的上市速度，推动并守护他们持有藏品的价值。",
         "精彩瞬间成为收藏品——用户投票决定发行数量——不再有人输掉博彩盲包。",
-        "球队兑换：玩家可以升级卡片获取最新内容，收藏者则能看到稀缺性随时间不断提升。",
+        "玩家可以升级卡片获取最新内容，收藏者则能看到稀缺性随时间不断提升。",
       ],
     },
     needs: {
@@ -1212,11 +1222,12 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["ファンは集めたい。", "ただ、そのためにお金を失いたくない。"],
-      headlines: ["ロングテールを活かす"],
+      sampleProduct: "サンプル商品",
+      paragraphPrefixes: ["ロングテールを活かす：", "ミントに投票：", "チームでの交換："],
       paragraphs: [
         "スポーツコレクティブルにはこれまでなかった、ファン主導の経済圏を届けます。デジタルなファンエンゲージメントならではの市場投入スピードで、ファンが保有する価値を高め、守ります。",
         "ハイライトがコレクティブルに。ユーザー投票で供給量が決まり、ギャンブル性のあるパックで負けることはもうありません。",
-        "チームでの交換：ゲーマーはカードを最新の内容にアップグレードでき、コレクターは時間とともに希少性が高まるのを実感できます。",
+        "ゲーマーはカードを最新の内容にアップグレードでき、コレクターは時間とともに希少性が高まるのを実感できます。",
       ],
     },
     needs: {
