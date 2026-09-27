@@ -87,7 +87,7 @@ export type TranslationSet = {
     close: string;
     investors: string;
     investorDescription: string;
-    rightsHolders: string;
+    leaguePartners: string;
     leagueDescription: string;
     email: string;
     collectors: string;
@@ -213,7 +213,7 @@ const english: TranslationSet = {
     close: "Close contact form",
     investors: "Investors",
     investorDescription: "Equity offering announcing soon. Join the waitlist to be notified:",
-    rightsHolders: "Rights Holders",
+    leaguePartners: "League Partners",
     leagueDescription: "Interested in discussing how we could bring this to your league?",
     email: "Email:",
     collectors: "Collectors",
@@ -341,7 +341,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "Cerrar formulario de contacto",
       investors: "Inversores",
       investorDescription: "La oferta de capital se anunciará pronto. Únete a la lista de espera para recibir avisos:",
-      rightsHolders: "Titulares de derechos",
+      leaguePartners: "Socios de ligas",
       leagueDescription: "¿Te interesa hablar sobre cómo podríamos llevar esto a tu liga?",
       email: "Correo electrónico:",
       collectors: "Coleccionistas",
@@ -463,7 +463,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "Fechar formulário de contato",
       investors: "Investidores",
       investorDescription: "A oferta de participação será anunciada em breve. Entre na lista de espera para receber novidades:",
-      rightsHolders: "Detentores de direitos",
+      leaguePartners: "Parceiros de ligas",
       leagueDescription: "Tem interesse em conversar sobre como levar isso para sua liga?",
       email: "E-mail:",
       collectors: "Colecionadores",
@@ -585,7 +585,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "إغلاق نموذج التواصل",
       investors: "المستثمرون",
       investorDescription: "سيتم الإعلان عن عرض الأسهم قريبًا. انضم إلى قائمة الانتظار ليصلك إشعار:",
-      rightsHolders: "أصحاب الحقوق",
+      leaguePartners: "شركاء الدوريات",
       leagueDescription: "هل ترغب في مناقشة كيفية تقديم هذا إلى دوريك؟",
       email: "البريد الإلكتروني:",
       collectors: "الجامعون",
@@ -707,7 +707,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "Kontaktformular schließen",
       investors: "Investoren",
       investorDescription: "Das Beteiligungsangebot wird bald angekündigt. Melde dich für die Warteliste an, um benachrichtigt zu werden:",
-      rightsHolders: "Rechteinhaber",
+      leaguePartners: "Liga-Partner",
       leagueDescription: "Möchtest du besprechen, wie wir dies in deine Liga bringen können?",
       email: "E-Mail:",
       collectors: "Sammler",
@@ -829,7 +829,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "Fermer le formulaire de contact",
       investors: "Investisseurs",
       investorDescription: "L'offre de participation sera annoncée prochainement. Inscrivez-vous sur la liste d'attente pour être informé :",
-      rightsHolders: "Ayants droit",
+      leaguePartners: "Partenaires de ligues",
       leagueDescription: "Vous souhaitez discuter de la façon dont nous pourrions apporter cela à votre ligue ?",
       email: "E-mail :",
       collectors: "Collectionneurs",
@@ -951,7 +951,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "Contactformulier sluiten",
       investors: "Investeerders",
       investorDescription: "Het aandelenaanbod wordt binnenkort aangekondigd. Meld je aan voor de wachtlijst om op de hoogte te blijven:",
-      rightsHolders: "Rechthebbenden",
+      leaguePartners: "Competitiepartners",
       leagueDescription: "Wil je bespreken hoe we dit naar jouw competitie kunnen brengen?",
       email: "E-mail:",
       collectors: "Verzamelaars",
@@ -1073,7 +1073,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "संपर्क फ़ॉर्म बंद करें",
       investors: "निवेशक",
       investorDescription: "इक्विटी ऑफ़र की घोषणा जल्द होगी। सूचना पाने के लिए प्रतीक्षा सूची में शामिल हों:",
-      rightsHolders: "अधिकार धारक",
+      leaguePartners: "लीग साझेदार",
       leagueDescription: "क्या आप चर्चा करना चाहते हैं कि हम इसे आपकी लीग तक कैसे ला सकते हैं?",
       email: "ईमेल:",
       collectors: "संग्रहकर्ता",
@@ -1192,7 +1192,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "关闭联系表单",
       investors: "投资者",
       investorDescription: "股权发行即将公布。加入候补名单以接收通知：",
-      rightsHolders: "权利持有人",
+      leaguePartners: "联赛合作伙伴",
       leagueDescription: "想讨论如何将这项服务带到你的联赛吗？",
       email: "电子邮箱：",
       collectors: "收藏者",
@@ -1314,7 +1314,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       close: "お問い合わせフォームを閉じる",
       investors: "投資家",
       investorDescription: "株式募集の詳細は近日発表します。通知を受け取るにはウェイトリストに登録してください：",
-      rightsHolders: "権利保有者",
+      leaguePartners: "リーグパートナー",
       leagueDescription: "あなたのリーグにこれを届ける方法について話しませんか？",
       email: "メール：",
       collectors: "コレクター",
