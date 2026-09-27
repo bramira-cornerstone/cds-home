@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ContactForm from "@/components/ContactForm";
+import { Link } from "react-router-dom";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -11,7 +12,11 @@ export default function AppHeader() {
     <>
       <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-black/5 bg-white/95 dark:bg-black/85 dark:border-white/10">
         <div className="container mx-auto flex flex-wrap items-center gap-2 px-4 py-1.5 mt-2 mb-2 md:flex-nowrap">
-          <div className="order-1 flex w-full min-w-0 items-center gap-2 md:order-none md:w-auto">
+          <Link
+            to="/"
+            aria-label="Cornerstone Digital Sports home"
+            className="order-1 flex w-full min-w-0 items-center gap-2 text-inherit no-underline focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#004FFF] md:order-none md:w-auto"
+          >
             <img
               src="/images/cds-logo-color-text.webp"
               alt="Cornerstone Digital Sports"
@@ -20,7 +25,7 @@ export default function AppHeader() {
             <h1 className="min-w-0 flex-1 text-[36px] leading-[36px] md:text-[50px] md:leading-[50px] lg:text-[60px] lg:leading-[60px]" style={{ fontFamily: "Roboto", fontWeight: 600 }}>
               Cornerstone Digital Sports
             </h1>
-          </div>
+          </Link>
           <LanguageSwitcher className="order-3 w-full justify-center md:order-none md:ml-auto md:w-auto md:justify-start" />
           <button
             onClick={() => setIsContactFormOpen(true)}
