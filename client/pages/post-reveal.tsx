@@ -104,19 +104,19 @@ function OpportunityMatrix() {
     <div lang={language} className="mt-5 w-full overflow-x-auto">
       <table
         aria-label={copy.needs.title}
-        className="w-full min-w-[320px] table-fixed border-separate border-spacing-0 overflow-hidden rounded-lg text-[15px]"
+        className="w-full min-w-[320px] table-fixed border-separate border-spacing-0 overflow-hidden rounded-lg text-[15px] md:text-base lg:text-lg"
       >
         <caption className="sr-only">{copy.needs.title}</caption>
         <thead>
           <tr>
-            <th scope="col" className="w-[36%] rounded-tl-lg bg-[#004FFF] px-2 py-2 text-left text-[11px] font-bold text-white sm:px-3">
+            <th scope="col" className="w-[36%] rounded-tl-lg bg-[#004FFF] px-2 py-2 text-left text-[11px] font-bold text-white sm:px-3 md:text-xs lg:text-sm">
               {copy.needs.matrix.options}
             </th>
             {columns.map((column, index) => (
               <th
                 key={column.label}
                 scope="col"
-                className={`bg-[#004FFF] px-1 py-2 text-center text-[11px] font-bold leading-tight text-white sm:px-2 ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
+                className={`bg-[#004FFF] px-1 py-2 text-center text-[11px] font-bold leading-tight text-white sm:px-2 md:text-xs lg:text-sm ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
               >
                 {column.label}
               </th>
@@ -126,7 +126,7 @@ function OpportunityMatrix() {
         <tbody>
           {rows.map((item) => (
             <tr key={item} className="odd:bg-white even:bg-slate-50">
-              <th scope="row" className="border-b border-slate-200 px-2 py-1.5 text-left font-medium leading-tight text-slate-800 sm:px-3">
+              <th scope="row" className="border-b border-slate-200 px-2 py-1.5 text-left text-[15px] font-medium leading-tight text-slate-800 sm:px-3 md:text-base lg:text-lg">
                 {item}
               </th>
               {columns.map((column) => {
@@ -135,7 +135,7 @@ function OpportunityMatrix() {
                 return (
                   <td key={column.label} className="border-b border-slate-200 px-0.5 py-1 text-center">
                     {included ? (
-                      <span aria-label={copy.needs.matrix.notIncluded} className="text-[26px] font-bold leading-none text-red-600">
+                      <span aria-label={copy.needs.matrix.notIncluded} className="text-[26px] font-bold leading-none text-red-600 md:text-[30px] lg:text-[32px]">
                         ✕
                       </span>
                     ) : (
@@ -155,7 +155,7 @@ function OpportunityMatrix() {
                 key={column.label}
                 className={`border-t-2 border-slate-200 px-1 py-2 text-center ${index === columns.length - 1 ? "rounded-br-lg" : ""}`}
               >
-                <span aria-label={copy.needs.matrix.included} className="text-[24px] font-bold leading-none text-green-600">
+                <span aria-label={copy.needs.matrix.included} className="text-[24px] font-bold leading-none text-green-600 md:text-[28px] lg:text-[30px]">
                   ✓
                 </span>
               </td>
@@ -197,15 +197,15 @@ function RotatingPitchSection() {
       style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
     >
       <h2
-        className="mx-auto mb-0 max-w-5xl text-center text-[42px] tracking-wider text-black"
-        style={{ fontWeight: 700, lineHeight: "50px" }}
+        className="mx-auto mb-0 max-w-5xl text-center text-[42px] leading-[50px] tracking-wider text-black md:text-[52px] md:leading-[60px] lg:text-[60px] lg:leading-[68px]"
+        style={{ fontWeight: 700 }}
       >
         {copy.pitch.sectionHeadingLines.map((line, index) => (
           <span
             key={line}
             className={
               index === 1
-                ? "block text-[20px] leading-normal font-normal italic tracking-[1px] text-[rgba(74,74,74,1)]"
+                ? "block text-[20px] leading-normal font-normal italic tracking-[1px] text-[rgba(74,74,74,1)] md:text-2xl lg:text-3xl"
                 : "block"
             }
           >
@@ -239,7 +239,7 @@ function RotatingPitchSection() {
           <span className="inline-block">{copy.pitch.headlines[0]}</span>
         </h2>
       </div>
-      <div className="mx-auto mt-4 max-w-5xl space-y-4 text-[17px] leading-relaxed text-[rgba(74,74,74,1)] sm:text-xl">
+      <div className="mx-auto mt-4 max-w-5xl space-y-4 text-[17px] leading-relaxed text-[rgba(74,74,74,1)] sm:text-xl md:text-2xl lg:text-[28px]">
         {copy.pitch.paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
@@ -343,16 +343,15 @@ function FeatureCarousel() {
         >
           <div className="!mt-3 !mb-3 flex flex-col items-center justify-center">
             <h2
-              className="text-center text-[42px] uppercase tracking-wider mb-0"
+              className="text-center text-[42px] uppercase tracking-wider mb-0 leading-[50px] md:text-[52px] md:leading-[60px] lg:text-[60px] lg:leading-[68px]"
               style={{
                 color: "#000000",
                 fontWeight: 700,
-                lineHeight: "50px",
               }}
             >
               {copy.needs.title}
             </h2>
-            <p className="max-w-3xl text-center text-xl leading-[24px] italic text-[rgba(74,74,74,1)]">
+            <p className="max-w-3xl text-center text-xl leading-[24px] italic text-[rgba(74,74,74,1)] md:text-2xl md:leading-[32px] lg:text-3xl lg:leading-[40px]">
               {copy.needs.subtitle}
             </p>
           </div>
@@ -367,21 +366,19 @@ function FeatureCarousel() {
         <div className="flex items-center justify-center">
           <div>
             <p
-              className="text-center text-[42px] uppercase tracking-wider mb-2"
+              className="mb-2 text-center text-[42px] uppercase leading-[50px] tracking-wider md:text-[52px] md:leading-[60px] lg:text-[60px] lg:leading-[68px]"
               style={{
                 color: activeCard.titleColor,
                 fontWeight: 700,
-                lineHeight: "50px",
                 marginTop: "24px",
               }}
             >
               {activeCopy.title}
             </p>
             <p
-              className={`text-center ${activeCard.descriptionClassName} dark:text-white`}
+              className={`text-center ${activeCard.descriptionClassName} leading-[26px] dark:text-white md:text-2xl md:leading-[32px] lg:text-[28px] lg:leading-[36px]`}
               style={{
                 fontWeight: 100,
-                lineHeight: "26px",
                 color: "rgba(74, 74, 74, 1)",
                 fontStyle: "italic",
                 fontFamily: "Roboto Condensed, sans-serif",
@@ -414,7 +411,7 @@ function FeatureCarousel() {
               />
             </div>
             {activeCopy.caption ? (
-              <p className="text-center text-sm text-slate-500 dark:text-slate-400 mt-2">
+              <p className="mt-2 text-center text-sm text-slate-500 dark:text-slate-400 md:text-base lg:text-lg">
                 {activeCopy.caption}
               </p>
             ) : null}
@@ -484,7 +481,7 @@ export default function Home() {
           <div className="flex items-center justify-center">
             <div>
               <p
-                className="text-center text-[28px] leading-tight text-black dark:text-white px-6"
+                className="px-6 text-center text-[28px] leading-tight text-black dark:text-white md:text-[32px] lg:text-[36px]"
                 style={{ marginTop: "36px", marginBottom: "36px" }}
               >
                 {copy.whitepaper.description}
@@ -512,7 +509,7 @@ export default function Home() {
 
       {/* Footer Content Section */}
       <section className="container relative z-40 mx-auto px-2 py-0 pb-0">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-600 dark:text-slate-400 py-12 px-4">
+        <div className="flex flex-col items-center justify-center gap-6 px-4 py-12 text-sm text-slate-600 dark:text-slate-400 sm:flex-row md:text-base lg:text-lg">
           <div className="flex items-center gap-2">
             <img
               src="/images/cornerstone-logo.webp"
