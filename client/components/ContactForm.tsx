@@ -25,22 +25,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
 
         <div className="space-y-8">
           <section>
-            <h2 className="font-semibold text-xl mb-2">{copy.contact.investors}</h2>
-            <p className="text-sm text-slate-600 dark:text-slate-400">
-              {copy.contact.investorDescription}{" "}
-              <a
-                href="https://stack.angellist.com/s/3cmz2r3k37"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline hover:text-blue-700"
-              >
-                https://stack.angellist.com/s/3cmz2r3k37
-              </a>
-            </p>
-          </section>
-
-          <section>
-            <h2 className="font-semibold text-xl mb-2">{copy.contact.leaguePartners}</h2>
+            <h2 className="font-semibold text-xl mb-2">{copy.contact.rightsHolders}</h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-2">
               {copy.contact.leagueDescription}
             </p>
@@ -51,6 +36,21 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                 className="text-blue-600 underline hover:text-blue-700"
               >
                 contact@cornerstonedigitalsports.com
+              </a>
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-semibold text-xl mb-2">{copy.contact.investors}</h2>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
+              {copy.contact.investorDescription}{" "}
+              <a
+                href="https://stack.angellist.com/s/3cmz2r3k37"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-700"
+              >
+                https://stack.angellist.com/s/3cmz2r3k37
               </a>
             </p>
           </section>
