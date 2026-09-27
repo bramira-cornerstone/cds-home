@@ -1,95 +1,7 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { useLanguage } from "@/contexts/LanguageContext";
-import { type FeatureKey } from "@/i18n";
-
-type FeatureCard = {
-  key: FeatureKey;
-  title: string;
-  titleColor: string;
-  description: string[];
-  descriptionClassName: string;
-  image: string;
-  imageAlt: string;
-  background: string;
-  imageContainerClassName: string;
-  imageContainerStyle?: CSSProperties;
-  imageClassName: string;
-  imageStyle?: CSSProperties;
-  caption?: string;
-};
-
-const featureCards: FeatureCard[] = [
-  {
-    key: "ownThePlays",
-    title: "OWN THE PLAYS",
-    titleColor: "#FF6300",
-    description: [
-      "Limited edition, interactive, 3d digital cards capturing sports history with owner name and market data on-card",
-    ],
-    descriptionClassName: "text-[22px]",
-    image: "/images/relicGif2.gif",
-    imageAlt: "Relic Card",
-    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
-    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900",
-    imageContainerStyle: { height: "280px" },
-    imageClassName: "w-full h-full object-contain",
-    caption: "*Sample product with sample league",
-  },
-  {
-    key: "voting",
-    title: "VOTING",
-    titleColor: "#FF6300",
-    description: [
-      "Users vote on supply released.",
-      "Most popular becomes the most scarce.",
-      "The least popular not released at all.",
-    ],
-    descriptionClassName: "text-[19px]",
-    image: "/images/voteGif.gif",
-    imageAlt: "Vote Card",
-    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.5) 0%, rgba(0, 79, 255, 0.5) 100%)",
-    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900",
-    imageContainerStyle: { height: "280px" },
-    imageClassName: "w-full h-full object-contain",
-  },
-  {
-    key: "social",
-    title: "SOCIAL",
-    titleColor: "#FF6300",
-    description: [
-      "No more lonely marketplace.",
-      "Friends can follow your trophy case, collecting events, badges, and ranks",
-    ],
-    descriptionClassName: "text-[20px]",
-    image: "/images/trophyCaseSplash.webp",
-    imageAlt: "Trophy Case",
-    background: "linear-gradient(135deg, rgba(0, 79, 255, 0.5) 0%, rgba(255, 99, 0, 0.5) 100%)",
-    imageContainerClassName: "w-full max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex items-center justify-center",
-    imageContainerStyle: { height: "250px" },
-    imageClassName: "w-full h-auto object-cover",
-  },
-  {
-    key: "utility",
-    title: "UTILITY",
-    titleColor: "#004FFF",
-    description: [
-      "Redeem team relics for new.",
-      "Utility you can trust - no rug pulls",
-      "or randomness.",
-    ],
-    descriptionClassName: "text-[20px]",
-    image: "/images/teamGrid.webp",
-    imageAlt: "Team Grid",
-    background: "linear-gradient(135deg, rgba(255, 99, 0, 0.5) 0%, rgba(0, 79, 255, 0.5) 100%)",
-    imageContainerClassName: "rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-lg bg-white dark:bg-slate-900 flex flex-col justify-center items-center flex-shrink-0",
-    imageContainerStyle: { height: "250px" },
-    imageClassName: "object-scale-down",
-    imageStyle: { marginLeft: "auto", marginRight: "auto", height: "300px" },
-  },
-];
-
 function OpportunityMatrix() {
   const { copy, language } = useLanguage();
   const columns = [
@@ -283,32 +195,8 @@ function RotatingPitchSection() {
   );
 }
 
-function FeatureCarousel() {
-  const [activeIndex, setActiveIndex] = useState(1);
-  const [isPaused, setIsPaused] = useState(false);
-  const activeCard = featureCards[activeIndex];
+function PostRevealContent() {
   const { copy, language } = useLanguage();
-  const activeCopy = copy.features[activeCard.key];
-
-  useEffect(() => {
-    if (isPaused) return;
-
-    const interval = window.setInterval(() => {
-      setActiveIndex((currentIndex) => (currentIndex + 1) % featureCards.length);
-    }, 5000);
-
-    return () => window.clearInterval(interval);
-  }, [isPaused]);
-
-  const showPrevious = () => {
-    setActiveIndex((currentIndex) =>
-      currentIndex === 0 ? featureCards.length - 1 : currentIndex - 1,
-    );
-  };
-
-  const showNext = () => {
-    setActiveIndex((currentIndex) => (currentIndex + 1) % featureCards.length);
-  };
 
   return (
     <section className="container mx-auto px-1.5 py-0 pb-0">
@@ -359,108 +247,6 @@ function FeatureCarousel() {
         </div>
       </section>
       <RotatingPitchSection />
-      <div
-        className="homepage-section relative grid grid-cols-1 lg:grid-cols-2 gap-[17px] py-8 px-4 my-6 rounded-lg min-h-[372px]"
-        style={{ backgroundColor: "rgba(255, 255, 255, 0.85)" }}
-      >
-        <div className="flex items-center justify-center">
-          <div>
-            <p
-              className="mb-2 text-center text-[42px] uppercase leading-[50px] tracking-wider md:text-[52px] md:leading-[60px] lg:text-[60px] lg:leading-[68px]"
-              style={{
-                color: activeCard.titleColor,
-                fontWeight: 700,
-                marginTop: "24px",
-              }}
-            >
-              {activeCopy.title}
-            </p>
-            <p
-              className={`text-center ${activeCard.descriptionClassName} leading-[26px] dark:text-white md:text-2xl md:leading-[32px] lg:text-[28px] lg:leading-[36px]`}
-              style={{
-                fontWeight: 100,
-                color: "rgba(74, 74, 74, 1)",
-                fontStyle: "italic",
-                fontFamily: "Roboto Condensed, sans-serif",
-                marginTop: "36px",
-                marginBottom: "36px",
-              }}
-            >
-              {activeCopy.description.map((line, index) => (
-                <span key={line}>
-                  {line}
-                  {index < activeCopy.description.length - 1 ? <br /> : null}
-                </span>
-              ))}
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-center">
-          <div>
-            <div
-              className={activeCard.imageContainerClassName}
-              style={activeCard.imageContainerStyle}
-            >
-              <img
-                src={activeCard.image}
-                alt={activeCopy.imageAlt}
-                className={activeCard.imageClassName}
-                loading="lazy"
-                style={activeCard.imageStyle}
-              />
-            </div>
-            {activeCopy.caption ? (
-              <p className="mt-2 text-center text-sm text-slate-500 dark:text-slate-400 md:text-base lg:text-lg">
-                {activeCopy.caption}
-              </p>
-            ) : null}
-          </div>
-        </div>
-
-        <button
-          type="button"
-          onClick={showPrevious}
-          aria-label={copy.carousel.previousFeature}
-          className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-2xl leading-none text-slate-700 shadow-sm transition hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-900"
-        >
-          ‹
-        </button>
-        <button
-          type="button"
-          onClick={showNext}
-          aria-label={copy.carousel.nextFeature}
-          className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full border border-slate-300 bg-white/80 px-3 py-1 text-2xl leading-none text-slate-700 shadow-sm transition hover:bg-white dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:bg-slate-900"
-        >
-          ›
-        </button>
-
-        <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
-          {featureCards.map((card, index) => (
-            <button
-              key={card.title}
-              type="button"
-              onClick={() => setActiveIndex(index)}
-              aria-label={copy.carousel.featureLabels[card.key]}
-              className={`h-2.5 w-2.5 rounded-full border transition ${
-                index === activeIndex
-                  ? "border-slate-700 bg-slate-700 dark:border-slate-200 dark:bg-slate-200"
-                  : "border-slate-400 bg-transparent dark:border-slate-500"
-              }`}
-            />
-          ))}
-          <button
-            type="button"
-            onClick={() => setIsPaused((currentPaused) => !currentPaused)}
-            aria-label={
-              isPaused ? copy.carousel.resumeCarousel : copy.carousel.pauseCarousel
-            }
-            className="ml-1 rounded border border-slate-400 px-1.5 text-[10px] leading-[10px] text-slate-600 transition hover:bg-white dark:border-slate-500 dark:text-slate-300 dark:hover:bg-slate-900"
-          >
-            {isPaused ? "▶" : "Ⅱ"}
-          </button>
-        </div>
-      </div>
     </section>
   );
 }
@@ -470,7 +256,7 @@ export default function Home() {
 
   return (
     <section className="relative min-h-screen flex flex-col">
-      <FeatureCarousel />
+      <PostRevealContent />
 
       {/* Whitepaper Download Section */}
       <section className="container mx-auto px-2 py-0 pb-0">
