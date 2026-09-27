@@ -118,8 +118,8 @@ const english: TranslationSet = {
     ],
   },
   needs: {
-    title: "OPPORTUNITY",
-    subtitle: "The missing piece that we help deliver",
+    title: "CURRENT ATTEMPTS",
+    subtitle: "Where others have attempted to solve the problem but fail",
     matrix: { options: "Options", value: "Value", cornerstoneModel: "The Cornerstone Model", included: "Included", notIncluded: "Not included" },
     cardItems: {
       aggregates: ["Streaming / OTT", "Social Media", "Physical Cards", "Digital Collectibles", "Fan Reward Tokens"],
@@ -246,8 +246,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "OPORTUNIDAD",
-      subtitle: "La pieza que falta y que ayudamos a ofrecer",
+      title: "INTENTOS ACTUALES",
+      subtitle: "Donde otros han intentado resolver el problema, pero han fracasado",
       matrix: { options: "Opciones", value: "Valor", cornerstoneModel: "El modelo Cornerstone", included: "Incluido", notIncluded: "No incluido" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Redes sociales", "Tarjetas físicas", "Coleccionables digitales", "Tokens de recompensa para fans"],
@@ -368,8 +368,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "OPORTUNIDADE",
-      subtitle: "A peça que falta e que ajudamos a entregar",
+      title: "TENTATIVAS ATUAIS",
+      subtitle: "Onde outros tentaram resolver o problema, mas falharam",
       matrix: { options: "Opções", value: "Valor", cornerstoneModel: "O modelo Cornerstone", included: "Incluído", notIncluded: "Não incluído" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Redes sociais", "Cartões físicos", "Colecionáveis digitais", "Tokens de recompensa para fãs"],
@@ -490,8 +490,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "الفرصة",
-      subtitle: "القطعة المفقودة التي نساعد على تقديمها",
+      title: "المحاولات الحالية",
+      subtitle: "حيث حاول الآخرون حل المشكلة لكنهم أخفقوا",
       matrix: { options: "الخيارات", value: "القيمة", cornerstoneModel: "نموذج كورنرستون", included: "مُدرج", notIncluded: "غير مُدرج" },
       cardItems: {
         aggregates: ["البث / OTT", "وسائل التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "رموز مكافآت المشجعين"],
@@ -612,8 +612,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "CHANCE",
-      subtitle: "Das fehlende Puzzlestück, zu dessen Umsetzung wir beitragen",
+      title: "AKTUELLE LÖSUNGSANSÄTZE",
+      subtitle: "Wo andere versucht haben, das Problem zu lösen, aber scheitern",
       matrix: { options: "Optionen", value: "Wert", cornerstoneModel: "Das Cornerstone-Modell", included: "Enthalten", notIncluded: "Nicht enthalten" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Soziale Medien", "Physische Karten", "Digitale Sammelobjekte", "Fan-Belohnungstoken"],
@@ -734,8 +734,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "OPPORTUNITÉ",
-      subtitle: "La pièce manquante que nous contribuons à apporter",
+      title: "TENTATIVES ACTUELLES",
+      subtitle: "Là où d’autres ont tenté de résoudre le problème, mais ont échoué",
       matrix: { options: "Options", value: "Valeur", cornerstoneModel: "Le modèle Cornerstone", included: "Inclus", notIncluded: "Non inclus" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Réseaux sociaux", "Cartes physiques", "Objets de collection numériques", "Jetons de récompense pour fans"],
@@ -856,8 +856,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "KANS",
-      subtitle: "Het ontbrekende onderdeel dat wij helpen leveren",
+      title: "HUIDIGE POGINGEN",
+      subtitle: "Waar anderen hebben geprobeerd het probleem op te lossen, maar dat niet is gelukt",
       matrix: { options: "Opties", value: "Waarde", cornerstoneModel: "Het Cornerstone-model", included: "Inbegrepen", notIncluded: "Niet inbegrepen" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Sociale media", "Fysieke kaarten", "Digitale verzamelobjecten", "Fanbeloningstokens"],
@@ -978,8 +978,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "अवसर",
-      subtitle: "वह कमी जिसे पूरा करने में हम मदद करते हैं",
+      title: "वर्तमान प्रयास",
+      subtitle: "जहाँ दूसरों ने समस्या को हल करने की कोशिश की, लेकिन वे असफल रहे।",
       matrix: { options: "विकल्प", value: "मूल्य", cornerstoneModel: "कॉर्नरस्टोन मॉडल", included: "शामिल", notIncluded: "शामिल नहीं" },
       cardItems: {
         aggregates: ["स्ट्रीमिंग / OTT", "सोशल मीडिया", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "प्रशंसक पुरस्कार टोकन"],
@@ -1100,8 +1100,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "机会",
-      subtitle: "我们助力交付的关键缺失环节",
+      title: "当前尝试",
+      subtitle: "其他人曾尝试解决问题，但未能成功",
       matrix: { options: "选项", value: "价值", cornerstoneModel: "Cornerstone 模型", included: "包含", notIncluded: "不包含" },
       cardItems: {
         aggregates: ["流媒体 / OTT", "社交媒体", "实体卡片", "数字收藏品", "球迷奖励代币"],
@@ -1219,8 +1219,8 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       ],
     },
     needs: {
-      title: "機会",
-      subtitle: "私たちが提供を支援する、欠けていたもの",
+      title: "現在の取り組み",
+      subtitle: "他者が問題解決を試みたものの、うまくいっていない点",
       matrix: { options: "選択肢", value: "価値", cornerstoneModel: "Cornerstoneモデル", included: "対象", notIncluded: "対象外" },
       cardItems: {
         aggregates: ["ストリーミング / OTT", "ソーシャルメディア", "物理カード", "デジタルコレクティブル", "ファン報酬トークン"],

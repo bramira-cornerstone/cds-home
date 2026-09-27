@@ -369,7 +369,7 @@ function FeatureCarousel() {
             >
               {copy.needs.title}
             </h2>
-            <p className="max-w-3xl text-center text-xl leading-[24px] text-[rgba(74,74,74,1)]">
+            <p className="max-w-3xl text-center text-xl leading-[24px] italic text-[rgba(74,74,74,1)]">
               {copy.needs.subtitle}
             </p>
           </div>
