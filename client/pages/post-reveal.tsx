@@ -191,7 +191,14 @@ function RotatingPitchSection() {
         style={{ fontWeight: 700, lineHeight: "50px" }}
       >
         {copy.pitch.sectionHeadingLines.map((line, index) => (
-          <span key={line}>
+          <span
+            key={line}
+            className={
+              index === 1
+                ? "text-[20px] leading-[20px] font-normal italic tracking-[1px] text-[rgba(74,74,74,1)]"
+                : undefined
+            }
+          >
             {line}
             {index < copy.pitch.sectionHeadingLines.length - 1 ? <br /> : null}
           </span>
