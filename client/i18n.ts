@@ -110,7 +110,7 @@ const english: TranslationSet = {
   },
   pitch: {
     sectionHeadingLines: ["Fans Want to Collect.", "They just don't want to lose money doing it."],
-    headlines: ["Own the Long Tail", "Reward and Create Lasting Fans", "Close the Loop on Fragmentation"],
+    headlines: ["Own the Long Tail"],
     paragraphs: [
       "Bring your fans a user-driven economy that has never existed in sports collectibles, with the speed-to-market only digital fan engagement can deliver, that drives and protects their value to hold.",
       "Your highlights become collectibles - user votes determine the supply - no more gambling pack losers.",
@@ -238,7 +238,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Los fans quieren coleccionar.", "Simplemente no quieren perder dinero al hacerlo."],
-      headlines: ["Aprovecha el Long Tail", "Recompensa y crea fans duraderos", "Cierra el ciclo de la fragmentación"],
+      headlines: ["Aprovecha el Long Tail"],
       paragraphs: [
         "Ofrece a tus fans una economía impulsada por los usuarios, inédita en los coleccionables deportivos, con la rapidez de lanzamiento que solo puede ofrecer la interacción digital con fans, y que impulsa y protege el valor que conservan.",
         "Tus mejores jugadas se convierten en coleccionables: los votos de los usuarios determinan la oferta; se acabaron los perdedores de los paquetes de azar.",
@@ -360,7 +360,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Os fãs querem colecionar.", "Só não querem perder dinheiro com isso."],
-      headlines: ["Aproveite o Long Tail", "Recompense e crie fãs duradouros", "Feche o ciclo da fragmentação"],
+      headlines: ["Aproveite o Long Tail"],
       paragraphs: [
         "Ofereça aos seus fãs uma economia guiada pelos usuários, inédita em colecionáveis esportivos, com a velocidade de lançamento que só o engajamento digital dos fãs pode proporcionar, impulsionando e protegendo o valor que eles mantêm.",
         "Seus melhores momentos viram colecionáveis: os votos dos usuários determinam a oferta; chega de perdedores em pacotes de aposta.",
@@ -482,7 +482,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["يريد المشجعون الجمع.", "لكنهم لا يريدون خسارة المال بسبب ذلك."],
-      headlines: ["استثمر في ذيل السوق الطويل", "كافئ المشجعين واصنع ولاءً دائمًا", "أغلق حلقة التجزئة"],
+      headlines: ["استثمر في ذيل السوق الطويل"],
       paragraphs: [
         "قدّم لمشجعيك اقتصادًا يقوده المستخدمون، لم يسبق له مثيل في المقتنيات الرياضية، بسرعة الوصول إلى السوق التي لا يوفرها إلا التفاعل الرقمي مع المشجعين، بما يعزز قيمة مقتنياتهم ويحميها للاحتفاظ بها.",
         "تتحول أبرز لقطاتك إلى مقتنيات؛ وتحدد أصوات المستخدمين الكمية المعروضة؛ بلا خاسرين في حزم المقامرة بعد الآن.",
@@ -604,7 +604,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Fans wollen sammeln.", "Sie wollen dabei nur kein Geld verlieren."],
-      headlines: ["Nutze den Long Tail", "Belohne Fans und schaffe dauerhafte Bindung", "Schließe den Kreislauf der Fragmentierung"],
+      headlines: ["Nutze den Long Tail"],
       paragraphs: [
         "Biete deinen Fans eine nutzergesteuerte Ökonomie, die es bei Sport-Sammelobjekten noch nie gab – mit der Markteinführungsgeschwindigkeit, die nur digitales Fan-Engagement ermöglicht und den Wert ihrer Sammelobjekte steigert und schützt.",
         "Deine Highlights werden zu Sammelobjekten – Nutzer bestimmen per Abstimmung die Menge – keine Verlierer mehr durch Glücksspiel-Packs.",
@@ -726,7 +726,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Les fans veulent collectionner.", "Ils ne veulent simplement pas perdre d'argent en le faisant."],
-      headlines: ["Misez sur la longue traîne", "Récompensez les fans et fidélisez-les durablement", "Bouclez la boucle de la fragmentation"],
+      headlines: ["Misez sur la longue traîne"],
       paragraphs: [
         "Offrez à vos fans une économie pilotée par les utilisateurs, inédite dans les objets de collection sportifs, avec la rapidité de mise sur le marché que seul l'engagement numérique des fans peut apporter, pour stimuler et protéger la valeur qu'ils détiennent.",
         "Vos moments forts deviennent des objets de collection : les votes des utilisateurs déterminent l'offre ; fini les perdants des pochettes de jeu d'argent.",
@@ -848,7 +848,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["Fans willen verzamelen.", "Ze willen er alleen geen geld aan verliezen."],
-      headlines: ["Benut de long tail", "Beloon fans en bouw duurzame fanbinding op", "Sluit de cirkel van versnippering"],
+      headlines: ["Benut de long tail"],
       paragraphs: [
         "Bied je fans een door gebruikers gestuurde economie die nog nooit bestond in sportverzamelobjecten, met de snelheid naar de markt die alleen digitale fanbetrokkenheid kan bieden en die de waarde die fans aanhouden vergroot en beschermt.",
         "Je hoogtepunten worden verzamelobjecten: gebruikersstemmen bepalen het aanbod; geen verliezers van gokpakketten meer.",
@@ -970,7 +970,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["प्रशंसक संग्रह करना चाहते हैं।", "वे ऐसा करते हुए बस अपना पैसा नहीं खोना चाहते।"],
-      headlines: ["लॉन्ग टेल का लाभ उठाएँ", "इनाम दें और लंबे समय तक प्रशंसक बनाएँ", "विखंडन का चक्र पूरा करें"],
+      headlines: ["लॉन्ग टेल का लाभ उठाएँ"],
       paragraphs: [
         "अपने प्रशंसकों को खेल संग्रहणीय वस्तुओं में पहले कभी न देखी गई उपयोगकर्ता-संचालित अर्थव्यवस्था दें, डिजिटल फ़ैन सहभागिता की तेज़ बाज़ार-पहुँच के साथ, जो उनके पास रखी वस्तुओं का मूल्य बढ़ाती और सुरक्षित रखती है।",
         "आपकी शानदार झलकियाँ संग्रहणीय बनती हैं—उपयोगकर्ताओं के वोट आपूर्ति तय करते हैं—अब जुए वाले पैक में कोई हारने वाला नहीं।",
@@ -1092,7 +1092,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["球迷想要收藏。", "他们只是不想因此亏钱。"],
-      headlines: ["深耕长尾价值", "奖励粉丝，打造持久连接", "打通碎片化闭环"],
+      headlines: ["深耕长尾价值"],
       paragraphs: [
         "为球迷带来体育收藏领域前所未有的用户驱动型经济，并以只有数字化球迷互动才能实现的上市速度，推动并守护他们持有藏品的价值。",
         "精彩瞬间成为收藏品——用户投票决定发行数量——不再有人输掉博彩盲包。",
@@ -1211,7 +1211,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
     },
     pitch: {
       sectionHeadingLines: ["ファンは集めたい。", "ただ、そのためにお金を失いたくない。"],
-      headlines: ["ロングテールを活かす", "ファンに報い、長く愛される関係を築く", "分断のループを閉じる"],
+      headlines: ["ロングテールを活かす"],
       paragraphs: [
         "スポーツコレクティブルにはこれまでなかった、ファン主導の経済圏を届けます。デジタルなファンエンゲージメントならではの市場投入スピードで、ファンが保有する価値を高め、守ります。",
         "ハイライトがコレクティブルに。ユーザー投票で供給量が決まり、ギャンブル性のあるパックで負けることはもうありません。",

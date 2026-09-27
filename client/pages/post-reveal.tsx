@@ -169,19 +169,8 @@ function OpportunityMatrix() {
 
 function RotatingPitchSection() {
   const { copy, language } = useLanguage();
-  const [activeHeadlineIndex, setActiveHeadlineIndex] = useState(0);
   const [isFullscreenMounted, setIsFullscreenMounted] = useState(false);
   const [isFullscreenVisible, setIsFullscreenVisible] = useState(false);
-
-  useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-    const interval = window.setInterval(() => {
-      setActiveHeadlineIndex((index) => (index + 1) % copy.pitch.headlines.length);
-    }, 3000);
-
-    return () => window.clearInterval(interval);
-  }, [copy.pitch.headlines.length]);
 
   useEffect(() => {
     if (!isFullscreenMounted) return;
@@ -224,7 +213,7 @@ function RotatingPitchSection() {
           </span>
         ))}
       </h2>
-      <div className="group relative mx-auto mt-4 flex min-h-[140px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg bg-black px-4 py-3 sm:min-h-[110px] lg:min-h-[100px]">
+      <div className="group relative mx-auto mt-4 flex min-h-[140px] w-full max-w-5xl items-center justify-center overflow-hidden rounded-lg bg-black px-4 py-3 sm:min-h-[110px] md:min-h-[500px]">
         <video
           className="absolute inset-0 z-0 h-full w-full object-cover"
           src="/images/onboarding-video.mp4"
@@ -247,12 +236,7 @@ function RotatingPitchSection() {
           </svg>
         </button>
         <h2 className="relative z-10 w-full text-center text-[32px] font-bold leading-tight text-[#FF6300] sm:text-4xl lg:text-5xl">
-          <span
-            key={activeHeadlineIndex}
-            className="inline-block"
-          >
-            {copy.pitch.headlines[activeHeadlineIndex]}
-          </span>
+          <span className="inline-block">{copy.pitch.headlines[0]}</span>
         </h2>
       </div>
       <div className="mx-auto mt-4 max-w-5xl space-y-4 text-[17px] leading-relaxed text-[rgba(74,74,74,1)] sm:text-xl">
