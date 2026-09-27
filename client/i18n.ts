@@ -115,7 +115,7 @@ const english: TranslationSet = {
     sampleProduct: "Sample Product",
     paragraphPrefixes: ["Own the long tail:", "Vote to Mint:", "Team Redeem:"],
     paragraphs: [
-      "Bring your fans a user-driven economy that has never existed in sports collectibles, with the speed-to-market only digital fan engagement can deliver, that drives and protects their value to hold.",
+      "Bring your fans a user-driven economy never before seen in sports collectibles! Speed-to-market only digital fan engagement can deliver, that converts attention to customers, and that drives and protects their value to hold.",
       "Your highlights become collectibles - user votes determine the supply - no more gambling pack losers.",
       "Gamers can upgrade their cards for the latest - collectors see greater scarcity over time",
     ],
