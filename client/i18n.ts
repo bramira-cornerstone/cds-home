@@ -126,7 +126,7 @@ const english: TranslationSet = {
     matrix: { options: "Options", value: "Value", cornerstoneModel: "The Cornerstone Model", included: "Included", notIncluded: "Not included" },
     cardItems: {
       aggregates: ["Streaming / OTT", "Social Media", "Physical Cards", "Digital Collectibles", "Fan Reward Tokens"],
-      converts: ["Social Media"],
+      converts: ["Social Media", "Gameified Fan Apps"],
       sustainable: ["Social Media", "Gameified Fan Apps", "Fan Reward Tokens"],
       valuable: ["Sports Betting", "Prediction Markets", "Gameified Fan Apps", "Physical Cards", "Digital Collectibles"],
     },
@@ -255,7 +255,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "Opciones", value: "Valor", cornerstoneModel: "El modelo Cornerstone", included: "Incluido", notIncluded: "No incluido" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Redes sociales", "Tarjetas físicas", "Coleccionables digitales", "Tokens de recompensa para fans"],
-        converts: ["Redes sociales"],
+        converts: ["Redes sociales", "Aplicaciones gamificadas para fans"],
         sustainable: ["Redes sociales", "Aplicaciones gamificadas para fans", "Tokens de recompensa para fans"],
         valuable: ["Apuestas deportivas", "Mercados de predicción", "Aplicaciones gamificadas para fans", "Tarjetas físicas", "Coleccionables digitales"],
       },
@@ -378,7 +378,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "Opções", value: "Valor", cornerstoneModel: "O modelo Cornerstone", included: "Incluído", notIncluded: "Não incluído" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Redes sociais", "Cartões físicos", "Colecionáveis digitais", "Tokens de recompensa para fãs"],
-        converts: ["Redes sociais"],
+        converts: ["Redes sociais", "Aplicativos gamificados para fãs"],
         sustainable: ["Redes sociais", "Aplicativos gamificados para fãs", "Tokens de recompensa para fãs"],
         valuable: ["Apostas esportivas", "Mercados de previsão", "Aplicativos gamificados para fãs", "Cartões físicos", "Colecionáveis digitais"],
       },
@@ -501,7 +501,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "الخيارات", value: "القيمة", cornerstoneModel: "نموذج كورنرستون", included: "مُدرج", notIncluded: "غير مُدرج" },
       cardItems: {
         aggregates: ["البث / OTT", "وسائل التواصل الاجتماعي", "بطاقات فعلية", "مقتنيات رقمية", "رموز مكافآت المشجعين"],
-        converts: ["وسائل التواصل الاجتماعي"],
+        converts: ["وسائل التواصل الاجتماعي", "تطبيقات مشجعين مُلعبة"],
         sustainable: ["وسائل التواصل الاجتماعي", "تطبيقات مشجعين مُلعبة", "رموز مكافآت المشجعين"],
         valuable: ["المراهنات الرياضية", "أسواق التنبؤ", "تطبيقات مشجعين مُلعبة", "بطاقات فعلية", "مقتنيات رقمية"],
       },
@@ -624,7 +624,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "Optionen", value: "Wert", cornerstoneModel: "Das Cornerstone-Modell", included: "Enthalten", notIncluded: "Nicht enthalten" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Soziale Medien", "Physische Karten", "Digitale Sammelobjekte", "Fan-Belohnungstoken"],
-        converts: ["Soziale Medien"],
+        converts: ["Soziale Medien", "Gamifizierte Fan-Apps"],
         sustainable: ["Soziale Medien", "Gamifizierte Fan-Apps", "Fan-Belohnungstoken"],
         valuable: ["Sportwetten", "Prognosemärkte", "Gamifizierte Fan-Apps", "Physische Karten", "Digitale Sammelobjekte"],
       },
@@ -747,7 +747,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "Options", value: "Valeur", cornerstoneModel: "Le modèle Cornerstone", included: "Inclus", notIncluded: "Non inclus" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Réseaux sociaux", "Cartes physiques", "Objets de collection numériques", "Jetons de récompense pour fans"],
-        converts: ["Réseaux sociaux"],
+        converts: ["Réseaux sociaux", "Applications de fans gamifiées"],
         sustainable: ["Réseaux sociaux", "Applications de fans gamifiées", "Jetons de récompense pour fans"],
         valuable: ["Paris sportifs", "Marchés prédictifs", "Applications de fans gamifiées", "Cartes physiques", "Objets de collection numériques"],
       },
@@ -870,7 +870,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "Opties", value: "Waarde", cornerstoneModel: "Het Cornerstone-model", included: "Inbegrepen", notIncluded: "Niet inbegrepen" },
       cardItems: {
         aggregates: ["Streaming / OTT", "Sociale media", "Fysieke kaarten", "Digitale verzamelobjecten", "Fanbeloningstokens"],
-        converts: ["Sociale media"],
+        converts: ["Sociale media", "Gegamificeerde fan-apps"],
         sustainable: ["Sociale media", "Gegamificeerde fan-apps", "Fanbeloningstokens"],
         valuable: ["Sportweddenschappen", "Voorspellingsmarkten", "Gegamificeerde fan-apps", "Fysieke kaarten", "Digitale verzamelobjecten"],
       },
@@ -993,7 +993,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "विकल्प", value: "मूल्य", cornerstoneModel: "कॉर्नरस्टोन मॉडल", included: "शामिल", notIncluded: "शामिल नहीं" },
       cardItems: {
         aggregates: ["स्ट्रीमिंग / OTT", "सोशल मीडिया", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ", "प्रशंसक पुरस्कार टोकन"],
-        converts: ["सोशल मीडिया"],
+        converts: ["सोशल मीडिया", "गेमिफाइड फ़ैन ऐप्स"],
         sustainable: ["सोशल मीडिया", "गेमिफाइड फ़ैन ऐप्स", "प्रशंसक पुरस्कार टोकन"],
         valuable: ["खेल सट्टेबाज़ी", "पूर्वानुमान बाज़ार", "गेमिफाइड फ़ैन ऐप्स", "भौतिक कार्ड", "डिजिटल संग्रहणीय वस्तुएँ"],
       },
@@ -1116,7 +1116,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "选项", value: "价值", cornerstoneModel: "Cornerstone 模型", included: "包含", notIncluded: "不包含" },
       cardItems: {
         aggregates: ["流媒体 / OTT", "社交媒体", "实体卡片", "数字收藏品", "球迷奖励代币"],
-        converts: ["社交媒体"],
+        converts: ["社交媒体", "游戏化球迷应用"],
         sustainable: ["社交媒体", "游戏化球迷应用", "球迷奖励代币"],
         valuable: ["体育博彩", "预测市场", "游戏化球迷应用", "实体卡片", "数字收藏品"],
       },
@@ -1236,7 +1236,7 @@ export const translations: Record<LanguageCode, TranslationSet> = {
       matrix: { options: "選択肢", value: "価値", cornerstoneModel: "Cornerstoneモデル", included: "対象", notIncluded: "対象外" },
       cardItems: {
         aggregates: ["ストリーミング / OTT", "ソーシャルメディア", "物理カード", "デジタルコレクティブル", "ファン報酬トークン"],
-        converts: ["ソーシャルメディア"],
+        converts: ["ソーシャルメディア", "ゲーミフィケーション対応ファンアプリ"],
         sustainable: ["ソーシャルメディア", "ゲーミフィケーション対応ファンアプリ", "ファン報酬トークン"],
         valuable: ["スポーツベッティング", "予測市場", "ゲーミフィケーション対応ファンアプリ", "物理カード", "デジタルコレクティブル"],
       },
