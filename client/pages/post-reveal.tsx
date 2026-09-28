@@ -29,7 +29,7 @@ function OpportunityMatrix() {
               <th
                 key={column.label}
                 scope="col"
-                className={`bg-[#004FFF] px-1 py-2 text-center text-[11px] font-bold leading-tight text-white sm:px-2 md:text-xs lg:text-sm ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
+                className={`bg-[#004FFF] px-1 py-2 text-center text-[10px] font-bold leading-tight text-white sm:px-2 md:text-xs lg:text-sm ${index === columns.length - 1 ? "rounded-tr-lg" : ""}`}
               >
                 {column.label}
               </th>
