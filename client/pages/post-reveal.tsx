@@ -280,7 +280,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center gap-2 w-full">
             <a
-              href="https://docs.google.com/document/d/1vifP9MGHMMv3hYUqVMFZ4yl3WiHcAoDI/edit?usp=sharing&ouid=103100335654011855903&rtpof=true&sd=true"
+              href="https://drive.google.com/file/d/1Zo6yUsL2T93D4j2ONv04EiDmQ_8MZCjN/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center aspect-square rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 hover:shadow-lg transition"
