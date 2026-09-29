@@ -220,7 +220,7 @@ function PostRevealContent() {
           >
             {copy.hero.title}
           </h2>
-          <p className="mt-4 max-w-3xl text-[24px] leading-relaxed md:text-[40px]">
+          <p className="mt-4 max-w-3xl text-[20px] leading-relaxed md:text-[40px]">
             {copy.hero.description}
             <br />
             <br />
